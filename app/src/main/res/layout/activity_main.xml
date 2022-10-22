@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2949A6"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="340dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:backgroundTint="#EEEEEE">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="70dp"
+                android:text="WELCOME TO"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:fontFamily="@font/ravenpro_black"
+                android:textColor="#2F498C"
+                android:textStyle="bold"
+                />
+
+            <RelativeLayout
+                android:id="@+id/bt1"
+                android:layout_width="match_parent"
+                android:layout_height="900dp"
+                android:layout_centerInParent="true">
+
+                <RelativeLayout
+                    android:id="@+id/emailicon"
+                    android:layout_width="355dp"
+                    android:layout_height="310dp"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+
+                        android:src="@drawable/eng" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/btnLogin"
+                android:layout_width="334dp"
+                android:layout_height="49dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="230dp">
+                    <com.google.android.gms.common.SignInButton
+                        android:id="@+id/sign_in_button"
+                        android:layout_width="334dp"
+                        android:layout_height="match_parent"
+                        android:background="#2949A6"
+                        android:gravity="center"
+                        android:text="Sign in with Google"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textSize="24sp"
+                        />
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="280dp"
+                        android:layout_marginLeft="70dp"
+                        android:src="@drawable/google" />
+
+            </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="90dp"-->
+<!--        android:gravity="center"-->
+<!--        android:text="WELCOME TO"-->
+<!--        android:textAppearance="@style/TextAppearance.AppCompat.Display2"-->
+<!--        android:textColor="#2949A6"-->
+<!--        android:textStyle="bold" />-->
+
+
+
+<!--    <ImageView-->
+<!--        android:layout_width="355dp"-->
+<!--        android:layout_height="310dp"-->
+<!--        android:layout_marginLeft="40dp"-->
+<!--        android:src="@drawable/eng" />-->
+
+
+
+<!--    <RelativeLayout-->
+
+<!--        android:layout_width="334dp"-->
+<!--        android:layout_height="49dp"-->
+<!--        android:layout_centerInParent="true"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:background="#2949A6">-->
+
+<!--        <com.google.android.gms.common.SignInButton-->
+<!--            android:id="@+id/sign_in_button"-->
+<!--            android:layout_width="281dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="50dp"-->
+
+<!--            android:gravity="center"-->
+<!--            android:text="Sign in with Google"-->
+<!--            android:textAppearance="@style/TextAppearance.AppCompat.Large"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="20sp" />-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_marginLeft="40dp"-->
+<!--            android:src="@drawable/google" />-->
+
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:fontFamily="@font/MavenPro_Black"&ndash;&gt;-->
+
+<!--&lt;!&ndash;            android:layout_marginLeft="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Sign in with Google"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textAppearance="@style/TextAppearance.AppCompat.Large"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="20sp" />&ndash;&gt;-->
+<!--    </RelativeLayout>-->
+
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/button"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:text="Sign in with Google"-->
+    <!--        android:layout_width="334dp"-->
+    <!--        android:layout_height="49dp"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_margin="20dp"-->
+    <!--        android:gravity="center"-->
+    <!--        -->
+    <!--    />-->
+
+</LinearLayout>
+
