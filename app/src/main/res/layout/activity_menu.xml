@@ -40,7 +40,7 @@
             android:layout_height="35dp"
             android:layout_marginTop="65dp"
             android:layout_marginLeft="20dp"
-            android:text="learn to day ?"
+            android:text="learn today ?"
             android:textSize="24sp"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:fontFamily="@font/ravenpro_medium"
@@ -119,8 +119,8 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
             app:cardElevation="9dp"
             app:cardCornerRadius="9dp"
 
@@ -154,9 +154,9 @@
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
             app:cardElevation="9dp"
             app:cardCornerRadius="9dp"
 
@@ -193,9 +193,9 @@
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
             app:cardElevation="9dp"
             app:cardCornerRadius="9dp"
 
@@ -230,9 +230,9 @@
             android:layout_height="0dp"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginBottom="13dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
             app:cardElevation="9dp"
             app:cardCornerRadius="9dp"
 
@@ -245,7 +245,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:src="@drawable/open_book"
+                    android:src="@drawable/cup"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="110dp"
                     android:layout_height="130dp"/>
@@ -254,12 +254,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_black"
-                    android:text="Reading"
+                    android:text="Ratings"
                     android:textAlignment="center"
-                    android:layout_marginLeft="12dp"
+                    android:layout_marginLeft="10dp"
                     android:textColor="#2F498C"
                     android:textSize="24sp" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+
     </GridLayout>
 </LinearLayout>

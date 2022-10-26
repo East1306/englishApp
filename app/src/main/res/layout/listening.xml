@@ -18,12 +18,12 @@
             />
 
         <TextView
-            android:id="@+id/vocabulary"
+            android:id="@+id/listening"
             android:layout_width="343dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="2dp"
-            android:text="Vocabulary"
+            android:text="Listening"
             android:textColor="@color/titleColor"
             android:textSize="30dp"
             android:textStyle="bold"/>
@@ -36,7 +36,7 @@
             android:background="@drawable/ic_next" />
     </LinearLayout>
     <TextView
-        android:id="@+id/question"
+        android:id="@+id/contentListen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question..................................?"
@@ -47,15 +47,47 @@
         android:layout_marginRight="20dp"
         >
     </TextView>
-    <ImageView
-        android:id="@+id/imageSuggestion"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
+    <Button
+        android:id="@+id/buttonPlaySound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="play sound"
+        android:backgroundTint="@color/buttonColor"
+        android:padding="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
         android:layout_gravity="center"
-        android:background="@drawable/vocabulary1"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         >
-    </ImageView>
+    </Button>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time: "
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/timePlaySound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            >
+        </TextView>
+    </LinearLayout>
     <RadioGroup
         android:id="@+id/RadioGroupAnswer"
         android:layout_width="match_parent"
@@ -93,7 +125,6 @@
             android:padding="10dp"/>
     </RadioGroup>
     <TextView
-        android:id="@+id/explain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"

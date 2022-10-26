@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bluegradient"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_line"
+        android:src="@drawable/ic_back" />
+
+    <TextView
+        android:id="@+id/reading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Hard"
+        android:textSize="50dp"
+        android:textColor="#495f96"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/T1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/reading"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:layout_marginTop="30dp"
+        android:text="YOUNG CHILDREN PLAY SPORTS - ADVANTAGES AND DISADVANTAGE "
+        android:background="@drawable/bg_btn_level"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        />
+
+    <Button
+        android:id="@+id/T2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/T1"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_level"
+        android:text="THE PANAMA CANAL "
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        />
+
+    <Button
+        android:id="@+id/T3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/T2"
+        android:layout_gravity="center"
+        android:gravity="left"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_btn_level"
+        android:text="THE NORTH SEA PROTECTION WORKS"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        />
+
+</RelativeLayout>

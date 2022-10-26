@@ -3,8 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/gradient">
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,12 +18,12 @@
             />
 
         <TextView
-            android:id="@+id/vocabulary"
+            android:id="@+id/reading"
             android:layout_width="343dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="2dp"
-            android:text="Vocabulary"
+            android:text="Reading"
             android:textColor="@color/titleColor"
             android:textSize="30dp"
             android:textStyle="bold"/>
@@ -36,7 +36,7 @@
             android:background="@drawable/ic_next" />
     </LinearLayout>
     <TextView
-        android:id="@+id/question"
+        android:id="@+id/questionRead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question..................................?"
@@ -47,15 +47,6 @@
         android:layout_marginRight="20dp"
         >
     </TextView>
-    <ImageView
-        android:id="@+id/imageSuggestion"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:background="@drawable/vocabulary1"
-        >
-    </ImageView>
     <RadioGroup
         android:id="@+id/RadioGroupAnswer"
         android:layout_width="match_parent"
