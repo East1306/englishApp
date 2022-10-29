@@ -16,8 +16,6 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/white_line"
             android:src="@drawable/ic_back" />
-
-
     </LinearLayout>
 
 
@@ -47,12 +45,24 @@
             />
     </LinearLayout>
 
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="110dp"
+        android:text="Time: 00:30"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
     <LinearLayout
         android:layout_width="360dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/bg_ques_custom"
         android:orientation="vertical"
@@ -65,28 +75,18 @@
             android:text="n/o/l/t/a/s/C/o/r/a/u/g/t/n/i"
             android:textAlignment="center"
             android:textColor="#CC000000"
-            android:textSize="25sp"
+            android:textSize="26sp"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="00:20"
-        android:textSize="30dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center"
-        android:textColor="#fff"
-        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/bg_pink_gradient"
+        android:background="@drawable/bg_ques_custom"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -94,31 +94,31 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="Congratulations"
             android:textAlignment="center"
             android:textColor="#CC000000"
             android:textSize="30dp"
+            android:text="Congratulations"
             android:textStyle="bold" />
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="100dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-
         <TextView
-            android:layout_width="155dp"
+            android:layout_width="154dp"
             android:layout_height="65dp"
-            android:background="@drawable/buttonradius"
-            android:backgroundTint="#f4364c"
-            android:gravity="center"
             android:text="Answer"
-            android:textColor="@color/white"
             android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonradius"
+            android:backgroundTint="#f6be00"
+            android:gravity="center"
             android:textAlignment="center"
             android:textStyle="bold" />
 
@@ -127,11 +127,12 @@
             android:layout_height="65dp"
             android:text="Next"
             android:textSize="25dp"
-            android:layout_marginLeft="50dp"
+            android:layout_gravity="center"
             android:textColor="@color/white"
             android:background="@drawable/buttonradius"
             android:backgroundTint="#30b700"
             android:gravity="center"
+            android:layout_marginLeft="60dp"
             android:textAlignment="center"
             android:textStyle="bold" />
 
