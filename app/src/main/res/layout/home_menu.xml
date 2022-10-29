@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_purple_gradient"
+    android:background="@drawable/bg_pink_gradient"
     android:orientation="vertical">
 
     <TextView
@@ -24,12 +24,14 @@
         android:layout_gravity="center">
 
         <ImageButton
+            android:id="@+id/btn_quiz"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:background="@drawable/quiz"
             />
 
         <ImageButton
+            android:id="@+id/btn_correctWord"
             android:layout_marginLeft="50dp"
             android:layout_width="150dp"
             android:layout_height="150dp"
