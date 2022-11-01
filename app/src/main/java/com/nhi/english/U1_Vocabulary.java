@@ -246,8 +246,6 @@ public class U1_Vocabulary extends AppCompatActivity {
         super.onPause();
         mySong.pause();
     }
-
-
     void Display(int i){
         txtCont.setText(L.get(i).ChuDe);
 //        mySong.setAudioSessionId(getResources().getIdentifier(L.get(i).Srcimg, "raw", "com.nhi.english"));

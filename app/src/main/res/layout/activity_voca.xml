@@ -22,7 +22,7 @@
             android:id="@+id/txtCont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Practices"
+            android:text="Vocabulary Topics"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
             android:layout_centerHorizontal="true"

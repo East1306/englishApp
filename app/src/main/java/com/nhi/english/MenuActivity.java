@@ -1,16 +1,9 @@
 package com.nhi.english;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
-
-
 
 
 public class MenuActivity extends AppCompatActivity {
@@ -27,7 +20,7 @@ public class MenuActivity extends AppCompatActivity {
         Cd3 = findViewById(R.id.card3);
         Cd4 = findViewById(R.id.card4);
         Cd1.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuActivity.this, vocabulary.class );
+            Intent intent = new Intent(MenuActivity.this, Vocabulary.class );
             startActivity(intent);
         });
 
