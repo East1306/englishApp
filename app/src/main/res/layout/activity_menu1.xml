@@ -1,0 +1,1318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/RevTop"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+
+        <ImageButton
+            android:id="@+id/BtnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:left="50dp"
+            android:background="@drawable/back"
+            android:layout_centerVertical="true"
+             />
+        <TextView
+            android:id="@+id/txtCont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vocabulary Topics"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textSize="30dp"
+            android:textColor="#2F498C"
+            android:textStyle="bold"/>
+
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="expand"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp"
+                tools:ignore="OnClick">
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Education"
+                        android:textColor="@color/blue"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:columnCount="2"
+                        android:rowCount="2"
+                        android:layout_gravity="center_horizontal"
+                        >
+
+                        <RelativeLayout
+                            android:id="@+id/bt1"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 1"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt2"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 2"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt3"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 3"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt4"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp"
+                                >
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 4"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+                    </GridLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bt5"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="55dp"
+                            android:layout_margin="3dp"
+
+                            app:tint="#fff" />
+
+                        <RelativeLayout
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="1dp"
+                            >
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:padding="10dp"
+
+                                app:tint="#fff" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="65dp"
+                            android:gravity="center"
+                            android:text="Unit 5"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardV1"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="expand2"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp"
+                tools:ignore="OnClick">
+
+                <LinearLayout
+                    android:id="@+id/layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Living"
+                        android:textColor="@color/blue"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <RelativeLayout
+                            android:id="@+id/bt6"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 6"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt7"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 7"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt8"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 8"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt9"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 9"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+                    </GridLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bt10"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="55dp"
+                            android:layout_margin="3dp"
+
+                            app:tint="#fff" />
+
+                        <RelativeLayout
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="1dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:padding="10dp"
+
+                                app:tint="#fff" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="65dp"
+                            android:gravity="center"
+                            android:text="Unit 10"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardV2"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="expand3"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp"
+                tools:ignore="OnClick">
+
+                <LinearLayout
+                    android:id="@+id/layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Technology"
+                        android:textColor="@color/blue"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <RelativeLayout
+                            android:id="@+id/bt11"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 11"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt12"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 12"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt13"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 13"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt14"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 14"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+                    </GridLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bt15"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="55dp"
+                            android:layout_margin="3dp"
+
+                            app:tint="#fff" />
+
+                        <RelativeLayout
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="1dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:padding="10dp"
+
+                                app:tint="#fff" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="65dp"
+                            android:gravity="center"
+                            android:text="Unit 15"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardV3"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="expand4"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp"
+                tools:ignore="OnClick">
+
+                <LinearLayout
+                    android:id="@+id/layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Travel"
+                        android:textColor="@color/blue"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <RelativeLayout
+                            android:id="@+id/bt16"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 16"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt17"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 17"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt18"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 18"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt19"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 19"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+                    </GridLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bt20"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="55dp"
+                            android:layout_margin="3dp"
+
+                            app:tint="#fff" />
+
+                        <RelativeLayout
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="1dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:padding="10dp"
+
+                                app:tint="#fff" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="65dp"
+                            android:gravity="center"
+                            android:text="Unit 20"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardV5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardV4"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="expand5"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="10dp"
+                app:contentPadding="20dp"
+                tools:ignore="OnClick">
+
+                <LinearLayout
+                    android:id="@+id/layout4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hometown"
+                        android:textColor="@color/blue"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="2"
+                        android:rowCount="2">
+
+                        <RelativeLayout
+                            android:id="@+id/bt21"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 21"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt22"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 22"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt23"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 23"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/bt24"
+                            android:layout_width="130dp"
+                            android:layout_height="40dp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="200dp"
+                                android:layout_height="55dp"
+                                android:layout_margin="3dp"
+
+                                app:tint="#fff" />
+
+                            <RelativeLayout
+                                android:layout_width="45dp"
+                                android:layout_height="50dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="1dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_centerHorizontal="true"
+                                    android:padding="10dp"
+
+                                    app:tint="#fff" />
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="65dp"
+                                android:gravity="center"
+                                android:text="Unit 24"
+                                android:textColor="#000"
+                                android:textSize="15dp" />
+                        </RelativeLayout>
+                    </GridLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bt25"
+                        android:layout_width="130dp"
+                        android:layout_height="40dp"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="55dp"
+                            android:layout_margin="3dp"
+
+                            app:tint="#fff" />
+
+                        <RelativeLayout
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="1dp">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerHorizontal="true"
+                                android:padding="10dp"
+
+                                app:tint="#fff" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="65dp"
+                            android:gravity="center"
+                            android:text="Unit 25"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

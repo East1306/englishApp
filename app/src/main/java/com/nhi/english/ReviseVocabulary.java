@@ -32,7 +32,7 @@ public class ReviseVocabulary extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_vocabulary);
+        setContentView(R.layout.vocabulary);
 
         question = (TextView) findViewById(R.id.question);
         explain = (TextView) findViewById(R.id.explain);
