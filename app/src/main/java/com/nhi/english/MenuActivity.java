@@ -1,13 +1,8 @@
 package com.nhi.english;
 
-<<<<<<< HEAD
-public class MenuActivity {
-
-}
-=======
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MenuActivity extends AppCompatActivity {
 
@@ -19,4 +14,3 @@ public class MenuActivity extends AppCompatActivity {
 
 
 }
->>>>>>> d7d78e49e082f41499118addf3b6c3106baac357
