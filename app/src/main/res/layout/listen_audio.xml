@@ -29,13 +29,14 @@
 
     <LinearLayout
         android:layout_below="@+id/listening"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         >
         <TextView
             android:id="@+id/T1"
-            android:layout_width="400dp"
+            android:layout_width="410dp"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
@@ -51,8 +52,8 @@
             />
         <TextView
             android:id="@+id/T2"
-            android:layout_width="400dp"
-            android:layout_height="wrap_content"
+            android:layout_width="410dp"
+            android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:backgroundTint="#5CD5E8"
@@ -60,14 +61,10 @@
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingBottom="10dp"
-            android:text="Tựa đề"
+            android:text=""
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold"
             />
     </LinearLayout>
-
-
-
-
 </RelativeLayout>
