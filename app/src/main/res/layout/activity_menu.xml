@@ -85,14 +85,11 @@
             android:layout_marginRight="13dp"
             app:cardElevation="9dp"
             app:cardCornerRadius="9dp"
-
             >
-            
             <LinearLayout
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageView
@@ -104,7 +101,6 @@
                 <TextView
                     android:id="@+id/txtTop1"
                     android:text="Vocabulary"
-
                     android:fontFamily="@font/roboto_black"
                     android:textAlignment="center"
                     android:textColor="#2F498C"
