@@ -37,7 +37,7 @@ public class U1_Vocabulary extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.education);
+        setContentView(R.layout.activity_education);
         back = findViewById(R.id.BtnBack);
         imgV1=findViewById(R.id.imgV1);
         leftarrow=findViewById(R.id.leftarrow);
@@ -51,7 +51,7 @@ public class U1_Vocabulary extends AppCompatActivity {
         text6=findViewById(R.id.text6);
         textnghia=findViewById(R.id.textnghia);
         back.setOnClickListener(v -> {
-            Intent intent = new Intent(U1_Vocabulary.this, education.class);
+            Intent intent = new Intent(U1_Vocabulary.this, Vocabulary.class);
             startActivity(intent);
             finish();
         });

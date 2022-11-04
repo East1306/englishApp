@@ -3,4 +3,38 @@
     <string name="question1">
     What is your phone number/email? ...
     </string>
+
+
+    <string name="u1tc">Thì Hiện Tại Đơn</string>
+    <string name="u1t">Thì hiện tại đơn dùng khi nói về:</string>
+    <string name="u1">
+        <b><i>- Việc xảy ra thường xuyên:</i></b>
+        \n Ví dụ 1: <b>We join the earth hour movement every year.</b>
+        \n Hàng năm, chúng tôi đều tham gia chiến dịch giờ Trái Đất.
+        \n
+        \n <b><i>- Việc hiển nhiên đúng:</i></b>
+        \n Ví dụ 2: <b>Whales do not lay eggs.</b>
+        \n Cá voi thì không đẻ trứng.
+        \n
+        \n <b><i>- Những trạng thái, cảm giác, nhận thức nói chung ở hiện tại:</i></b>
+        \n Ví dụ 3: <b>Something smells funky around here.</b>
+        \n Có cái gì mùi khó ngửi quanh đây.
+        \n
+        \n <b><i>- Việc theo thời gian biểu.</i></b>
+        \n Ví dụ 4: <b>Your shift starts in one minute. Hurry up !</b>
+        \n Ca làm của cậu sẽ bắt đầu trong một phút nữa. Nhanh lên nào !
+        \n
+        Động từ chỉ cảm trạng thái, cảm giác, nhận thức nói chung ở hiện tại bao gồm 1 nhóm sau:
+        \n
+        <b>1. sở hữu </b>(have, possess, belong)
+        \n
+        <b>2. cảm giác </b>(see, hear, feel, seem, smell)
+        \n
+        <b>3. cảm xúc </b>(like, love, want, need, prefer)
+        \n
+        <b>4. nhận thức </b>(realize, suppose, believe, unserstand)
+
+    </string>
+    <string name="u2">CÔNG THỨC CỦA THÌ HIỆN TẠI ĐƠN</string>
+    <string name="u2t"><b>CÂU KHẲNG ĐỊNH</b></string>
 </resources>

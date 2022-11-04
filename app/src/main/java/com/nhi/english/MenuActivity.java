@@ -19,11 +19,16 @@ public class MenuActivity extends AppCompatActivity {
         Cd2 = findViewById(R.id.card2);
         Cd3 = findViewById(R.id.card3);
         Cd4 = findViewById(R.id.card4);
+
         Cd1.setOnClickListener(v -> {
             Intent intent = new Intent(MenuActivity.this, Vocabulary.class);
             startActivity(intent);
         });
 
+        Cd2.setOnClickListener(v -> {
+            Intent intent = new Intent(MenuActivity.this, Grammar.class);
+            startActivity(intent);
+        });
     }
 }
 

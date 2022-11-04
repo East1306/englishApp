@@ -12,14 +12,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-public class Vocabulary extends AppCompatActivity {
+public class Grammar extends AppCompatActivity {
     RelativeLayout BT;
-    CardView B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13, B14, B15;
+    CardView B1, B2, B3, B4, B5, B6, B7, B8, B9, B10;
     ImageButton back;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_voca);
+        setContentView(R.layout.grammar);
         back = findViewById(R.id.BtnBack);
         B1 = findViewById(R.id.cardV1);
         B2 = findViewById(R.id.cardV2);
@@ -31,13 +31,9 @@ public class Vocabulary extends AppCompatActivity {
         B8 = findViewById(R.id.cardV8);
         B9 = findViewById(R.id.cardV9);
         B10 = findViewById(R.id.cardV10);
-        B11 = findViewById(R.id.cardV11);
-        B12 = findViewById(R.id.cardV12);
-        B13 = findViewById(R.id.cardV13);
-        B14 = findViewById(R.id.cardV14);
-        B15 = findViewById(R.id.cardV15);
+
         back.setOnClickListener(v -> {
-            Intent intent = new Intent(Vocabulary.this,MenuActivity.class);
+            Intent intent = new Intent(Grammar.this,MenuActivity.class);
             startActivity(intent);
             finish();
         });
@@ -46,7 +42,7 @@ public class Vocabulary extends AppCompatActivity {
         B1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U1_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U1_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -54,7 +50,7 @@ public class Vocabulary extends AppCompatActivity {
         B2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U2_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U2_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -62,7 +58,7 @@ public class Vocabulary extends AppCompatActivity {
         B3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U3_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U3_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -70,7 +66,7 @@ public class Vocabulary extends AppCompatActivity {
         B4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U4_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U4_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -78,7 +74,7 @@ public class Vocabulary extends AppCompatActivity {
         B5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U5_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U5_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -86,7 +82,7 @@ public class Vocabulary extends AppCompatActivity {
         B6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U6_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U6_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -94,7 +90,7 @@ public class Vocabulary extends AppCompatActivity {
         B7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U7_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U7_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -102,7 +98,7 @@ public class Vocabulary extends AppCompatActivity {
         B8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U8_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U8_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -110,7 +106,7 @@ public class Vocabulary extends AppCompatActivity {
         B9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U9_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U9_Grammar.class);
                 startActivity(intent);
                 finish();
             }
@@ -118,51 +114,12 @@ public class Vocabulary extends AppCompatActivity {
         B10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U10_Vocabulary.class);
+                Intent intent = new Intent(Grammar.this,U10_Grammar.class);
                 startActivity(intent);
                 finish();
             }
         });
-        B11.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U11_Vocabulary.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        B12.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U12_Vocabulary.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        B13.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U13_Vocabulary.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        B14.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U14_Vocabulary.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        B15.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Vocabulary.this,U15_Vocabulary.class);
-                startActivity(intent);
-                finish();
-            }
-        });
+
     }
 
 }
