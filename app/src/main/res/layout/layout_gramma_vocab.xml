@@ -8,9 +8,6 @@
     tools:context=".MainActivity"
     android:background="@drawable/gradient">
 
-
-
-
         <Button
             android:id="@+id/btn_goback_Quiz"
             android:layout_width="40dp"
