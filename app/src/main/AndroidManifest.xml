@@ -15,8 +15,22 @@
         android:theme="@style/Theme.English"
         tools:targetApi="31">
         <activity
-            android:name=".HomeMenuActivity"
+            android:name=".Activity_correctword"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_gramma_vocab"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Activity_HomeMenu"
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -37,6 +51,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Numofquestion"
+            android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
