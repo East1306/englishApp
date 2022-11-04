@@ -173,9 +173,10 @@
 
                 <ImageView
                     android:id="@+id/leftarrow"
+                    android:src="@drawable/back"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                      />
 
                 <ImageView
@@ -183,9 +184,11 @@
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_toRightOf="@+id/leftarrow"
+                    android:src="@drawable/next"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="20dp"
                      />
+
             </RelativeLayout>
         </RelativeLayout>
     </LinearLayout>

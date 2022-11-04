@@ -22,7 +22,7 @@
             android:id="@+id/txtCont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Practices"
+            android:text="Vocabulary Topics"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
             android:layout_centerHorizontal="true"
@@ -55,7 +55,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="60dp"
-                    android:src="@drawable/notebook" />
+                    android:src="@drawable/traffic" />
 
                 <GridLayout
                     android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:text="Grammer (The 12 Verb Tenses)"
+                        android:text="Traffic and Transport"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
@@ -145,7 +145,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/house" />
+                    android:src="@drawable/music" />
 
                 <GridLayout
                     android:layout_width="wrap_content"
@@ -167,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
-                        android:text="Living"
+                        android:text="Music"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
