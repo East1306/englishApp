@@ -1,4 +1,4 @@
-package com.nhi.english;
+package com.nhi.english.Revise_PhuongDong;
 
 
 import android.annotation.SuppressLint;
@@ -11,13 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.ArrayList;
+import com.nhi.english.R;
 
-class Question{
-    int id;
-    String content;
-    String answerA, answerB, answerC, answerD;
-}
+import java.util.ArrayList;
 
 public class ReviseVocabulary extends AppCompatActivity {
     TextView question;

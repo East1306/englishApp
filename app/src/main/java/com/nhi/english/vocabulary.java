@@ -21,7 +21,6 @@ public class vocabulary extends Activity {
         setContentView(R.layout.activity_menu1);
         //BT = (RelativeLayout) findViewById(R.id.BtnBack);
 //Phần Intent và Bundle đã giải thích code ở bài trước
-
         BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
