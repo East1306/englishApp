@@ -163,9 +163,9 @@
 <!--            android:textStyle="bold" />-->
 <!--    </LinearLayout>-->
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:id="@+id/radioGroup"
         android:layout_width="250dp"
         android:layout_height="wrap_content">
 
@@ -213,6 +213,7 @@
             android:textSize="20sp" />
     </RadioGroup>
     <Button
+        android:id="@+id/BtnTraloi"
         android:layout_marginTop="25dp"
         android:layout_gravity="center"
         android:layout_width="180dp"
@@ -225,4 +226,3 @@
         android:textSize="24dp"/>
 
 </LinearLayout>
-    <!--    #F9F9F8-->
