@@ -49,13 +49,11 @@
                     />
 
                 <ImageView
-                    android:id="@+id/imgTop"
                     android:layout_width="132dp"
                     android:layout_height="128dp"
-                    tools:srcCompat="@drawable/question"
                     android:layout_marginLeft="247dp"
                     android:layout_marginTop="20dp"
-                    />
+                    android:src="@drawable/question" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -150,7 +148,6 @@
                     android:fontFamily="@font/roboto_black"
                     android:text="Grammar"
                     android:textAlignment="center"
-                    android:layout_marginLeft="3dp"
                     android:textColor="#2F498C"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -192,7 +189,6 @@
                     android:fontFamily="@font/roboto_black"
                     android:text="Listening"
                     android:textAlignment="center"
-                    android:layout_marginLeft="4dp"
                     android:textColor="#2F498C"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -232,7 +228,6 @@
                     android:fontFamily="@font/roboto_black"
                     android:text="Ratings"
                     android:textAlignment="center"
-                    android:layout_marginLeft="10dp"
                     android:textColor="#2F498C"
                     android:textSize="20sp" />
             </LinearLayout>
@@ -274,7 +269,6 @@
                     android:fontFamily="@font/roboto_black"
                     android:text="Practices"
                     android:textAlignment="center"
-                    android:layout_marginLeft="3dp"
                     android:textColor="#2F498C"
                     android:textSize="20sp" />
             </LinearLayout>

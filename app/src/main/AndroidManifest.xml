@@ -27,7 +27,30 @@
         <activity android:name=".Vocabulary"/>
         <activity android:name=".Grammar"/>
         <activity android:name=".U1_Vocabulary"/>
+        <activity android:name=".U2_Vocabulary"/>
+        <activity android:name=".U3_Vocabulary"/>
+        <activity android:name=".U4_Vocabulary"/>
+        <activity android:name=".U5_Vocabulary"/>
+        <activity android:name=".U6_Vocabulary"/>
+        <activity android:name=".U7_Vocabulary"/>
+        <activity android:name=".U8_Vocabulary"/>
+        <activity android:name=".U9_Vocabulary"/>
+        <activity android:name=".U10_Vocabulary"/>
+        <activity android:name=".U11_Vocabulary"/>
+        <activity android:name=".U12_Vocabulary"/>
+        <activity android:name=".U13_Vocabulary"/>
+        <activity android:name=".U14_Vocabulary"/>
+        <activity android:name=".U15_Vocabulary"/>
         <activity android:name=".U1_Grammar"/>
+        <activity android:name=".U2_Grammar"/>
+        <activity android:name=".U3_Grammar"/>
+        <activity android:name=".U4_Grammar"/>
+        <activity android:name=".U5_Grammar"/>
+        <activity android:name=".U6_Grammar"/>
+        <activity android:name=".U7_Grammar"/>
+        <activity android:name=".U8_Grammar"/>
+        <activity android:name=".U9_Grammar"/>
+        <activity android:name=".U10_Grammar"/>
     </application>
 
 </manifest>

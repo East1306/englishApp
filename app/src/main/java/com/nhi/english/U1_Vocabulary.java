@@ -32,7 +32,7 @@ public class U1_Vocabulary extends AppCompatActivity {
     ImageView imgV1, leftarrow, rightarrow;
     TextView txtCont, text1, text2, text3, text4, text5, text6, textnghia;
     int pos=0;
-    MediaPlayer mySong;
+
     ArrayList<Word> L = new ArrayList();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,197 +58,48 @@ public class U1_Vocabulary extends AppCompatActivity {
         ReadData();
         Display(pos);
 
-//        rightarrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mySong.stop();
-//                pos++;
-//                if (pos == 1) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.follow);
-//                }
-//                if (pos == 2) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.culture);
-//                }
-//                if (pos == 3) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.abroad);
-//                }
-//                if (pos == 4) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.language);
-//                }
-//                if (pos == 5) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.shy);
-//                }
-//                if (pos == 6) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.foreigner);
-//                }
-//                if (pos == 7) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.understand);
-//                }
-//                if (pos == 8) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.confident);
-//                }
-//                if (pos == 9) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.improve);
-//                }
-//                if (pos == 10) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.progress);
-//                }
-//                if (pos == 11) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.communicate);
-//                }
-//                if (pos == 12) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.vocabulary);
-//                }
-//                if (pos == 13) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.speaker);
-//                }
-//                if (pos == 14) {
-//                    mySong = MediaPlayer.create(U1_Vocabulary.this, R.raw.certificate);
-//                }
-//                if (pos == 15) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.course);
-//                }
-//                if (pos == 16) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.original);
-//                }
-//                if (pos == 17) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.visitor);
-//                }
-//                if (pos == 18) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.idea);
-//                }
-//                if (pos == 19) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.conversation);
-//                }
-//                if (pos == 20) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.topic);
-//                }
-//                if (pos == 21) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.difficulty);
-//                }
-//                if (pos == 22) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.beginner);
-//                }
-//                if (pos == 23) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.scared);
-//                }
-//                if (pos >= L.size()) {
-//                    Intent intent = new Intent(U1_HocTu.this,activity_hoctu.class);
-//                    startActivity(intent);
-//
-//                    finish();
-//                }
-//                else{
-//                    Display(pos);
-//                }
-//
-//            }
-//
-//        });
-//        leftarrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                mySong.stop();
-//                pos--;
-//                if(pos < 0){
-//                    pos = 0;
-//                    Display(pos);
-//                }
-//                Display(pos);
-//                if (pos == 0) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.skill);
-//                }
-//                if (pos == 1) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.follow);
-//                }
-//                if (pos == 2) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.culture);
-//                }
-//                if (pos == 3) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.abroad);
-//                }
-//                if (pos == 4) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.language);
-//                }
-//                if (pos == 5) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.shy);
-//                }
-//                if (pos == 6) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.foreigner);
-//                }
-//                if (pos == 7) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.understand);
-//                }
-//                if (pos == 8) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.confident);
-//                }
-//                if (pos == 9) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.improve);
-//                }
-//                if (pos == 10) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.progress);
-//                }
-//                if (pos == 11) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.communicate);
-//                }
-//                if (pos == 12) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.vocabulary);
-//                }
-//                if (pos == 13) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.speaker);
-//                }
-//                if (pos == 14) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.certificate);
-//                }
-//                if (pos == 15) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.course);
-//                }
-//                if (pos == 16) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.original);
-//                }
-//                if (pos == 17) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.visitor);
-//                }
-//                if (pos == 18) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.idea);
-//                }
-//                if (pos == 19) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.conversation);
-//                }
-//                if (pos == 20) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.topic);
-//                }
-//                if (pos == 21) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.difficulty);
-//                }
-//                if (pos == 22) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.beginner);
-//                }
-//                if (pos == 23) {
-//                    mySong = MediaPlayer.create(U1_HocTu.this, R.raw.scared);
-//                }
-//
-//            }
-//
-//        });
-//        if(pos == 0){
-//
-//            mySong = MediaPlayer.create(U1_HocTu.this, R.raw.skill);
-//
-//        }
+        rightarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                pos++;
+
+                if (pos >= L.size()) {
+                    Intent intent = new Intent(U1_Vocabulary.this,Vocabulary.class);
+                    startActivity(intent);
+
+                    finish();
+                }
+                else{
+                    Display(pos);
+                }
+
+            }
+
+        });
+        leftarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                pos--;
+                if(pos < 0){
+                    pos = 0;
+                    Display(pos);
+                }
+                Display(pos);
+
+            }
+
+        });
+
 
     }
-    public void playIT(View v){
-        mySong.start();
 
-    }
-    protected void onPause(){
-        super.onPause();
-        mySong.pause();
-    }
+
+
     void Display(int i){
         txtCont.setText(L.get(i).ChuDe);
-//        mySong.setAudioSessionId(getResources().getIdentifier(L.get(i).Srcimg, "raw", "com.nhi.english"));
+//        mySong.setAudioSessionId(getResources().getIdentifier(L.get(i).Srcimg, "raw", "com.binh.englishapp"));
         imgV1.setImageResource(getResources().getIdentifier(L.get(i).Srcimg, "drawable","com.nhi.english" ));
         text1.setText(L.get(i).TuVung);
         text2.setText(L.get(i).PhienAm);

@@ -46,7 +46,7 @@ public class U1_Grammar extends AppCompatActivity {
         TxtContent.setText(R.string.u1tc);
 //        mediaPlayer = MediaPlayer.create(this,R.raw.unit01);
         Btn.setOnClickListener(v -> {
-            Intent intent = new Intent(U1_Grammar.this, Grammar.class);
+            Intent intent = new Intent(U1_Grammar.this,Grammar.class);
             startActivity(intent);
             finish();
         });
