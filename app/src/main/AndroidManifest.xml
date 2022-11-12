@@ -14,7 +14,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.English"
         tools:targetApi="31">
-
         <activity
             android:name=".MenuActivity"
             android:exported="true">
@@ -51,6 +50,14 @@
         <activity android:name=".U8_Grammar"/>
         <activity android:name=".U9_Grammar"/>
         <activity android:name=".U10_Grammar"/>
+        <activity android:name=".activity_ketqua"/>
+        <activity android:name=".Listening"/>
+        <activity android:name=".Activity_correctword"/>
+        <activity android:name=".Activity_gramma_vocab"/>
+        <activity android:name=".Activity_HomeMenu"/>
+        <activity android:name=".Activity_highscores"/>
+        <activity android:name=".Activity_test"/>
+
     </application>
 
 </manifest>

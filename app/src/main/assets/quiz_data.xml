@@ -1,0 +1,451 @@
+<Questionare>
+    <Item>
+        <ID>1</ID>
+        <Question>Take an umbrella because it...</Question>
+        <AnswerA>A.is going to rain</AnswerA>
+        <AnswerB>B.rains</AnswerB>
+        <AnswerC>C.will rain</AnswerC>
+        <AnswerD>D.is raining</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>2</ID>
+        <Question>It’s not good to avoid...the teacher’s questions in class.</Question>
+        <AnswerA>A.answer</AnswerA>
+        <AnswerB>B.answering</AnswerB>
+        <AnswerC>C.answered</AnswerC>
+        <AnswerD>D.to answer</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>3</ID>
+        <Question>Have you seen the money...was on the table ?</Question>
+        <AnswerA>A.where</AnswerA>
+        <AnswerB>B.whose</AnswerB>
+        <AnswerC>C.when</AnswerC>
+        <AnswerD>D.that</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>4</ID>
+        <Question>Please, stop...noise! I am trying to concentrate.</Question>
+        <AnswerA>A.to make</AnswerA>
+        <AnswerB>B.made</AnswerB>
+        <AnswerC>C.make</AnswerC>
+        <AnswerD>D.making</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>5</ID>
+        <Question>Students are always interested in...a party.</Question>
+        <AnswerA>A.have</AnswerA>
+        <AnswerB>B.having</AnswerB>
+        <AnswerC>C.to have</AnswerC>
+        <AnswerD>D.had</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>6</ID>
+        <Question>I don't like people...never stop talking.</Question>
+        <AnswerA>A.who</AnswerA>
+        <AnswerB>B.which</AnswerB>
+        <AnswerC>C.whom</AnswerC>
+        <AnswerD>D.whose</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>7</ID>
+        <Question>It’s already 34oc. It....very hot today.</Question>
+        <AnswerA>A.will be</AnswerA>
+        <AnswerB>B.is going to be</AnswerB>
+        <AnswerC>C.is being</AnswerC>
+        <AnswerD>D.will not be</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>8</ID>
+        <Question>My friend...any beer at the party last night.</Question>
+        <AnswerA>A.not drinked</AnswerA>
+        <AnswerB>B.didn't drink</AnswerB>
+        <AnswerC>C.did drink</AnswerC>
+        <AnswerD>D.drank not</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>9</ID>
+        <Question>The building...was destroyed in the fire has now been rebuilt.</Question>
+        <AnswerA>A.who</AnswerA>
+        <AnswerB>B.which</AnswerB>
+        <AnswerC>C.what</AnswerC>
+        <AnswerD>D.where</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>10</ID>
+        <Question>You can pass the exam...harder.</Question>
+        <AnswerA>A.by study</AnswerA>
+        <AnswerB>B.by studying</AnswerB>
+        <AnswerC>C.to study</AnswerC>
+        <AnswerD>D.studying</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>11</ID>
+        <Question>She was out too late,...made her parent worried.</Question>
+        <AnswerA>A.that</AnswerA>
+        <AnswerB>B.what</AnswerB>
+        <AnswerC>C.which</AnswerC>
+        <AnswerD>D.A and C are correct</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>12</ID>
+        <Question>They...the way to the park yet.</Question>
+        <AnswerA>A.haven't found</AnswerA>
+        <AnswerB>B.haven't find</AnswerB>
+        <AnswerC>C.hasn't found</AnswerC>
+        <AnswerD>D.hasn't find</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>13</ID>
+        <Question>Nam passed the final examination,....surprised everybody.</Question>
+        <AnswerA>A.what</AnswerA>
+        <AnswerB>B.that</AnswerB>
+        <AnswerC>C.which</AnswerC>
+        <AnswerD>D.who</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>14</ID>
+        <Question>There was smoke in the room.Someone...before I came in.</Question>
+        <AnswerA>A.seemed to smoke</AnswerA>
+        <AnswerB>B.had smoke</AnswerB>
+        <AnswerC>C.smoke</AnswerC>
+        <AnswerD>D.had smoked</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>15</ID>
+        <Question>The express train often...on time.</Question>
+        <AnswerA>A.arrives</AnswerA>
+        <AnswerB>B.arrive</AnswerB>
+        <AnswerC>C.is arriving</AnswerC>
+        <AnswerD>D.has arrived</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>16</ID>
+        <Question>Information technology is very...to our life.</Question>
+        <AnswerA>A.useful</AnswerA>
+        <AnswerB>B.use</AnswerB>
+        <AnswerC>C.used</AnswerC>
+        <AnswerD>D.using</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>17</ID>
+        <Question>My sister looks more beautiful in the picture.She's....</Question>
+        <AnswerA>A.photo</AnswerA>
+        <AnswerB>B.photograph</AnswerB>
+        <AnswerC>C.photographic</AnswerC>
+        <AnswerD>D.photogenic</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>18</ID>
+        <Question>My brother...speaking English very much.</Question>
+        <AnswerA>A.enjoys</AnswerA>
+        <AnswerB>B.enjoying</AnswerB>
+        <AnswerC>C.enjoy</AnswerC>
+        <AnswerD>D.enjoyable</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>19</ID>
+        <Question>She enjoys watching the films...make her laugh.</Question>
+        <AnswerA>A.they</AnswerA>
+        <AnswerB>B.what</AnswerB>
+        <AnswerC>C.which</AnswerC>
+        <AnswerD>D.it</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>20</ID>
+        <Question>He is very...at maths.</Question>
+        <AnswerA>A.good</AnswerA>
+        <AnswerB>B.afraid</AnswerB>
+        <AnswerC>C.fond</AnswerC>
+        <AnswerD>D.bored</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>21</ID>
+        <Question>He...the details of his uncle's will.</Question>
+        <AnswerA>A.was given</AnswerA>
+        <AnswerB>B.gave</AnswerB>
+        <AnswerC>C.gives</AnswerC>
+        <AnswerD>D.being given</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>22</ID>
+        <Question>For a long time,the earth....to be flat.</Question>
+        <AnswerA>A.had believed</AnswerA>
+        <AnswerB>B.had been believing</AnswerB>
+        <AnswerC>C.was believed</AnswerC>
+        <AnswerD>D.was been believed</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>23</ID>
+        <Question>When we came,the film...half an hour before.</Question>
+        <AnswerA>A.had been starting</AnswerA>
+        <AnswerB>B.had started</AnswerB>
+        <AnswerC>C.was started</AnswerC>
+        <AnswerD>D.had been started</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>24</ID>
+        <Question>They advised that part-time workers should....</Question>
+        <AnswerA>A.be employing</AnswerA>
+        <AnswerB>B.have been employ</AnswerB>
+        <AnswerC>C.employ</AnswerC>
+        <AnswerD>D.be employed</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>25</ID>
+        <Question>He expected us...him the job.</Question>
+        <AnswerA>A.offering</AnswerA>
+        <AnswerB>B.to offer</AnswerB>
+        <AnswerC>C.offer</AnswerC>
+        <AnswerD>D.to be offered</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>26</ID>
+        <Question>Someone will have...to take her position.</Question>
+        <AnswerA>A.found</AnswerA>
+        <AnswerB>B.to find</AnswerB>
+        <AnswerC>C.to be found</AnswerC>
+        <AnswerD>D.being found</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>27</ID>
+        <Question>The entire building is....</Question>
+        <AnswerA>A.being demolished</AnswerA>
+        <AnswerB>B.been demolished</AnswerB>
+        <AnswerC>C.been demolishing</AnswerC>
+        <AnswerD>D.demolishing</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>28</ID>
+        <Question>The sick man ....... to the hospital.</Question>
+        <AnswerA>A.took</AnswerA>
+        <AnswerB>B.is taked</AnswerB>
+        <AnswerC>C.being taken</AnswerC>
+        <AnswerD>D.was taken</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>29</ID>
+        <Question>Why do you ask me about the party? I ........ to it.</Question>
+        <AnswerA>A.was not invited</AnswerA>
+        <AnswerB>B.didn't invite</AnswerB>
+        <AnswerC>C.not invited</AnswerC>
+        <AnswerD>D.was not been inviting</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>30</ID>
+        <Question>The problem is getting rid ........ nuclear waste.</Question>
+        <AnswerA>A.from</AnswerA>
+        <AnswerB>B.of</AnswerB>
+        <AnswerC>C.away from</AnswerC>
+        <AnswerD>D.out of</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>31</ID>
+        <Question>That book looks....</Question>
+        <AnswerA>A.interest</AnswerA>
+        <AnswerB>B.interested</AnswerB>
+        <AnswerC>C.interesting</AnswerC>
+        <AnswerD>D.interestingly</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>32</ID>
+        <Question>Two hundred people lost their jobs as a consequence .......... the company's bankrupt.</Question>
+        <AnswerA>A.from</AnswerA>
+        <AnswerB>B.for</AnswerB>
+        <AnswerC>C.with</AnswerC>
+        <AnswerD>D.of</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>33</ID>
+        <Question>Firemen soon put the fire....</Question>
+        <AnswerA>A.away</AnswerA>
+        <AnswerB>B.in</AnswerB>
+        <AnswerC>C.out</AnswerC>
+        <AnswerD>D.of</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>34</ID>
+        <Question>You need to consider these documents. There appears ...many mistakes</Question>
+        <AnswerA>A.to have been</AnswerA>
+        <AnswerB>B.is</AnswerB>
+        <AnswerC>C.being</AnswerC>
+        <AnswerD>D.be</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>35</ID>
+        <Question>It is impossible for me ......... a lie to her.</Question>
+        <AnswerA>A.to tell</AnswerA>
+        <AnswerB>B.tell</AnswerB>
+        <AnswerC>C.telling</AnswerC>
+        <AnswerD>D.told</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>36</ID>
+        <Question>I was given some pills to take .......... the pain.</Question>
+        <AnswerA>A.off</AnswerA>
+        <AnswerB>B.without</AnswerB>
+        <AnswerC>C.along</AnswerC>
+        <AnswerD>D.away</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>37</ID>
+        <Question>The dam was not strong enough to ...... flood water.</Question>
+        <AnswerA>A.hold back</AnswerA>
+        <AnswerB>B.hold in</AnswerB>
+        <AnswerC>C.hold out</AnswerC>
+        <AnswerD>D.old off</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>38</ID>
+        <Question>Candidates are to bring ........ certificates when they come to the interview.</Question>
+        <AnswerA>A.needless</AnswerA>
+        <AnswerB>B.needing</AnswerB>
+        <AnswerC>C.needed</AnswerC>
+        <AnswerD>D.need</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>39</ID>
+        <Question>He is very sensitive ........ his weight, and therefore, easy o get angry if someone mentions words.</Question>
+        <AnswerA>A.in</AnswerA>
+        <AnswerB>B.about</AnswerB>
+        <AnswerC>C.along</AnswerC>
+        <AnswerD>D.around</AnswerD>
+        <Answer>B</Answer>
+    </Item><Item>
+        <ID>40</ID>
+        <Question>Some young mothers feel ........ in their own homes.</Question>
+        <AnswerA>A.imprison</AnswerA>
+        <AnswerB>B.imprisoned</AnswerB>
+        <AnswerC>C.imprisoning</AnswerC>
+        <AnswerD>D.to imprison </AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>41</ID>
+        <Question>Marie Curie was the first woman in France ...........a university professor.</Question>
+        <AnswerA>A.was</AnswerA>
+        <AnswerB>B.to be</AnswerB>
+        <AnswerC>C.used to be</AnswerC>
+        <AnswerD>D.is</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>42</ID>
+        <Question>In spite of .......  up late, she got up early the next morning.</Question>
+        <AnswerA>A.staying</AnswerA>
+        <AnswerB>B.to stay</AnswerB>
+        <AnswerC>C.Mary stayed</AnswerC>
+        <AnswerD>D.stay</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>43</ID>
+        <Question>When he .........., every one ............. ..</Question>
+        <AnswerA>A.arrived/had left</AnswerA>
+        <AnswerB>B.had arrived/left</AnswerB>
+        <AnswerC>C.would arrive/leaves</AnswerC>
+        <AnswerD>D.arrived/has left</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>44</ID>
+        <Question>I suddenly remembered I ....... my wallet on the bus.</Question>
+        <AnswerA>A.leave</AnswerA>
+        <AnswerB>B.had left</AnswerB>
+        <AnswerC>C.have left</AnswerC>
+        <AnswerD>D.would leave</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>45</ID>
+        <Question>I ........ the washing up before my mother came home.</Question>
+        <AnswerA>A.was doing</AnswerA>
+        <AnswerB>B.did</AnswerB>
+        <AnswerC>C.had done</AnswerC>
+        <AnswerD>D.must have done</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>46</ID>
+        <Question>After her husband’s accident, she ............ the sole breadwinner of the family.</Question>
+        <AnswerA>A.had become</AnswerA>
+        <AnswerB>B.became</AnswerB>
+        <AnswerC>C.would become</AnswerC>
+        <AnswerD>D.used to be</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>47</ID>
+        <Question>The room smelled terrible. Someone ....... before I came.</Question>
+        <AnswerA>A.had smoked</AnswerA>
+        <AnswerB>B.smoked</AnswerB>
+        <AnswerC>C.seemed to smoke</AnswerC>
+        <AnswerD>D.would smoke</AnswerD>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>48</ID>
+        <Question>Celine Dion......... to receive recognition for her talent in 1982.</Question>
+        <AnswerA>A.had begun</AnswerA>
+        <AnswerB>B.began</AnswerB>
+        <AnswerC>C.probably begins</AnswerC>
+        <AnswerD>D.would have begun</AnswerD>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>49</ID>
+        <Question>In 1994, Celine Dion and Rene Angelil .......... at Notre Dame Basilica in Montreal.</Question>
+        <AnswerA>A.had married</AnswerA>
+        <AnswerB>B.married</AnswerB>
+        <AnswerC>C.marry</AnswerC>
+        <AnswerD>D.got married</AnswerD>
+        <Answer>D</Answer>
+    </Item>
+    <Item>
+        <ID>50</ID>
+        <Question>I ....... as a hotel telephonist from May 2001 to March 2002.</Question>
+        <AnswerA>A.had worked</AnswerA>
+        <AnswerB>B.would work</AnswerB>
+        <AnswerC>C.worked</AnswerC>
+        <AnswerD>D.get used to working</AnswerD>
+        <Answer>C</Answer>
+    </Item>
+</Questionare>
