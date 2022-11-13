@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Questionare>
+    <Item>
+        <ID>1</ID>
+        <Question>A male chicken is called</Question>
+        <AnswerA>a hen</AnswerA>
+        <AnswerB>a chick</AnswerB>
+        <AnswerC>a rooster</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <ID>2</ID>
+        <Question>A young sheep is called</Question>
+        <AnswerA>a ram</AnswerA>
+        <AnswerB>a lamb</AnswerB>
+        <AnswerC>a ewe</AnswerC>
+        <Answer>B</Answer>
+    </Item>
+    <Item>
+        <ID>3</ID>
+        <Question>A female pig is called</Question>
+        <AnswerA>a sow</AnswerA>
+        <AnswerB>a sucking</AnswerB>
+        <AnswerC>a boar</AnswerC>
+        <Answer>C</Answer>
+    </Item>
+    <Item>
+        <ID>4</ID>
+        <Question>A baby kangaroo is called</Question>
+        <AnswerA>a cub</AnswerA>
+        <AnswerB>a pup</AnswerB>
+        <AnswerC>a joey</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+</Questionare>

@@ -40,7 +40,7 @@
                     android:id="@+id/btn_quiz"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:background="@drawable/quiz"
+                    android:background="@drawable/quiz_icon"
                     />
             </LinearLayout>
 
