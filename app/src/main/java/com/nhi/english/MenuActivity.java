@@ -7,6 +7,10 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 
+import android.os.Bundle;
+import android.widget.ImageView;
+
+
 
 public class MenuActivity extends AppCompatActivity {
     CardView Cd1, Cd2, Cd3, Cd4, Cd5;

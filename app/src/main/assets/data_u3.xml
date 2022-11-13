@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Word>
+    <Item>
+        <ID>1</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>RECORD  </TuVung>
+        <PhienAm>/ri'kɔ:d/</PhienAm>
+        <Nghia>ghi lại</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>You should record the lecture so you can listen to it again</Eg>
+        <Dich>Cậu nên thu âm lại bài giảng để có thể nghe lại lần nữa</Dich>
+        <Srcimg>record</Srcimg>
+    </Item>
+    <Item>
+        <ID>2</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>VOLUME  </TuVung>
+        <PhienAm>/'vol.ju:m/</PhienAm>
+        <Nghia>âm lượng</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>Action movies are best enjoyed at high volume</Eg>
+        <Dich>Các phim hành động hay nhất khi được xem với âm lượng lớn</Dich>
+        <Srcimg>volu</Srcimg>
+    </Item>
+    <Item>
+        <ID>3</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>BEAT</TuVung>
+        <PhienAm>/biːt/ </PhienAm>
+        <Nghia>nhịp</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>Did you complete the homework ?</Eg>
+        <Dich>Cậu đã hoàn thành bài tập về nhà chưa ?</Dich>
+        <Srcimg>beat</Srcimg>
+    </Item>
+    <Item>
+        <ID>4</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>TUNE  </TuVung>
+        <PhienAm>/tfu:n/</PhienAm>
+        <Nghia>giai điệu</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>Can you provide an example, please?</Eg>
+        <Dich>Thầy có thể cho(cung cấp) một ví dụ được không ạ? </Dich>
+        <Srcimg>provide</Srcimg>
+    </Item>
+    <Item>
+        <ID>5</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>RHYTHM</TuVung>
+        <PhienAm>/ˈrɪð.əm/</PhienAm>
+        <Nghia>nhịp</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun) </TiengAnh>
+        <Eg>He beat out a jazz rhythm on the drums</Eg>
+        <Dich>Anh ấy đánh nhịp điệu jazz trên trống </Dich>
+        <Srcimg>rhythm</Srcimg>
+    </Item>
+    <Item>
+        <ID>6</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>CLAP </TuVung>
+        <PhienAm>/klæp/</PhienAm>
+        <Nghia>vỗ tay</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>As she finished singing, everyone started to clap their hands</Eg>
+        <Dich>Ngay khi cô ấy hát xong, mọi người bắt đầu vỗ tay</Dich>
+        <Srcimg>clap</Srcimg>
+    </Item>
+    <Item>
+        <ID>7</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>CLASSICAL </TuVung>
+        <PhienAm>/'klæs.i.kəl/ </PhienAm>
+        <Nghia>nhạc cổ điển</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>She listens to classical music while studying</Eg>
+        <Dich>Cô ấy nghe nhạc cổ điển trong khi học bài</Dich>
+        <Srcimg>classical</Srcimg>
+    </Item>
+    <Item>
+        <ID>8</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>DRUM </TuVung>
+        <PhienAm>/dr^m/</PhienAm>
+        <Nghia>trống</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>The neighbor did not like it when I bought a drum kit</Eg>
+        <Dich>Hàng xóm tôi không thích tí nào khi tôi mua một bộ trống</Dich>
+        <Srcimg>drum</Srcimg>
+    </Item>
+    <Item>
+        <ID>9</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>FURTHER </TuVung>
+        <PhienAm>/'f3:.dər/</PhienAm>
+        <Nghia>hơn nữa</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Trạng từ (adverb)</TiengAnh>
+        <Eg>I'm going to read further than is required</Eg>
+        <Dich>Tôi sẽ đọc thêm ngoài yêu cầu</Dich>
+        <Srcimg>further</Srcimg>
+    </Item>
+    <Item>
+        <ID>10</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>INSTRUMENT </TuVung>
+        <PhienAm>/ˈɪn.strə.mənt/ </PhienAm>
+        <Nghia>thi sĩ</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>Which instrument do you play?</Eg>
+        <Dich>Bạn chơi nhạc cụ nào?</Dich>
+        <Srcimg>instrument</Srcimg>
+    </Item>
+    <Item>
+        <ID>11</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>MUSIC STAND</TuVung>
+        <PhienAm>/ˈmyo͞ozik ˌstand/</PhienAm>
+        <Nghia>giá để bản nhạc</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>A music stand rested in the third corner with a flute and violin on stands nearby</Eg>
+        <Dich>Một quầy âm nhạc đặt ở góc thứ ba với một cây sáo và một cây đàn vi-ô-lông ở gần đó</Dich>
+        <Srcimg>musicstand</Srcimg>
+    </Item>
+    <Item>
+        <ID>12</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>FOLK</TuVung>
+        <PhienAm>/fəʊk/</PhienAm>
+        <Nghia>nhạc dân ca</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>Some types of folk music may be called world music.</Eg>
+        <Dich>Đôi khi nhạc dân gian còn được gọi với tên world music (âm nhạc thế giới).</Dich>
+        <Srcimg>folk</Srcimg>
+    </Item>
+    <Item>
+        <ID>13</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>SYMPHONY</TuVung>
+        <PhienAm>/ˈsɪm.fə.ni/</PhienAm>
+        <Nghia>nhạc giao hưởng</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>Mahler's ninth symphony</Eg>
+        <Dich>Bản giao hưởng thứ chín của Mahler</Dich>
+        <Srcimg>symphony</Srcimg>
+    </Item>
+    <Item>
+        <ID>14</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>LYRICS </TuVung>
+        <PhienAm>/'lir.iks/</PhienAm>
+        <Nghia>lời bài hát</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ số nhiều (plural noun)</TiengAnh>
+        <Eg>This song's lyrics are rather deep</Eg>
+        <Dich>Lời bài hát của bài này khá là sâu sắc</Dich>
+        <Srcimg>lyrics</Srcimg>
+    </Item>
+    <Item>
+        <ID>15</ID>
+        <ChuDe>Music</ChuDe>
+        <TuVung>SINGER  </TuVung>
+        <PhienAm>/'sın.ər/</PhienAm>
+        <Nghia>ca sĩ </Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>She has wanted to become a singer for years</Eg>
+        <Dich>Cô nàng đã muốn trở thành ca sĩ hàng năm nay rồi</Dich>
+        <Srcimg>lyrics</Srcimg>
+    </Item>
+</Word>
