@@ -22,7 +22,7 @@
             android:id="@+id/txtCont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reviews"
+            android:text="Practices"
             android:layout_centerVertical="true"
             android:layout_gravity="center_horizontal"
             android:layout_centerHorizontal="true"
@@ -145,7 +145,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/house" />
+                    android:src="@drawable/villa" />
 
                 <GridLayout
                     android:layout_width="wrap_content"
@@ -280,7 +280,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/worker"/>
+                    android:src="@drawable/work"/>
 
                 <GridLayout
                     android:layout_width="wrap_content"
@@ -413,7 +413,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/vila" />
+                    android:src="@drawable/villa" />
 
                 <GridLayout
                     android:layout_width="wrap_content"
@@ -457,7 +457,7 @@
                 <ImageView
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:src="@drawable/vila1" />
+                    android:src="@drawable/villa1" />
 
                 <GridLayout
                     android:layout_width="wrap_content"

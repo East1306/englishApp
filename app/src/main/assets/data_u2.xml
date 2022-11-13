@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Word>
+    <Item>
+        <ID>1</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>PROFESSOR </TuVung>
+        <PhienAm>/prə'fes.ər/</PhienAm>
+        <Nghia>giáo sư</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>The professor assigned lots of homework.</Eg>
+        <Dich>Vị giáo sư giao rất nhiều bài tập về nhà.</Dich>
+        <Srcimg>professor</Srcimg>
+    </Item>
+    <Item>
+        <ID>2</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>WARN </TuVung>
+        <PhienAm>/wɔ:n/</PhienAm>
+        <Nghia>cảnh cáo</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>I should warn you: it's a very tough exam.</Eg>
+        <Dich>Tôi nên cảnh cáo cậu: bài thi ấy khó lắm đấy</Dich>
+        <Srcimg>warn</Srcimg>
+    </Item>
+    <Item>
+        <ID>3</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>COMPLETE</TuVung>
+        <PhienAm>//kəm'pli:t/ </PhienAm>
+        <Nghia>hoàn thành</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>Did you complete the homework ?</Eg>
+        <Dich>Cậu đã hoàn thành bài tập về nhà chưa ?</Dich>
+        <Srcimg>complete</Srcimg>
+    </Item>
+    <Item>
+        <ID>4</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>PROVIDE </TuVung>
+        <PhienAm>/prə’vaid/</PhienAm>
+        <Nghia>cung cấp</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>Can you provide an example, please?</Eg>
+        <Dich>Thầy có thể cho(cung cấp) một ví dụ được không ạ? </Dich>
+        <Srcimg>provide</Srcimg>
+    </Item>
+    <Item>
+        <ID>5</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>APPLICATION</TuVung>
+        <PhienAm>/,æp.li’kəi.fən/</PhienAm>
+        <Nghia>đăng ký</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun) </TiengAnh>
+        <Eg>My job application has been rejected.</Eg>
+        <Dich>Đơn xin việc của tôi đã bị từ chối. </Dich>
+        <Srcimg>application</Srcimg>
+    </Item>
+    <Item>
+        <ID>6</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>ADVANCED </TuVung>
+        <PhienAm>/ad'va:nst/</PhienAm>
+        <Nghia>nâng cao </Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Tính từ (Adjective)</TiengAnh>
+        <Eg>Advanced English courses require lots of studying.</Eg>
+        <Dich>Các khóa học tiếng Anh nâng cao đòi hỏi nhiều nghiên cứu. </Dich>
+        <Srcimg>advanced</Srcimg>
+    </Item>
+    <Item>
+        <ID>7</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>STRESS</TuVung>
+        <PhienAm>/stres/ </PhienAm>
+        <Nghia>căng thẳng</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>The stress of exams is making me crazy.</Eg>
+        <Dich>Sự căng thẳng từ việc thi cử làm tôi phát điên. </Dich>
+        <Srcimg>stress</Srcimg>
+    </Item>
+    <Item>
+        <ID>8</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>LECTURE</TuVung>
+        <PhienAm>/’lek.tar/</PhienAm>
+        <Nghia>bài giảng </Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>The lecture lasts about an hour.</Eg>
+        <Dich>Bài giảng kéo dài trong tầm 1 tiếng.</Dich>
+        <Srcimg>understand</Srcimg>
+    </Item>
+    <Item>
+        <ID>9</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>FURTHER </TuVung>
+        <PhienAm>/'f3:.dər/</PhienAm>
+        <Nghia>hơn nữa</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Trạng từ (adverb)</TiengAnh>
+        <Eg>I'm going to read further than is required</Eg>
+        <Dich>Tôi sẽ đọc thêm ngoài yêu cầu</Dich>
+        <Srcimg>further</Srcimg>
+    </Item>
+    <Item>
+        <ID>10</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>POETRY </TuVung>
+        <PhienAm>/'pau.i.tri/ </PhienAm>
+        <Nghia>thi sĩ</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>I never read poetry, until she left me with a broken heart  </Eg>
+        <Dich>Tôi chẳng bao giờ đọc thơ ca, cho tới khi nàng để lại tôi với một trái tim tan vỡ</Dich>
+        <Srcimg>poetry</Srcimg>
+    </Item>
+    <Item>
+        <ID>11</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>QUALIFICATION </TuVung>
+        <PhienAm>/ kwal.i.fi'kei.fən/</PhienAm>
+        <Nghia>bằng cấp</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>Getting a job requires certain qualifications, like a degree</Eg>
+        <Dich>Để kiếm được một công việc đòi hỏi những bằng cấp nhất định, như bằng đại học</Dich>
+        <Srcimg>qualification</Srcimg>
+    </Item>
+    <Item>
+        <ID>12</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>communicate</TuVung>
+        <PhienAm>/kəˈmjuːnɪkeɪt/</PhienAm>
+        <Nghia>giao tiếp</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Động từ (verb)</TiengAnh>
+        <Eg>The purpose of a language is to help people communicate</Eg>
+        <Dich>Mục đích của một ngôn ngữ là giúp con người giao tiếp với nhau</Dich>
+        <Srcimg>communicate</Srcimg>
+    </Item>
+    <Item>
+        <ID>13</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>Vocabulary</TuVung>
+        <PhienAm>/vəˈkæbjəleri/</PhienAm>
+        <Nghia>từ vựng </Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>That kid has hot a very rich vocabulary</Eg>
+        <Dich>Đứa nhóc ấy có một vốn từ vựng rất phong phú</Dich>
+        <Srcimg>voca</Srcimg>
+    </Item>
+    <Item>
+        <ID>14</ID>
+        <ChuDe>Education</ChuDe>
+        <TuVung>Certificate</TuVung>
+        <PhienAm>/sərˈtɪfɪkət/ </PhienAm>
+        <Nghia>giấy chứng nhận</Nghia>
+        <YNghia></YNghia>
+        <TiengAnh>Danh từ (noun)</TiengAnh>
+        <Eg>Do you have a teaching certìicate</Eg>
+        <Dich>Bạn có chứng chỉ dạy học không nhỉ?</Dich>
+        <Srcimg>certificate</Srcimg>
+    </Item>
+</Word>

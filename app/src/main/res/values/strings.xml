@@ -3,4 +3,339 @@
     <string name="question1">
     What is your phone number/email? ...
     </string>
+
+
+    <string name="u1tc">Thì Hiện Tại Đơn</string>
+    <string name="u1t">Thì hiện tại đơn dùng khi nói về:</string>
+    <string name="u1">
+        <b><i>- Việc xảy ra thường xuyên:</i></b>
+        \n Ví dụ 1: <b>We join the earth hour movement every year.</b>
+        \n Hàng năm, chúng tôi đều tham gia chiến dịch giờ Trái Đất.
+        \n
+        \n <b><i>- Việc hiển nhiên đúng:</i></b>
+        \n Ví dụ 2: <b>Whales do not lay eggs.</b>
+        \n Cá voi thì không đẻ trứng.
+        \n
+        \n <b><i>- Những trạng thái, cảm giác, nhận thức nói chung ở hiện tại:</i></b>
+        \n Ví dụ 3: <b>Something smells funky around here.</b>
+        \n Có cái gì mùi khó ngửi quanh đây.
+        \n
+        \n <b><i>- Việc theo thời gian biểu.</i></b>
+        \n Ví dụ 4: <b>Your shift starts in one minute. Hurry up !</b>
+        \n Ca làm của cậu sẽ bắt đầu trong một phút nữa. Nhanh lên nào !
+        \n
+        Động từ chỉ cảm trạng thái, cảm giác, nhận thức nói chung ở hiện tại bao gồm 1 nhóm sau:
+        \n
+        <b>1. sở hữu </b>(have, possess, belong)
+        \n
+        <b>2. cảm giác </b>(see, hear, feel, seem, smell)
+        \n
+        <b>3. cảm xúc </b>(like, love, want, need, prefer)
+        \n
+        <b>4. nhận thức </b>(realize, suppose, believe, unserstand)
+    </string>
+    <string name="u2">CÔNG THỨC CỦA THÌ HIỆN TẠI ĐƠN</string>
+    <string name="u2t"><b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>* Công thức động từ thường</b>
+        \n <b>CHỦ NGỮ</b> V-inf / V-s,-es
+        \n Ví dụ 5: The sun rises in the east.
+        \n Mặt trời mọc ở đằng Đông.
+        \n <b>* Công thức động từ to-be</b>
+        \n <b>CHỦ NGỮ</b> Am / Is / Are
+        \n Ví dụ 5: You are my sunshine.
+        \n Bạn là tia nắng ấm của tôi.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>* Công thức động từ thường</b>
+        \n <b>CHỦ NGỮ</b> Do / Does + not + V-inf
+        \n Ví dụ 7: My dog does not bite.
+        \n Con chó nhà tôi không cắn đâu.
+        \n <b>* Công thức động từ to-be</b>
+        \n <b>CHỦ NGỮ</b> Am / Is / Are + not
+        \n Ví dụ 8: He is not dangreous.
+        \n Anh ta không nguy hiểm đâu.
+        \n <b>CÂU HỎI</b>
+        \n <b>* Công thức động từ thường</b>
+        \n (Từ để hỏi) + Do / Does + Chủ ngữ + V-inf ?
+        \n Ví dụ 9: What do you think ?
+        \n Bạn nghĩ thế nào ?
+        \n <b>* Công thức động từ to-be</b>
+        \n (Từ để hỏi) Am / Is / Are + Chủ ngữ ?
+        \n Ví dụ 10: Am I a genius ?
+        \n Tôi có phải thiên tài không ?
+    </string>
+
+<!--    Thì hiện tại tiếp diễn-->
+    <string name="u3tc">Thì Hiện Tiếp Diễn</string>
+    <string name="u3t">Thì hiện tại tiếp diễn dùng khi nói về những hành động
+        <b>ĐANG</b> xảy ra ngay lúc này, <b>ĐANG</b> trên đà thay đổi,
+    <b>ĐANG</b> còn tồn tại; và những kế hoạch <b>ĐANG</b> sắp sửa diễn ra.</string>
+    <string name="u3">
+        <b><i>- Việc <b>ĐANG</b> diễn ra lúc này:</i></b>
+        \n Ví dụ 1: <b>I am making a special cup of coffee for you right now.</b>
+        \n Mình đang làm một cốc cà phê đặc biệt cho bạn ngay bây giờ đây.
+        \n
+        \n <b><i>- Việc <b>ĐANG</b> trên đà thay đổi và phát triển:</i></b>
+        \n Ví dụ 2: <b>The rumour is getting stronger and stronger</b>
+        \n Tin đồn đang trở nên ngày càng cỏ vẻ là sự thật.
+        \n
+        \n <b><i>- Thói xấu vẫn <b>ĐANG</b> còn tồn tại, luôn dùng với "always / constantly".</i></b>
+        \n Ví dụ 3: <b>He is always blaming others for his own mistakes</b>
+        \n Cậu ta luôn đổ lỗi cho người khác về những lỗi lầm của mình.
+        \n
+        \n <b><i>- Kế hoạch sẽ xảy ra trong tương lai gần</i></b>
+        \n Ví dụ 4: <b>After a month of social distancing, I am finally going out tomorrow.</b>
+        \n Sau một tháng giãn cách xã hội, cuối cùng ngày mai mình sẽ được ra ngoài.
+
+    </string>
+    <string name="u4">CÔNG THỨC CỦA THÌ HIỆN TẠI TIẾP DIỄN</string>
+    <string name="u4t">Tất cả các thì tiếp diễn đều có công thức gốc là to be + V-ing. Ở thì hiện tại tiếp diễn, động từ to-be được chia theo thì hiện tại là am / is / are
+        <b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>CHỦ NGỮ + Am / Is / Are + V-ing</b>
+        \n Ví dụ 5: I am studying English for a better future.
+        \n Tôi đang học tiếng Anh để có tương lai tốt hơn.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>CHỦ NGỮ + Am / Is / Are + not + V-ing</b>
+        \n Ví dụ 6: My friend is not listening to me.
+        \n Bạn tôi đang không chịu nghe tôi.
+        \n <b>CÂU HỎI</b>
+        \n <b>(Từ để hỏi) + Am / Is / Are + Chủ ngữ + V-ing ?</b>
+        \n Ví dụ 7: Are you kidding me ?
+        \n Bạn đùa tôi đấy hả ?
+        \n <u>Câu trả lời khẳng định:</u> <b>Yes,</b> Chủ ngữ + am / is / are.
+        \n VD: Yes, I am.
+        \n <u>Câu trả lời phủ định:</u> <b>No,</b> Chủ ngữ + am / is / are + not.
+        \n VD: No, I am not.
+    </string>
+
+    <!--    Thì hiện quá khứ đơn-->
+    <string name="c1">Thì Quá Khứ Đơn</string>
+    <string name="c2"> Diễn tả những gì <b>ĐÃ</b> xảy ra và <b>ĐÃ</b> kết thúc trong quá khứ.</string>
+    <string name="c3">
+        <b><i>1 Việc <b>ĐÃ</b> xảy ra và đã kết thúc trong quá khứ.</i></b>
+        \n Ví dụ 1: <b>My friends gave me a surprise party yesterday.</b>
+        \n Những người bạn của tôi đã tổ chức một bữa tiệc bất ngờ cho tôi vào hôm qua.
+        \n
+        \n <b><i>2 Chuỗi hành động <b>ĐÃ</b> xảy ra liên tiếp trong quá khứ.</i></b>
+        \n Ví dụ 2: <b>She had lunch, took a nap, woke up and ordered a cup of bubble tea. </b>
+        \n Bà ấy đã ăn trưa, đi ngủ, thức dậy rồi gọi 1 cốc trà sữa.
+
+    </string>
+    <string name="c4">CÔNG THỨC CỦA THÌ QUÁ KHỨ ĐƠN</string>
+    <string name="c5">
+        \n <b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>* Công thức động từ thường</b>
+        \n <b>CHỦ NGỮ + V-ed (dạng quá khứ)</b>
+        \n Ví dụ 3: <b>My grandparents exchanged hand letters in the past.</b>
+        \n Ngày xưa, ông bà của tôi toàn trao nhau thư viết tay.
+        \n <b>* Công thức động từ to-be</b>
+        \n <b>CHỦ NGỮ + was / were</b>
+        \n Ví dụ 4: <b>I was pretty from birth.</b>
+        \n Tôi sinh ra đã đẹp rồi.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>* Công thức động từ thường</b>
+        \n <b>CHỦ NGỮ + did + not + V-inf</b>
+        \n Ví dụ 5: <b>They did not have smartphones in the 80s.</b>
+        \n Những năm 80, mọi người chẳng cón điện thoại thông minh.
+        \n <b>* Công thức động từ to-be</b>
+        \n <b>CHỦ NGỮ + was / were + not </b>
+        \n Ví dụ 6: <b>It was not my fault.</b>
+        \n Đó đâu phải lỗi của tôi.
+        \n <b>CÂU HỎI</b>
+        \n <b>* Công thức động từ thường</b>
+        \n <b>(Từ để hỏi) + did + Chủ ngữ + V-inf ?</b>
+        \n Ví dụ 7: Where did i leave my phone ?
+        \n Tôi để cái điện thoại ở đâu nhỉ ?
+        \n <b>* Công thức động từ to-be</b>
+         \n <b>(Từ để hỏi) + was / were + Chủ ngữ ?</b>
+        \n Ví dụ 7: Where were you yesterday evening ?
+        \n Tối qua bạn đã ở đâu thế ?
+    </string>
+
+    <!--    Thì hiện quá khứ tiếp diễn-->
+    <string name="d1">Thì Quá Khứ Tiếp Diễn</string>
+    <string name="d2"> Nói về việc <b>ĐÃ ĐANG</b> xảy ra tại một thời điểm cụ thể, việc <b>ĐÃ KÉO DÀI</b> trong quá khứ.</string>
+    <string name="d3">
+        <b><i>1. Việc <b>ĐÃ ĐANG</b> xảy ra tại một thời điểm cụ thể.</i></b>
+        \n Ví dụ 1: <b>This time last week, we were walking together.</b>
+        \n Giờ này tuần trước, chúng tôi đang đi bộ cùng nhau.
+        \n
+        \n <b><i>2. Việc <b>ĐÃ KÉO DÀI</b> suốt 1 khoảng thời gian nhất định trong quá khứ.</i></b>
+        \n Ví dụ 2: <b>The doctors were wearing masks all day yesterday. </b>
+        \n Các bác sĩ đã phải đeo khẩu trang cả ngày hôm qua.
+        \n
+        \n <b><i>3. Thói xấu <b>ĐÃ KÉO DÀI</b> trong quá khứ, thường có từ (always).</i></b>
+        \n Ví dụ 3: <b>My friend was always calling me at  2 am in the morning. </b>
+        \n Bạn tôi đã từng liên tục gọi trêu tôi lúc 2 giờ sáng.
+
+    </string>
+    <string name="d4">CÔNG THỨC CỦA THÌ QUÁ KHỨ TIẾP DIỄN</string>
+    <string name="d5">
+        <b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>CHỦ NGỮ + was / were + V-ing</b>
+        \n Ví dụ 3: <b>My grandparents exchanged hand letters in the past.</b>
+        \n Ngày xưa, ông bà của tôi toàn trao nhau thư viết tay.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>CHỦ NGỮ + was / were + not </b>
+        \n Ví dụ 6: <b>It was not my fault.</b>
+        \n Đó đâu phải lỗi của tôi.
+        \n <b>CÂU HỎI</b>
+        \n <b>* Công thức động từ thường</b>
+        \n <b>(Từ để hỏi) + did + Chủ ngữ + V-inf ?</b>
+        \n Ví dụ 7: Where did i leave my phone ?
+        \n Tôi để cái điện thoại ở đâu nhỉ ?
+        \n <b>* Công thức động từ to-be</b>
+         \n <b>(Từ để hỏi) + was / were + Chủ ngữ ?</b>
+        \n Ví dụ 7: Where were you yesterday evening ?
+        \n Tối qua bạn đã ở đâu thế ?
+    </string>
+
+    <!--    Thì hiện tại hoàn thành-->
+    <string name="e1">Thì Hiện Tại Hoàn Thành</string>
+    <string name="e2"> Nói về việc những việc bắt đầu trong quá khứ nhưng vẫn có liên hệ hoặc ảnh hưởng tới hiện tại, thậm chí có thể kéo dài trong tương lai. </string>
+    <string name="e3">
+        <b><i>1. Để nói về một việc xảy ra trong quá khứ, vẫn còn liên hệ đến hiện tại và có thể kéo dài trong tương lai.</i></b>
+        \n Ví dụ 1: <b>He has been a fan od Harry Potter since a very young age.</b>
+        \n Cậu ta đã là fan của Harry Potter từ hồi nhỏ.
+        \n
+        \n <b><i>2. Để nói về một việc xảy ra ở một thời điểm không xác định trong quá khứ và có thể lặp lại trong tương lai.</i></b>
+        \n Ví dụ 2: <b>How many times have you put gum under the table? </b>
+        \n Tôi đã dính kẹo cao su xuống gầm bàn bao nhiêu lần rồi.
+        \n
+        \n <b><i>3. Để nhấn mạnh một sự việc vừa mới xảy ra gần đây và có thể thấy kết quả ở hiện tại.</i></b>
+        \n Ví dụ 3: <b>Let go. I have finished all my tasks. </b>
+        \n Đi thôi. Tôi đã làm cong hết các công việc rồi.
+
+    </string>
+    <string name="e4">CÔNG THỨC CỦA THÌ HIỆN TẠI HOÀN THÀNH</string>
+    <string name="e5">
+        <b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>CHỦ NGỮ + have / has + V-PII</b>
+        \n Ví dụ 4: <b>My friend has just won a full scholarship.</b>
+        \n Bạn tôi vừa đạt được học bổng toàn phần.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>CHỦ NGỮ + have / has + not + V-PII </b>
+        \n Ví dụ 5: <b>You have not changed a bit after all these years.</b>
+        \n Bạn chẳng thay đổi gì suốt bao năm nay cả.
+        \n <b>CÂU HỎI</b>
+        \n <b>(Từ để hỏi) + have / has + Chủ ngữ + V-PII ?</b>
+        \n Ví dụ 6: <b>Have we met before ?</b>
+        \n <u>Câu trả lời khẳng định:</u> <b>Yes,</b> Chủ ngữ + have / has.
+        \n VD: Yes, we have.
+        \n <u>Câu trả lời phủ định:</u> <b>No,</b> Chủ ngữ + havent / hasnt.
+        \n VD: No, we havent.
+    </string>
+
+    <!--    Thì quá khứ hoàn thành-->
+    <string name="f1">Thì Quá Khứ Hoàn Thành</string>
+    <string name="f2"> Dùng để diễn tả một việc đã xảy ra và hoàn thành trước một thời điểm hoặc trước một hành động khác trong quá khứ. </string>
+    <string name="f3">
+        \n Ví dụ 1: <b>He had a;ready had 5 retests before the new term.</b>
+        \n Cậu ta đã từng thi lai5 lần trước học kỳ mới rồi.
+        \n Ở ví dụ này, dấu mốc thi lại lần thứ 5 đã xảy ra trước thời điểm học kỳ mới.
+        \n Ví dụ 2: <b>He had just had the questions when all of his classmates submitted their tests. </b>
+        \n Anh ta mới đọc đề xong thì cả lớp liền nộp bài hết.
+        \n Ở ví dụ này, có 2 chuyện kinh thiên động địa xảy ra:
+        \n <b>Anh ta đọc đề xong</b> (he had just read the questions) => Sự việc xảy ra trước: <b>Thì quá khứ hoàn thành</b>
+        \n <b>Cả lớp nộp bài</b> (all his classmates submitted their tests) => Sự việc xảy ra sau: <b>Thì quá khứ đơn</b>
+
+    </string>
+    <string name="f4">CÔNG THỨC CỦA THÌ QUÁ KHỨ HOÀN THÀNH</string>
+    <string name="f5">
+        <b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>CHỦ NGỮ + had + V-PII</b>
+        \n Ví dụ 3: <b>We had finished the project before the deadline.</b>
+        \n Chúng tôi đã hoàn thành dự án trước thời hạn.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>CHỦ NGỮ + had + not + V-PII </b>
+        \n Ví dụ 4: <b>The students had not gone to school for months.</b>
+        \n Các bạn học sinh đã không đến trường trong nhiều tháng liền.
+        \n <b>CÂU HỎI</b>
+        \n <b>(Từ để hỏi) + had + Chủ ngữ + V-PII ?</b>
+        \n Ví dụ 5: <b>Had he done something wrong ?</b>
+        \n Anh ấy đã làm gì sai à ?
+        \n <u>Câu trả lời khẳng định:</u> <b>Yes,</b> Chủ ngữ + had.
+        \n VD: Yes, he had.
+        \n <u>Câu trả lời phủ định:</u> <b>No,</b> Chủ ngữ + hadnt.
+        \n VD: No, he hadnt.
+    </string>
+
+    <!--    Thì tương lai đơn-->
+    <string name="g1">Thì Tương Lai Đơn</string>
+    <string name="g2"> Dùng để nói về những việc <b>SẼ</b> xảy ra trong tương lai nói chung, thường là những ý định bộc phát hoặc dự đoán ít bằng chứng. </string>
+    <string name="g3">
+        <b><i>1. Một việc sẽ xảy ra trong tương lai.</i></b>
+        \n Ví dụ 1: <b>Tommorow, It will be your turn to do the dishes.</b>
+        \n Ngày mai sẽ đến lượt cậu ta phải rửa bát.
+        <b><i>2. Một ý định bộc phát tại thời điểm nói.</i></b>
+        \n Ví dụ 2: <b>My mom is calling. I will talk to you later. </b>
+        \n Mẹ tôi đang gọi. Tôi sẽ nói chuyện với bạn sau nhé.
+        <b><i>3. Một lời dự đoán không có căn cứ.</i></b>
+        \n Ví dụ 3: <b>Maybe, my dream will come true. </b>
+        \n Có thể, giấc mơ của tôi sẽ thành sự thật.
+        <b><i>4. Dùng để yêu cầu / mời gọi / hứa hẹn.</i></b>
+        \n Ví dụ 4: <b>Will you stop daydreaming, please ? </b>
+        \n Bạn làm ơn ngừng mơ mộng, được không ?.
+    </string>
+    <string name="g4">CÔNG THỨC CỦA THÌ TƯƠNG LAI ĐƠN</string>
+    <string name="g5">
+        <b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>CHỦ NGỮ + will V-inf</b>
+        \n Ví dụ 5: <b>We will take a break after this project.</b>
+        \n Chúng tôi sẽ nghỉ một thời gian sau dự án này.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>CHỦ NGỮ + will + not + V-inf </b>
+        \n Ví dụ 6: <b>I will not come to this restaurant again.</b>
+        \n Tôi sẽ không đến nhà hàng này nữa.
+        \n <b>CÂU HỎI</b>
+        \n <b>(Từ để hỏi) + will + Chủ ngữ + V-inf ?</b>
+        \n Ví dụ 7: <b>Will you finish this book on time ?</b>
+        \n Bạn sẽ hoàn thành cuốn sách này đúng hạn chứ ?
+        \n <u>Câu trả lời khẳng định:</u> <b>Yes,</b> Chủ ngữ + will.
+        \n <u>Câu trả lời phủ định:</u> <b>No,</b> Chủ ngữ + wont.
+    </string>
+
+    <!--    Thì tương lai tiếp diễn-->
+    <string name="h1">Thì Tương Lai Tiếp Diễn</string>
+    <string name="h2"> Dùng để nói về những việc <b>SẼ</b> xảy ra trong tương lai nói chung, thường là những ý định bộc phát hoặc dự đoán ít bằng chứng. </string>
+    <string name="h3">
+        <b><i>1. Một việc sẽ xảy ra trong tương lai.</i></b>
+        \n Ví dụ 1: <b>Tommorow, It will be your turn to do the dishes.</b>
+        \n Ngày mai sẽ đến lượt cậu ta phải rửa bát.
+        <b><i>2. Một ý định bộc phát tại thời điểm nói.</i></b>
+        \n Ví dụ 2: <b>My mom is calling. I will talk to you later. </b>
+        \n Mẹ tôi đang gọi. Tôi sẽ nói chuyện với bạn sau nhé.
+        <b><i>3. Một lời dự đoán không có căn cứ.</i></b>
+        \n Ví dụ 3: <b>Maybe, my dream will come true. </b>
+        \n Có thể, giấc mơ của tôi sẽ thành sự thật.
+        <b><i>4. Dùng để yêu cầu / mời gọi / hứa hẹn.</i></b>
+        \n Ví dụ 4: <b>Will you stop daydreaming, please ? </b>
+        \n Bạn làm ơn ngừng mơ mộng, được không ?.
+    </string>
+    <string name="h4">CÔNG THỨC CỦA THÌ TƯƠNG LAI ĐƠN</string>
+    <string name="h5">
+        <b>CÂU KHẲNG ĐỊNH</b>
+        \n <b>CHỦ NGỮ + will V-inf</b>
+        \n Ví dụ 5: <b>We will take a break after this project.</b>
+        \n Chúng tôi sẽ nghỉ một thời gian sau dự án này.
+        \n <b>CÂU PHỦ ĐỊNH</b>
+        \n <b>CHỦ NGỮ + will + not + V-inf </b>
+        \n Ví dụ 6: <b>I will not come to this restaurant again.</b>
+        \n Tôi sẽ không đến nhà hàng này nữa.
+        \n <b>CÂU HỎI</b>
+        \n <b>(Từ để hỏi) + will + Chủ ngữ + V-inf ?</b>
+        \n Ví dụ 7: <b>Will you finish this book on time ?</b>
+        \n Bạn sẽ hoàn thành cuốn sách này đúng hạn chứ ?
+        \n <u>Câu trả lời khẳng định:</u> <b>Yes,</b> Chủ ngữ + will.
+        \n <u>Câu trả lời phủ định:</u> <b>No,</b> Chủ ngữ + wont.
+    </string>
+
+    <string name="title_activity_ketqua">activity_ketqua</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

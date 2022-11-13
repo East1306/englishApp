@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_goback_CW"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/ic_goback"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="15dp"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_radius_15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#CC000000"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/star"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="110dp"
+        android:text="00:30"
+        android:textColor="#000"
+        android:textSize="25dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/bg_ques_custom"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="n/o/l/t/a/s/C/o/r/a/u/g/t/n/i"
+            android:textAlignment="center"
+            android:textColor="#CC000000"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/bg_ques_custom"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#CC000000"
+            android:textSize="28dp"
+            android:text="Congratulations"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:text="Answer"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonradius"
+            android:backgroundTint="#2196f3"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="false"/>
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="58dp"
+            android:text="Next"
+            android:textSize="25dp"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/buttonradius"
+            android:backgroundTint="#26c485"
+            android:gravity="center"
+            android:layout_marginLeft="60dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Correct answers: 1"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        />
+</LinearLayout>

@@ -8,8 +8,8 @@
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
-        android:layout_width="379dp"
+
+        android:layout_width="390dp"
         android:layout_height="125dp"
         android:layout_gravity="center_horizontal"
         app:cardCornerRadius="15dp"
@@ -17,248 +17,267 @@
         android:alpha="0.8"
         app:cardElevation="20dp"
         android:backgroundTint="#2F498C">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="223dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="20dp"
+                android:text="What do you want"
+                android:textSize="24sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:fontFamily="@font/ravenpro_medium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="223dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginLeft="20dp"
+                android:text="learn today ?"
+                android:textSize="24sp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:fontFamily="@font/ravenpro_medium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="223dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="20dp"
-        android:text="What do you want"
-        android:textSize="24sp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:fontFamily="@font/ravenpro_medium"
-        android:textColor="@color/white"
-        android:textStyle="bold"
-        />
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="223dp"
-            android:layout_height="35dp"
-            android:layout_marginTop="65dp"
-            android:layout_marginLeft="20dp"
-            android:text="learn today ?"
-            android:textSize="24sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-            android:fontFamily="@font/ravenpro_medium"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            />
-
-        <ImageView
-            android:layout_width="132dp"
-            android:layout_height="128dp"
-            tools:srcCompat="@drawable/question"
-            android:layout_marginLeft="247dp"
-            android:layout_marginTop="20dp"
-            />
-            
-        
-        <!--    <RelativeLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:layout_weight="2">-->
-<!--    -->
-<!--   -->
-<!--        <TextView-->
-<!--            android:id="@+id/textGrid"-->
-<!--            android:text=""-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"/>-->
-
-<!--    </RelativeLayout>-->
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Hello"-->
-<!--        app:layout_constrainBottom_toBottomOf="parent"-->
-<!--        app:layout_constrainBottom_toLeftOf="parent"-->
-<!--        app:layout_constrainBottom_toRightOf="parent"-->
-<!--        app:layout_constrainBottom_toTopOf="parent"/>-->
-
-
-<!--    <View-->
-<!--        android:id="@+id/view"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="353dp"-->
-<!--        android:background="#BFCAE6"-->
-<!--        android:layout_marginBottom="528dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        tools:layout_editor_absoluteX="0dp" />-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/imageView"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="100dp"-->
-<!--        android:gravity="center"-->
-<!--        android:layout_marginLeft="40dp"-->
-<!--        android:layout_marginTop="-800dp"-->
-<!--        tools:srcCompat="@drawable/lisa" />-->
-    </RelativeLayout>
+            <ImageView
+                android:id="@+id/imgTop"
+                android:layout_width="132dp"
+                android:layout_height="128dp"
+                tools:srcCompat="@drawable/question"
+                android:layout_marginLeft="247dp"
+                android:layout_marginTop="20dp"
+                />
+        </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
-    <GridLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="488dp"
-        android:layout_weight="8"
-        android:alignmentMode="alignMargins"
-        android:columnCount="2"
+        android:layout_height="match_parent">
 
-        android:columnOrderPreserved="false"
-        android:padding="25dp"
-        android:rowCount="2">
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="488dp"
+            android:layout_weight="8"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="25dp"
+            android:rowCount="3">
 
-        <!--- Row 1 -->
-        <!--- Colum 1 -->
-        <androidx.cardview.widget.CardView
-           android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            app:cardElevation="9dp"
-            app:cardCornerRadius="9dp"
+            <!--- Row 1 -->
+            <!--- Colum 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card1"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="9dp"
+                app:cardElevation="9dp">
 
-            >
-            
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/vocabulary"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="110dp"
-                    android:layout_height="130dp"/>
-                <TextView
-                    android:text="Vocabulary"
-                    android:fontFamily="@font/roboto_black"
-                    android:textAlignment="center"
-                    android:textColor="#2F498C"
-                    android:textSize="24sp"
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <!--- Colum 1 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_marginBottom="13dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            app:cardElevation="9dp"
-            app:cardCornerRadius="9dp"
-
-            >
-
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/book"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="110dp"
-                    android:layout_height="130dp"/>
-
-                <TextView
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_black"
-                    android:text="Grammar"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="3dp"
-                    android:textColor="#2F498C"
-                    android:textSize="24sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-        <!--- Row 2 -->
-        <!--- Colum 2 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_marginBottom="13dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            app:cardElevation="9dp"
-            app:cardCornerRadius="9dp"
+                    <ImageView
+                        android:id="@+id/imgV1"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/vocabulary" />
 
-            >
+                    <TextView
+                        android:id="@+id/txtTop1"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Vocabulary"
+                        android:textAlignment="center"
+                        android:textColor="#2F498C"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/listening"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="110dp"
-                    android:layout_height="130dp"/>
+            <!--- Row 2 -->
+            <!--- Colum 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card2"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="9dp"
+                app:cardElevation="9dp">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_black"
-                    android:text="Listening"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="4dp"
-                    android:textColor="#2F498C"
-                    android:textSize="24sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
-        <!--- Colum 2 -->
-        <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_marginBottom="13dp"
-            android:layout_marginLeft="13dp"
-            android:layout_marginRight="13dp"
-            app:cardElevation="9dp"
-            app:cardCornerRadius="9dp"
-            >
-            <LinearLayout
-                android:layout_gravity="center_horizontal|center_vertical"
-                android:layout_margin="16dp"
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageView
-                    android:src="@drawable/cup"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_width="110dp"
-                    android:layout_height="130dp"/>
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
+                    <ImageView
+                        android:id="@+id/imgV2"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/book" />
+
+                    <TextView
+                        android:id="@+id/txtTop2"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Grammar"
+                        android:textAlignment="center"
+                        android:textColor="#2F498C"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--- Row 3 -->
+            <!--- Colum 3 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card3"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="9dp"
+                app:cardElevation="9dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_black"
-                    android:text="Ratings"
-                    android:textAlignment="center"
-                    android:layout_marginLeft="10dp"
-                    android:textColor="#2F498C"
-                    android:textSize="24sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
 
-    </GridLayout>
+                    <ImageView
+                        android:id="@+id/imgV3"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/listening" />
+
+                    <TextView
+                        android:id="@+id/txtTop3"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Listening"
+                        android:textAlignment="center"
+                        android:textColor="#2F498C"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--- Row 4 -->
+            <!--- Colum 4 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card4"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="9dp"
+                app:cardElevation="9dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgV4"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/cup" />
+
+                    <TextView
+                        android:id="@+id/txtTop4"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Ratings"
+                        android:textAlignment="center"
+                        android:textColor="#2F498C"
+                        android:textSize="20sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--- Row 5 -->
+            <!--- Colum 5 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card5"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="13dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="13dp"
+                app:cardCornerRadius="9dp"
+                app:cardElevation="9dp"
+
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="16dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgV5"
+                        android:layout_width="130dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/bookk" />
+
+                    <TextView
+                        android:id="@+id/txtTop5"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="Practices"
+                        android:textAlignment="center"
+                        android:textColor="#2F498C"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+    </ScrollView>
 </LinearLayout>
