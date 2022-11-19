@@ -18,12 +18,12 @@
             />
 
         <TextView
-            android:id="@+id/vocabulary"
+            android:id="@+id/title_"
             android:layout_width="343dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="2dp"
-            android:text="Vocabulary"
+            android:text="Title"
             android:textColor="@color/titleColor"
             android:textSize="30dp"
             android:textStyle="bold"/>

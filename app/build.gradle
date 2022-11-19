@@ -50,12 +50,11 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation 'com.google.android.gms:play-services-auth:20.3.0'
     implementation 'com.github.bumptech.glide:glide:4.14.2'
-    implementation 'https://englishapp-443d4-default-rtdb.firebaseio.com/'
+//    implementation 'https://englishapp-443d4-default-rtdb.firebaseio.com/'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
 
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:31.0.1')
-
 
     // TODO: Add the dependencies for Firebase products you want to use
     // When using the BoM, don't specify versions in Firebase dependencies

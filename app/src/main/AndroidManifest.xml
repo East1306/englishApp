@@ -70,6 +70,7 @@
         <activity android:name=".Activity_HomeMenu"/>
         <activity android:name=".Activity_highscores"/>
         <activity android:name=".Activity_test"/>
+        <activity android:name=".Revise_PhuongDong.ReviseGrammar"/>
     </application>
 
 </manifest>

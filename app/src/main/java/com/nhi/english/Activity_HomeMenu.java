@@ -51,7 +51,9 @@ public class Activity_HomeMenu extends AppCompatActivity {
         img_revise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Activity_HomeMenu.this, ReviseVocabulary.class);
+                Intent intent = new Intent(Activity_HomeMenu.this,
+                                            ReviseVocabulary.class);
+                intent.putExtra("key", 1306);
                 startActivity(intent);
             }
         });
