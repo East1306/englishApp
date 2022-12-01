@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
-
         android:layout_width="390dp"
         android:layout_height="125dp"
         android:layout_gravity="center_horizontal"
@@ -23,42 +21,32 @@
             >
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="223dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="20dp"
-                android:text="What do you want"
-                android:textSize="24sp"
+                android:text="How are you today?"
+                android:textSize="30sp"
                 android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                 android:fontFamily="@font/ravenpro_medium"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 />
+
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="223dp"
-                android:layout_height="35dp"
-                android:layout_marginTop="65dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
-                android:text="learn today ?"
-                android:textSize="24sp"
-                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:layout_marginTop="50dp"
                 android:fontFamily="@font/ravenpro_medium"
+                android:text="Do you want to do something?"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                />
-
-            <ImageView
-                android:id="@+id/imgTop"
-                android:layout_width="132dp"
-                android:layout_height="128dp"
-                tools:srcCompat="@drawable/question"
-                android:layout_marginLeft="247dp"
-                android:layout_marginTop="20dp"
-                />
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -73,170 +61,6 @@
             android:padding="25dp"
             android:rowCount="3">
 
-            <!--- Row 1 -->
-            <!--- Colum 1 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card1"
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="13dp"
-                android:layout_marginRight="13dp"
-                android:layout_marginBottom="16dp"
-                app:cardCornerRadius="9dp"
-                app:cardElevation="9dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imgV1"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/vocabulary" />
-
-                    <TextView
-                        android:id="@+id/txtTop1"
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_black"
-                        android:text="Vocabulary"
-                        android:textAlignment="center"
-                        android:textColor="#2F498C"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--- Row 2 -->
-            <!--- Colum 2 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card2"
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="13dp"
-                android:layout_marginRight="13dp"
-                android:layout_marginBottom="13dp"
-                app:cardCornerRadius="9dp"
-                app:cardElevation="9dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imgV2"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/book" />
-
-                    <TextView
-                        android:id="@+id/txtTop2"
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_black"
-                        android:text="Grammar"
-                        android:textAlignment="center"
-                        android:textColor="#2F498C"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--- Row 3 -->
-            <!--- Colum 3 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card3"
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="13dp"
-                android:layout_marginRight="13dp"
-                android:layout_marginBottom="13dp"
-                app:cardCornerRadius="9dp"
-                app:cardElevation="9dp"
-
-                >
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imgV3"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/listening" />
-
-                    <TextView
-                        android:id="@+id/txtTop3"
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_black"
-                        android:text="Listening"
-                        android:textAlignment="center"
-                        android:textColor="#2F498C"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--- Row 4 -->
-            <!--- Colum 4 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card4"
-                android:layout_width="0dp"
-                android:layout_height="180dp"
-                android:layout_rowWeight="1"
-                android:layout_columnWeight="1"
-                android:layout_marginLeft="13dp"
-                android:layout_marginRight="13dp"
-                android:layout_marginBottom="13dp"
-                app:cardCornerRadius="9dp"
-                app:cardElevation="9dp">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
-                    android:layout_margin="16dp"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/imgV4"
-                        android:layout_width="130dp"
-                        android:layout_height="100dp"
-                        android:layout_gravity="center_horizontal"
-                        android:src="@drawable/cup" />
-
-                    <TextView
-                        android:id="@+id/txtTop4"
-                        android:layout_width="130dp"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/roboto_black"
-                        android:text="Ratings"
-                        android:textAlignment="center"
-                        android:textColor="#2F498C"
-                        android:textSize="20sp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--- Row 5 -->
-            <!--- Colum 5 -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/card5"
                 android:layout_width="0dp"
@@ -248,13 +72,10 @@
                 android:layout_marginBottom="13dp"
                 app:cardCornerRadius="9dp"
                 app:cardElevation="9dp"
-
                 >
-
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
@@ -270,14 +91,12 @@
                         android:layout_width="130dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/roboto_black"
-                        android:text="Practices"
+                        android:text="Start"
                         android:textAlignment="center"
                         android:textColor="#2F498C"
                         android:textSize="20sp" />
                 </LinearLayout>
-
             </androidx.cardview.widget.CardView>
-
         </GridLayout>
     </ScrollView>
 </LinearLayout>

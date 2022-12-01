@@ -87,7 +87,7 @@ public class ReviseSpeaking extends AppCompatActivity {
                     mediaPlayer.start();
 
                     Toast.makeText(ReviseSpeaking.this, "Sarting play", Toast.LENGTH_SHORT).show();
-                } catch (IOException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
@@ -105,7 +105,7 @@ public class ReviseSpeaking extends AppCompatActivity {
 //            mediaRecorder.start();
 //
 //            Toast.makeText(this, "Recording is started", Toast.LENGTH_SHORT).show();
-//        } catch (IOException e) {
+//        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
 //
@@ -120,14 +120,15 @@ public class ReviseSpeaking extends AppCompatActivity {
 //    }
 //
 //    public void btnPlay(){
-//        mediaPlayer = new MediaPlayer();
+//
 //        try {
+//            mediaPlayer = new MediaPlayer();
 //            mediaPlayer.setDataSource(getFilePath());
 //            mediaPlayer.prepare();
 //            mediaPlayer.start();
 //
 //            Toast.makeText(this, "Sarting play", Toast.LENGTH_SHORT).show();
-//        } catch (IOException e) {
+//        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
 //
@@ -144,7 +145,8 @@ public class ReviseSpeaking extends AppCompatActivity {
     private void getMicrophonePermission() {
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)
                 == PackageManager.PERMISSION_DENIED) {
-            ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.RECORD_AUDIO}, MICROPHONE_PERMISSION_CODE);
+            ActivityCompat.requestPermissions(this, new String[]
+                    {Manifest.permission.RECORD_AUDIO}, MICROPHONE_PERMISSION_CODE);
         }
     }
 

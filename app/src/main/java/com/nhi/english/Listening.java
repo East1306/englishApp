@@ -29,7 +29,7 @@ import javax.xml.parsers.ParserConfigurationException;
 public class Listening extends AppCompatActivity {
     MediaPlayer player;
     TextView Cauhoi,Noidung;
-    Button back;
+    Button back,next;
     int pos = 0;
     ArrayList<QuestionNare> L = new ArrayList();
     @Override
@@ -39,14 +39,42 @@ public class Listening extends AppCompatActivity {
         Cauhoi = (TextView) findViewById(R.id.T1);
         Noidung = (TextView) findViewById(R.id.T2);
         back = findViewById(R.id.BtnBack);
+        next = findViewById(R.id.BtnNext);
         ReadData();
         Display(pos);
-        back.setOnClickListener(v -> {
-            Intent intent = new Intent(Listening.this, MenuActivity.class);
-            startActivity(intent);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+        if (pos == 0){
+            back.setVisibility(View.INVISIBLE);
+        }
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pos--;
+                if (pos == 0){
+                    back.setVisibility(View.INVISIBLE);
+                }
+                Display(pos);
+            }
         });
-
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                back.setVisibility(View.VISIBLE);
+                pos++;
+                if (pos >= L.size()) {
+                    Intent intent = new Intent(Listening.this,Listening.class);
+                    startActivity(intent);
+                }
+                else Display(pos); //Hiển thị câu hỏi kế tiếp
+            }
+        });
     }
+
 
     public void play(View v){
         if (player == null){
@@ -74,7 +102,7 @@ public class Listening extends AppCompatActivity {
         if(player !=null){
             player.release();
             player = null;
-            Toast.makeText(this,"MediaaPlayer released",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"MediaPlayer has stopped",Toast.LENGTH_SHORT).show();
         }
     }
     protected void onStop(){
@@ -88,30 +116,29 @@ public class Listening extends AppCompatActivity {
     }
     void ReadData() {
         try {
-//Tạo đối tượng DocumentBuilder (builder )
+
             DocumentBuilderFactory DBF = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = DBF.newDocumentBuilder();
-//Tạo FileInputStream từ tập tin XML nguồn
+
             InputStream in = getAssets().open("listen_data.xml");
-//Dùng phương thức parse của đối tượng builder để tạo Document
+
             Document doc = builder.parse(in);
-            Element root = doc.getDocumentElement();//lấy tag Root
-            NodeList list = root.getChildNodes();// lấy toàn bộ node con của Root
+            Element root = doc.getDocumentElement();
+            NodeList list = root.getChildNodes();
             for (int i = 0; i < list.getLength(); i++) {
-// duyệt từ node đầu tiên cho tới node cuối cùng
-                Node node = list.item(i);// mỗi lần duyệt thì lấy ra 1 node
-// kiểm tra xem node đó có phải là Element hay không
+
+                Node node = list.item(i);
+
                 if (node instanceof Element) {
-                    Element Item = (Element) node;// lấy được tag Item
-// lấy tag ID bên trong của tag Item
+                    Element Item = (Element) node;
+
                     NodeList listChild = Item.getElementsByTagName("Title");
-//lấy nội dung của tag ID
-//lấy nội dung của tag ID
+
                     String Title = listChild.item(0).getTextContent();
                     listChild = Item.getElementsByTagName("Text");
-//lấy nội dung của tag ID
+
                     String Text = listChild.item(0).getTextContent();
-//lưu vào list
+
                     QuestionNare Q1 = new QuestionNare();
 
                     Q1.title=Title;

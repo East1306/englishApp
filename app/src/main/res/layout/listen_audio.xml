@@ -13,17 +13,17 @@
         android:layout_height="40dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/ic_goback"
+        android:background="@drawable/ic_back"
         />
     <Button
-        android:id="@+id/Ne"
+        android:id="@+id/BtnNext"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_marginStart="15dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="15dp"
-        android:background="@drawable/ic_goback"
+        android:background="@drawable/ic_next"
+        android:layout_toEndOf="@+id/listening"
         />
-
     <TextView
         android:id="@+id/listening"
         android:layout_width="wrap_content"
@@ -43,30 +43,27 @@
         android:layout_height="match_parent"
 
         >
-        <TextView
 
+        <TextView
             android:id="@+id/T1"
-            android:layout_width="410dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:backgroundTint="#5CD5E8"
-            android:paddingTop="10dp"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:textColor="@color/black"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            />
+            android:textColor="#3F51B5"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
         <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="500dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
             android:fillViewport="true">
 
             <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="wrap_content"
                 android:stretchColumns="1">
 
                 <TextView
@@ -83,7 +80,7 @@
         </ScrollView>
 
         <LinearLayout
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="25dp"
             android:gravity="bottom"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
