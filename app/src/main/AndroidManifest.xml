@@ -39,10 +39,6 @@
         <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
         <activity android:name=".Revise_PhuongDong.ReviseReading"/>
-<!--        <activity android:name=".Vocabulary"/>-->
-<!--        <activity android:name=".Grammar"/>-->
-<!--        <activity android:name=".U1_Vocabulary"-->
-<!--            tools:ignore="DuplicateActivity" />-->
         <activity android:name=".U2_Vocabulary"/>
         <activity android:name=".U3_Vocabulary"/>
         <activity android:name=".U4_Vocabulary"/>

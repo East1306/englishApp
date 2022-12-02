@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Activity_gramma_vocab extends AppCompatActivity {
-    private Button btnGobackHomeMenu;
     TextView txt;
     String TAG = "Main";
 
@@ -28,13 +27,7 @@ public class Activity_gramma_vocab extends AppCompatActivity {
         startService(intent);
         Log.i(TAG, "Started Service");
 
-        btnGobackHomeMenu = (Button) findViewById(R.id.btn_goback_Quiz);
-        btnGobackHomeMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                gobackHomeMenuActivity();
-            }
-        });
+
     }
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -76,7 +69,7 @@ public class Activity_gramma_vocab extends AppCompatActivity {
 
     private void updateGUI(Intent intent){
         if (intent.getExtras() != null){
-            long millisUntilFinished = intent.getLongExtra("countdown", 30000);
+            long millisUntilFinished = intent.getLongExtra("countdown", 20000);
             Log.i(TAG, "Countdown seconds remaining: " + millisUntilFinished/1000);
 
             txt.setText(Long.toString(millisUntilFinished / 1000));
@@ -84,12 +77,5 @@ public class Activity_gramma_vocab extends AppCompatActivity {
             sharedPreferences.edit().putLong("time", millisUntilFinished).apply();
         }
     }
-
-    public void gobackHomeMenuActivity() {
-        Intent intent = new Intent(this, Activity_HomeMenu.class);
-        startActivity(intent);
-    }
-
-
 
 }

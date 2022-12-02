@@ -67,8 +67,7 @@ public class Listening extends AppCompatActivity {
                 back.setVisibility(View.VISIBLE);
                 pos++;
                 if (pos >= L.size()) {
-                    Intent intent = new Intent(Listening.this,Listening.class);
-                    startActivity(intent);
+                    finish();
                 }
                 else Display(pos); //Hiển thị câu hỏi kế tiếp
             }

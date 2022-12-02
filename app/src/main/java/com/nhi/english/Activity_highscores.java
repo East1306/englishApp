@@ -22,7 +22,7 @@ public class Activity_highscores extends Activity {
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
         setContentView(R.layout.activity_highscores);
-        Txt1 = (TextView)findViewById(R.id.TxtHighscore);
+        Txt1 = (TextView)findViewById(R.id.TxtRanking);
         LoadHighScore();
         Txt1.setText(""+ HighScore);
     }
