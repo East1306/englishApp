@@ -20,7 +20,6 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -35,42 +34,16 @@
         <service android:name=".BroadcastService_Correctword"/>
         <activity android:name=".Vocabulary" />
         <activity android:name=".Grammar" />
-        <activity android:name=".U1_Vocabulary" />
-        <activity android:name=".U1_Grammar" />
         <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
         <activity android:name=".Revise_PhuongDong.ReviseReading"/>
-        <activity android:name=".U2_Vocabulary"/>
-        <activity android:name=".U3_Vocabulary"/>
-        <activity android:name=".U4_Vocabulary"/>
-        <activity android:name=".U5_Vocabulary"/>
-        <activity android:name=".U6_Vocabulary"/>
-        <activity android:name=".U7_Vocabulary"/>
-        <activity android:name=".U8_Vocabulary"/>
-        <activity android:name=".U9_Vocabulary"/>
-        <activity android:name=".U10_Vocabulary"/>
-        <activity android:name=".U11_Vocabulary"/>
-        <activity android:name=".U12_Vocabulary"/>
-        <activity android:name=".U13_Vocabulary"/>
-        <activity android:name=".U14_Vocabulary"/>
-        <activity android:name=".U15_Vocabulary"/>
-<!--        <activity android:name=".U1_Grammar"/>-->
-        <activity android:name=".U2_Grammar"/>
-        <activity android:name=".U3_Grammar"/>
-        <activity android:name=".U4_Grammar"/>
-        <activity android:name=".U5_Grammar"/>
-        <activity android:name=".U6_Grammar"/>
-        <activity android:name=".U7_Grammar"/>
-        <activity android:name=".U8_Grammar"/>
-        <activity android:name=".U9_Grammar"/>
-        <activity android:name=".U10_Grammar"/>
         <activity android:name=".activity_ketqua"/>
         <activity android:name=".Listening"/>
         <activity android:name=".Activity_correctword"/>
         <activity android:name=".Activity_gramma_vocab"/>
         <activity android:name=".Activity_HomeMenu"/>
         <activity android:name=".Activity_highscores"/>
-        <activity android:name=".Activity_test"/>
+        <activity android:name=".Activity_Quiz"/>
     </application>
 
 </manifest>

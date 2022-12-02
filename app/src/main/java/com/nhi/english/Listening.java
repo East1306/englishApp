@@ -25,13 +25,16 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-
+//class QuestionNare {
+//    public String ID,title,text;
+//}
 public class Listening extends AppCompatActivity {
     MediaPlayer player;
     TextView Cauhoi,Noidung;
     Button back,next;
     int pos = 0;
     ArrayList<QuestionNare> L = new ArrayList();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,22 +45,19 @@ public class Listening extends AppCompatActivity {
         next = findViewById(R.id.BtnNext);
         ReadData();
         Display(pos);
-//        back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
-        if (pos == 0){
-            back.setVisibility(View.INVISIBLE);
-        }
+
+//        if (pos == 0){
+//            back.setVisibility(View.INVISIBLE);
+//        }
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 pos--;
-                if (pos == 0){
-                    back.setVisibility(View.INVISIBLE);
+                if (pos < 0){
+                    Intent intent = new Intent(Listening.this, Activity_HomeMenu.class);
+                    startService(intent);
                 }
+                stopPlayer();
                 Display(pos);
             }
         });
@@ -69,23 +69,138 @@ public class Listening extends AppCompatActivity {
                 if (pos >= L.size()) {
                     finish();
                 }
-                else Display(pos); //Hiển thị câu hỏi kế tiếp
+                else {
+                    stopPlayer();
+                    Display(pos); //Hiển thị câu hỏi kế tiếp
+                }
             }
         });
     }
 
 
     public void play(View v){
-        if (player == null){
-            player = MediaPlayer.create(this,R.raw.yoda_the_cat__with_four_ears);
-            player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    stopPlayer();
+        switch(pos){
+            case 0:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.yoda_the_cat__with_four_ears);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
                 }
-            });
+                player.start();
+                break;
+            case 1:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.salt_coffee_last_part);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 2:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.dating);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 3:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.reasons_of_love);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 4:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.the_north_sea_protection_works);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 5:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.love_map);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 6:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.the_panama_canal);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 7:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.the_empire_state_building);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 8:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.the_itaipu_dam);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
+            case 9:
+                if (player == null){
+                    player = MediaPlayer.create(this,R.raw.young_children_play_sports__advantages_and_disadvantages);
+                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+                        @Override
+                        public void onCompletion(MediaPlayer mp) {
+                            stopPlayer();
+                        }
+                    });
+                }
+                player.start();
+                break;
         }
-        player.start();
     }
 
     public void pause(View v){

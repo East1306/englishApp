@@ -24,8 +24,6 @@ public class Numofquestion extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.num_of_q);
-
-
         btnGobackHomeMenu = (Button) findViewById(R.id.btn_goback_NumOfQues);
         btnGobackHomeMenu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +51,7 @@ public class Numofquestion extends AppCompatActivity {
     }
 
     public void openActivity_gramma_vocab() {
-        Intent intent = new Intent(this, Activity_gramma_vocab.class);
+        Intent intent = new Intent(this, Activity_Quiz.class);
         startActivity(intent);
     }
 

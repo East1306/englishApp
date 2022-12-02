@@ -18,7 +18,7 @@ public class MenuActivity extends AppCompatActivity {
 
         Cd = findViewById(R.id.card5);
         Cd.setOnClickListener(v -> {
-            Intent intent = new Intent(MenuActivity.this, Activity_HomeMenu.class);
+            Intent intent = new Intent(this, Activity_HomeMenu.class);
             startActivity(intent);
         });
     }

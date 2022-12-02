@@ -22,7 +22,7 @@ public class Activity_correctword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_correctword);
         txt = findViewById(R.id.txttime_correctword);
-        Intent intent = new Intent(this, BroadcastService_Quiz.class);
+        Intent intent = new Intent(this, BroadcastService_Correctword.class);
         startService(intent);
         Log.i(TAG, "Started Service");
 
