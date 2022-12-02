@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -37,10 +38,8 @@
         <activity android:name=".U1_Vocabulary" />
         <activity android:name=".U1_Grammar" />
         <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
-<!--        <activity android:name=".Vocabulary"/>-->
-<!--        <activity android:name=".Grammar"/>-->
-<!--        <activity android:name=".U1_Vocabulary"-->
-<!--            tools:ignore="DuplicateActivity" />-->
+        <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
+        <activity android:name=".Revise_PhuongDong.ReviseReading"/>
         <activity android:name=".U2_Vocabulary"/>
         <activity android:name=".U3_Vocabulary"/>
         <activity android:name=".U4_Vocabulary"/>
@@ -72,7 +71,6 @@
         <activity android:name=".Activity_HomeMenu"/>
         <activity android:name=".Activity_highscores"/>
         <activity android:name=".Activity_test"/>
-        <activity android:name=".Revise_PhuongDong.ReviseGrammar"/>
     </application>
 
 </manifest>

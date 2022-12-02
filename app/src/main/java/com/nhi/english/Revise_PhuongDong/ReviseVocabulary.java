@@ -7,7 +7,6 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,6 +61,7 @@ public class ReviseVocabulary extends AppCompatActivity {
         next = (ImageButton) findViewById(R.id.ic_next);
 
         ReadData();
+
         for (int i = 0; i < list.size(); i++){
             switch (list.get(i).style){
                 case "1":
@@ -118,7 +118,8 @@ public class ReviseVocabulary extends AppCompatActivity {
                 back.setVisibility(View.VISIBLE);
                 pos++;
                 if (pos == list.size()){
-                    Intent intent = new Intent(ReviseVocabulary.this, ReviseReading.class);
+                    Intent intents = new Intent(ReviseVocabulary.this, ReviseSpeaking.class);
+                    startActivity(intents);
                 }else {
                     Display(pos);
                 }

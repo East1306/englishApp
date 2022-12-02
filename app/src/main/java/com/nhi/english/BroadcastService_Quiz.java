@@ -24,12 +24,12 @@ public class BroadcastService_Quiz extends Service{
         super.onCreate();
        Log.i(TAG, "Starting timer ...");
        sharedPreferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
-       long millis = sharedPreferences.getLong("time", 30000);
+       long millis = sharedPreferences.getLong("time", 20000);
        if(millis / 1000 == 0){
-           millis = 30000;
+           millis = 20000;
        }
 
-       countDownTimer = new CountDownTimer(30000, 1000) {
+       countDownTimer = new CountDownTimer(20000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 Log.i(TAG, "Countdown seconds remaining: " + millisUntilFinished);
