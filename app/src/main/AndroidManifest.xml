@@ -30,6 +30,7 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <service android:name=".BroadcastService"/>
         <activity android:name=".Vocabulary" />
         <activity android:name=".Grammar" />
         <activity android:name=".U1_Vocabulary" />
