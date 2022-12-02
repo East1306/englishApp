@@ -24,7 +24,7 @@ public class Activity_gramma_vocab extends AppCompatActivity {
         setContentView(R.layout.layout_gramma_vocab);
 
         txt = findViewById(R.id.txttime);
-        Intent intent = new Intent(this, BroadcastService.class);
+        Intent intent = new Intent(this, BroadcastService_Quiz.class);
         startService(intent);
         Log.i(TAG, "Started Service");
 
@@ -46,7 +46,7 @@ public class Activity_gramma_vocab extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        registerReceiver(broadcastReceiver, new IntentFilter(BroadcastService.COUNTDOWN_CDT));
+        registerReceiver(broadcastReceiver, new IntentFilter(BroadcastService_Quiz.COUNTDOWN_CDT));
         Log.i(TAG, "Registered broadcast receiver");
     }
 
@@ -69,7 +69,7 @@ public class Activity_gramma_vocab extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        stopService(new Intent(this, BroadcastService.class));
+        stopService(new Intent(this, BroadcastService_Quiz.class));
         Log.i(TAG, "Stopped service");
         super.onDestroy();
     }
