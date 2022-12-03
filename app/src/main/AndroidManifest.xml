@@ -40,7 +40,6 @@
         <activity android:name=".activity_ketqua"/>
         <activity android:name=".Listening"/>
         <activity android:name=".Activity_correctword"/>
-        <activity android:name=".Activity_gramma_vocab"/>
         <activity android:name=".Activity_HomeMenu"/>
         <activity android:name=".Activity_highscores"/>
         <activity android:name=".Activity_Quiz"/>

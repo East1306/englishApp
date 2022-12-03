@@ -112,6 +112,7 @@ public class Activity_Quiz extends AppCompatActivity {
             updateGUI(intent);
         }
     };
+
     @Override
     protected void onResume() {
         super.onResume();
