@@ -39,10 +39,8 @@
         <activity android:name=".Revise_PhuongDong.ReviseReading"/>
         <activity android:name=".activity_ketqua"/>
         <activity android:name=".Listening"/>
-        <activity android:name=".Activity_correctword"/>
-        <activity android:name=".Activity_HomeMenu"
-            tools:ignore="DuplicateActivity" />
         <activity android:name=".Activity_highscores"/>
+        <activity android:name=".Activity_correctword"/>
         <activity android:name=".Activity_Quiz"/>
     </application>
 

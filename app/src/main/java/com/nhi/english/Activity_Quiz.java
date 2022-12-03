@@ -46,6 +46,7 @@ public class Activity_Quiz extends AppCompatActivity {
     RadioButton A,B,C,D;
     int pos=0;//vị trí câu hỏi trong danh sách
     int kq=0; //lưu số câu trả lời đúng
+    int HighScore = 0;
     ArrayList <QuestionNare> L ; //chứa câu hỏi
     @SuppressLint("MissingInflatedId")
     @Override
@@ -88,15 +89,20 @@ public class Activity_Quiz extends AppCompatActivity {
                 pos++; //Xong 1 câu thì tăng pos lên 1 để làm câu kế tiếp
 //Nếu trả lời hết câu hỏi
                 if (pos >= L.size()) {
-                    Intent intent = new Intent(Activity_Quiz.this,activity_ketqua.class);
+                    Intent intent = new Intent(Activity_Quiz.this, activity_ketqua.class);
                     Bundle bundle = new Bundle();
-                    bundle.putInt("KQ",kq);
-                    bundle.putInt("Socau",pos);
-                    intent.putExtra("MyPackage",bundle);
+                    bundle.putInt("KQ", kq);
+                    bundle.putInt("Socau", pos);
+                    intent.putExtra("MyPackage", bundle);
                     startActivity(intent);
                     pos =0; //Cho vị trí pos về câu hỏi đầu tiên
                     kq =0; //cho số câu hỏi đúng bằng 0, để làm lại
                     Display(pos); // Hiển thị lại nội dung
+                    if (kq > HighScore) {
+                        HighScore = kq;
+                        SaveHighScore();
+                    }
+                    finish();
                 }
                 else Display(pos); //Hiển thị câu hỏi kế tiếp
             }
@@ -223,4 +229,19 @@ public class Activity_Quiz extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    void LoadHighScore(){
+        SharedPreferences sharedPreferences = getSharedPreferences("MyData",
+                Context.MODE_PRIVATE);
+        if (sharedPreferences !=null){
+            HighScore = sharedPreferences.getInt("H",0);
+        }
+    }
+    void SaveHighScore(){
+        SharedPreferences sharedPreferences = getSharedPreferences("MyData",Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("H",HighScore);
+        editor.apply();
+    }
+
 }
