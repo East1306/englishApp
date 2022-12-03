@@ -1,9 +1,7 @@
 package com.nhi.english;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.view.View;
 import android.widget.RelativeLayout;
@@ -20,7 +18,6 @@ public class Vocabulary extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voca);
-        back = findViewById(R.id.BtnBack);
         B1 = findViewById(R.id.cardV1);
         B2 = findViewById(R.id.cardV2);
         B3 = findViewById(R.id.cardV3);
@@ -36,11 +33,6 @@ public class Vocabulary extends AppCompatActivity {
         B13 = findViewById(R.id.cardV13);
         B14 = findViewById(R.id.cardV14);
         B15 = findViewById(R.id.cardV15);
-        back.setOnClickListener(v -> {
-            Intent intent = new Intent(Vocabulary.this,MenuActivity.class);
-            startActivity(intent);
-            finish();
-        });
         //BT = (RelativeLayout) findViewById(R.id.BtnBack);
         //Phần Intent và Bundle đã giải thích code ở bài trước
         B1.setOnClickListener(new View.OnClickListener() {

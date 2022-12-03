@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
+
             GoogleSignInAccount account = completedTask.getResult(ApiException.class);
             Toast.makeText(this, "Sign-in-success", Toast.LENGTH_SHORT).show();
         } catch (ApiException e) {
