@@ -13,6 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 
+import java.util.ArrayList;
+
 
 public class Numofquestion extends AppCompatActivity {
     private Button btnGobackHomeMenu, btnStartQuiz;
@@ -52,9 +54,9 @@ public class Numofquestion extends AppCompatActivity {
 
     public void openActivity_gramma_vocab() {
         Intent intent = new Intent(this, Activity_Quiz.class);
+        intent.putExtra("pos", vitri);
         startActivity(intent);
     }
-
     public void CreateSpinner(){
         ArrayAdapter <String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Arr);
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
@@ -65,13 +67,13 @@ public class Numofquestion extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 vitri = position;
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
                 vitri = -1;
             }
         });
     }
+
 }
 
 

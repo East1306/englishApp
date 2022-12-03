@@ -45,15 +45,23 @@ public class Activity_Quiz extends AppCompatActivity {
     Button BT;
     RadioButton A,B,C,D;
     int pos=0;//vị trí câu hỏi trong danh sách
+    int soCau;
     int kq=0; //lưu số câu trả lời đúng
+<<<<<<< HEAD
     int HighScore = 0;
     ArrayList <QuestionNare> L ; //chứa câu hỏi
+=======
+    int k = 0;
+    ArrayList <QuestionNare> L; //chứa câu hỏi
+>>>>>>> 09c733c68d0c90a679fe86ffc6a914055cc0e941
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_gramma_vocab);
         L = new ArrayList<>();
+        txt = findViewById(R.id.txttime);
+
         Cauhoi = (TextView) findViewById(R.id.TxtCauhoi);
         Ketqua = (TextView)findViewById(R.id.TxtKetqua);
         RG = (RadioGroup)findViewById(R.id.RadioGroupTraloi);
@@ -62,6 +70,10 @@ public class Activity_Quiz extends AppCompatActivity {
         B = (RadioButton)findViewById(R.id.RdbB);
         C = (RadioButton)findViewById(R.id.RdbC);
         D = (RadioButton)findViewById(R.id.RdbD);
+
+        Intent intent_ = getIntent();
+        soCau = intent_.getExtras().getInt("pos");
+
         ReadData();
         Display(pos);
         BT.setOnClickListener(new View.OnClickListener() {
@@ -104,13 +116,13 @@ public class Activity_Quiz extends AppCompatActivity {
                     }
                     finish();
                 }
-                else Display(pos); //Hiển thị câu hỏi kế tiếp
+                else {
+                    Display(pos); //Hiển thị câu hỏi kế tiếp
+                }
+
             }
+
         });
-        txt = findViewById(R.id.txttime);
-        Intent intent = new Intent(this, BroadcastService_Quiz.class);
-        startService(intent);
-        Log.i(TAG, "Started Service");
     }
     private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -125,31 +137,31 @@ public class Activity_Quiz extends AppCompatActivity {
         registerReceiver(broadcastReceiver, new IntentFilter(BroadcastService_Quiz.COUNTDOWN_CDT));
         Log.i(TAG, "Registered broadcast receiver");
     }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        unregisterReceiver(broadcastReceiver);
-        Log.i(TAG, "Unregistered broadcast receiver");
-    }
-
-    @Override
-    protected void onStop() {
-        try {
-            unregisterReceiver(broadcastReceiver);
-        }catch (Exception e){
-
-        }
-        super.onStop();
-    }
-
-    @Override
-    protected void onDestroy() {
-        stopService(new Intent(this, BroadcastService_Quiz.class));
-        Log.i(TAG, "Stopped service");
-        super.onDestroy();
-    }
-
+//
+//    @Override
+//    protected void onPause() {
+//        super.onPause();
+//        unregisterReceiver(broadcastReceiver);
+//        Log.i(TAG, "Unregistered broadcast receiver");
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        try {
+//            unregisterReceiver(broadcastReceiver);
+//        }catch (Exception e){
+//
+//        }
+//        super.onStop();
+//    }
+//
+//    @Override
+//    protected void onDestroy() {
+//        stopService(new Intent(this, BroadcastService_Quiz.class));
+//        Log.i(TAG, "Stopped service");
+//        super.onDestroy();
+//    }
+//
     private void updateGUI(Intent intent){
         if (intent.getExtras() != null){
             long millisUntilFinished = intent.getLongExtra("countdown", 20000);
@@ -162,12 +174,15 @@ public class Activity_Quiz extends AppCompatActivity {
     }
     //Hiển thị nội dung+
     void Display(int i){
+        Log.i(TAG, "Started Service");
         Cauhoi.setText(L.get(i).Q);
         A.setText(L.get(i).AnswerA);
         B.setText(L.get(i).AnswerB);
         C.setText(L.get(i).AnswerC);
         D.setText(L.get(i).AnswerD);
         Ketqua.setText("Câu đúng:" + kq);
+        Intent intent = new Intent(Activity_Quiz.this, BroadcastService_Quiz.class);
+        startService(intent);
         RG.clearCheck(); //xóa checked
     }
     void ReadData() {
@@ -183,6 +198,7 @@ public class Activity_Quiz extends AppCompatActivity {
             Element root = doc.getDocumentElement();//lấy tag Root
             NodeList list = root.getChildNodes();// lấy toàn bộ node con của Root
             for (int i = 0; i < list.getLength(); i++) {
+
 // duyệt từ node đầu tiên cho tới node cuối cùng
                 Node node = list.item(i);// mỗi lần duyệt thì lấy ra 1 node
 // kiểm tra xem node đó có phải là Element hay không
@@ -217,7 +233,11 @@ public class Activity_Quiz extends AppCompatActivity {
                     Q1.Answer = Answer;
                     L.add(Q1);
                     Log.e("","size"+L.size());
+                    if(L.size() == Chon(soCau)){
+                        break;
+                    }
                 };
+
             }
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
@@ -229,6 +249,7 @@ public class Activity_Quiz extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+<<<<<<< HEAD
 
     void LoadHighScore(){
         SharedPreferences sharedPreferences = getSharedPreferences("MyData",
@@ -244,4 +265,30 @@ public class Activity_Quiz extends AppCompatActivity {
         editor.apply();
     }
 
+=======
+    int Chon(int vitri)
+    {
+        int Z = 0;
+        switch (vitri)
+        {
+            case 0:
+                Z = 5;
+                break;
+            case 1:
+                Z = 6;
+                break;
+            case 2:
+                Z = 7;
+                break;
+            case 3:
+                Z = 8;
+                break;
+            case 4:
+                Z = 9;
+            case 5:
+                Z = 10;
+        }
+        return Z;
+    }
+>>>>>>> 09c733c68d0c90a679fe86ffc6a914055cc0e941
 }

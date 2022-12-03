@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
+
 <Question>
+    /*
+    Style 1: Vocabulary
+    Style 2: Grammar
+    Style 3: Reading
+    Style 4: Listen
+        Id 1: The listening session 1
+        Id 2: The listening session 2
+        Id 3: The listening session 3
+    */
 // VOCABULARY
     <Item>
         <Style>1</Style> //Vocabulary
@@ -164,5 +174,145 @@
         <AnswerB>win</AnswerB>
         <AnswerC></AnswerC>
         <Answer>B</Answer>
+    </Item>
+
+//Listening
+    <Item>
+        <Style>4</Style>
+        <ID>1</ID>
+        <Question>At approximately what time will the ship arrive?</Question>
+        <AnswerA>at 7 a.m</AnswerA>
+        <AnswerB>at 8 a.m</AnswerB>
+        <AnswerC>at 9 a.m</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>1</ID>
+        <Question>Which of these can children have in the restaurant?
+        </Question>
+        <AnswerA>a children's menu</AnswerA>
+        <AnswerB>earlier mealtimes</AnswerB>
+        <AnswerC>a children's party</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>1</ID>
+        <Question>What are available at a reduced price?</Question>
+        <AnswerA>souvenirs of the ship</AnswerA>
+        <AnswerB>first-class cabins</AnswerB>
+        <AnswerC>train tickets</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>1</ID>
+        <Question>Which of these is situated in the lounge?</Question>
+        <AnswerA>a computer</AnswerA>
+        <AnswerB>a coffee machine</AnswerB>
+        <AnswerC>a television</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>1</ID>
+        <Question>What special event will happen during the voyage?</Question>
+        <AnswerA>a fashion show</AnswerA>
+        <AnswerB>a concert</AnswerB>
+        <AnswerC>a competition</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+
+    <Item>
+        <Style>4</Style>
+        <ID>2</ID>
+        <Question>The caller wants to do a writing course to help with</Question>
+        <AnswerA>his hobby.</AnswerA>
+        <AnswerB>his job.</AnswerB>
+        <AnswerC>his children's education.</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>2</ID>
+        <Question>
+            What does the course pack include?</Question>
+        <AnswerA>multimedia items</AnswerA>
+        <AnswerB>a list of books to buy</AnswerB>
+        <AnswerC>lesson and assignment dates</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>2</ID>
+        <Question>How much does the course cost?</Question>
+        <AnswerA>£340</AnswerA>
+        <AnswerB>£375</AnswerB>
+        <AnswerC>£400</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>2</ID>
+        <Question>Alex's first assignment will be about his</Question>
+        <AnswerA>family life.</AnswerA>
+        <AnswerB>school experiences.</AnswerB>
+        <AnswerC>expectations of the course.</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>2</ID>
+        <Question>What does the feedback include?</Question>
+        <AnswerA>a tutorial</AnswerA>
+        <AnswerB>an exercise</AnswerB>
+        <AnswerC>a discussion group</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>3</ID>
+        <Question>How long will it take to get to Paris?</Question>
+        <AnswerA> about one hour</AnswerA>
+        <AnswerB> about three hours</AnswerB>
+        <AnswerC> about four hours</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>3</ID>
+        <Question>What should passengers do with their passports?</Question>
+        <AnswerA>leave them with the steward</AnswerA>
+        <AnswerB>lock them away</AnswerB>
+        <AnswerC>carry them at all times</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>3</ID>
+        <Question>What are available at a reduced price?</Question>
+        <AnswerA>7.45 p.m</AnswerA>
+        <AnswerB>8.00 p.m</AnswerB>
+        <AnswerC>8.15 p.m</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>3</ID>
+        <Question>What will the passengers do when the train gets to the Italian border?</Question>
+        <AnswerA>change trains</AnswerA>
+        <AnswerB>go on a tour</AnswerB>
+        <AnswerC>have lunch in a local cafe</AnswerC>
+        <Answer>A</Answer>
+    </Item>
+    <Item>
+        <Style>4</Style>
+        <ID>3</ID>
+        <Question>What should passengers not do?</Question>
+        <AnswerA>eat their own food on the train</AnswerA>
+        <AnswerB>open their cabin window</AnswerB>
+        <AnswerC>leave the train before it gets to Italy</AnswerC>
+        <Answer>A</Answer>
     </Item>
 </Question>

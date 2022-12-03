@@ -1,14 +1,17 @@
 package com.nhi.english.Revise_PhuongDong;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.nhi.english.Activity_HomeMenu;
 import com.nhi.english.R;
 
 
@@ -18,13 +21,19 @@ public class Result extends AppCompatActivity {
 
     @SuppressLint("MissingInflatedId")
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.result_dong);
 
         result = (TextView) findViewById(R.id.getPoint);
         finish = (Button) findViewById(R.id.finish);
 
-
+        finish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Result.this, Activity_HomeMenu.class);
+                startActivity(intent);
+            }
+        });
     }
 }
