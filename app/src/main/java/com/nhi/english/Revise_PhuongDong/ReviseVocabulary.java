@@ -118,7 +118,8 @@ public class ReviseVocabulary extends AppCompatActivity {
                 back.setVisibility(View.VISIBLE);
                 pos++;
                 if (pos == list.size()){
-                    Intent intents = new Intent(ReviseVocabulary.this, ReviseSpeaking.class);
+                    Intent intents = new Intent(ReviseVocabulary.this, ReviseListen.class);
+                    intents.putExtra("Style", pos);
                     startActivity(intents);
                 }else {
                     Display(pos);
@@ -132,7 +133,7 @@ public class ReviseVocabulary extends AppCompatActivity {
             DocumentBuilderFactory DBF = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = DBF.newDocumentBuilder();
 
-            InputStream in = getAssets().open("data_reviseVoca_Gram.xml");
+            InputStream in = getAssets().open("data_revise.xml");
 
             Document doc = builder.parse(in);
             Element root = doc.getDocumentElement();;
@@ -206,7 +207,7 @@ public class ReviseVocabulary extends AppCompatActivity {
         }else{
             D.setVisibility(View.INVISIBLE);
         }
-        rg.clearCheck();
+//        rg.clearCheck();
     }
 }
 
