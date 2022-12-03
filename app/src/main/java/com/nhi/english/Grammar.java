@@ -20,7 +20,6 @@ public class Grammar extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.grammar);
-        back = findViewById(R.id.BtnBack);
         B1 = findViewById(R.id.cardV1);
         B2 = findViewById(R.id.cardV2);
         B3 = findViewById(R.id.cardV3);
@@ -32,11 +31,6 @@ public class Grammar extends AppCompatActivity {
         B9 = findViewById(R.id.cardV9);
         B10 = findViewById(R.id.cardV10);
 
-        back.setOnClickListener(v -> {
-            Intent intent = new Intent(Grammar.this,MenuActivity.class);
-            startActivity(intent);
-            finish();
-        });
         //BT = (RelativeLayout) findViewById(R.id.BtnBack);
         //Phần Intent và Bundle đã giải thích code ở bài trước
         B1.setOnClickListener(new View.OnClickListener() {
