@@ -5,16 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    android:background="@drawable/gradient">
-
-        <Button
-            android:id="@+id/btn_goback_Quiz"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/ic_goback"/>
+    android:background="@drawable/gradient"
+    tools:context=".Activity_Quiz">>
 
         <TextView
             android:id="@+id/grammar"
@@ -46,22 +38,11 @@
         android:layout_marginTop="30dp">
 
         <TextView
-            android:layout_marginRight="20dp"
-            android:id="@+id/TxtQuestion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="Question ?"
-            android:textColor="#3b5eaf"
-            android:textSize="24dp"
-            android:textStyle="bold" />
-
-        <TextView
             android:id="@+id/txttime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="120dp"
-            android:text="00:30"
+            android:layout_marginLeft="10dp"
+            android:text=""
             android:textSize="26dp"
             android:layout_marginTop="22dp"
             />
@@ -83,133 +64,62 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="@string/question1"
+            android:text=""
             android:textColor="#CC000000"
             android:textSize="17sp"
             android:textAlignment="center"
             android:textStyle="bold" />
     </LinearLayout>
 
-<!--    <LinearLayout-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content">-->
-
-
-<!--        <Button-->
-<!--            android:id="@+id/Btnanswer1"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:background="@drawable/buttonradius"-->
-<!--            android:backgroundTint="#f4364c"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Answer 1"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textStyle="bold" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/Btnanswer3"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:text="Answer 3"-->
-<!--            android:textSize="20dp"-->
-<!--            android:layout_marginLeft="50dp"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:background="@drawable/buttonradius"-->
-<!--            android:backgroundTint="#1e8fd5"-->
-<!--            android:gravity="center"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textStyle="bold" />-->
-
-
-<!--    </LinearLayout>-->
-
-<!--    <LinearLayout-->
-<!--        android:layout_marginTop="45dp"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:orientation="horizontal"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content">-->
-
-<!--        <Button-->
-<!--            android:id="@+id/Btnanswer2"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:text="Answer 2"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:background="@drawable/buttonradius"-->
-<!--            android:backgroundTint="#f6be00"-->
-<!--            android:gravity="center"-->
-<!--            android:textSize="20dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textStyle="bold" />-->
-
-<!--        <Button-->
-<!--            android:id="@+id/Btnanswer4"-->
-<!--            android:layout_width="150dp"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:layout_marginLeft="50dp"-->
-<!--            android:background="@drawable/buttonradius"-->
-<!--            android:backgroundTint="#30b700"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Answer 4"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="20dp"-->
-<!--            android:textStyle="bold" />-->
-<!--    </LinearLayout>-->
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/RadioGroupTraloi"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:layout_width="250dp"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="DuplicateIds">
 
         <RadioButton
+            android:id="@+id/RdbA"
             android:buttonTint="#3959ba"
             android:background="@drawable/edit_button_quiz"
             android:paddingLeft="30dp"
-            android:id="@+id/rb1"
             android:layout_width="match_parent"
             android:layout_height="35dp"
-            android:text="113 "
+            android:text=" "
             android:textSize="20sp" />
 
         <RadioButton
-            android:id="@+id/rb2"
+            android:id="@+id/RdbB"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
             android:background="@drawable/edit_button_quiz"
             android:buttonTint="#3959ba"
             android:paddingLeft="30dp"
-            android:text="I'm fine"
+            android:text=""
             android:textSize="20sp" />
 
         <RadioButton
+            android:id="@+id/RdbC"
             android:buttonTint="#3959ba"
             android:background="@drawable/edit_button_quiz"
-            android:id="@+id/rb3"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="30dp"
-            android:text="I'm twenty"
+            android:text=""
             android:textSize="20sp" />
 
         <RadioButton
+            android:id="@+id/RdbD"
             android:buttonTint="#3959ba"
             android:background="@drawable/edit_button_quiz"
-            android:id="@+id/rb4"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:layout_marginTop="10dp"
             android:paddingLeft="30dp"
-            android:text="I'm great"
+            android:text=""
             android:textSize="20sp" />
     </RadioGroup>
     <Button
@@ -224,5 +134,14 @@
         android:backgroundTint="#0e79b2"
         android:textAllCaps="false"
         android:textSize="24dp"/>
+    <TextView
+        android:id="@+id/TxtKetqua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_below="@+id/BtnTraloi"
+        android:layout_marginTop="30dp"
+        android:textAlignment="center"
+        />
 
 </LinearLayout>

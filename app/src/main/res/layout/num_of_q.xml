@@ -51,12 +51,12 @@
         android:textStyle="normal" />
 
     <Spinner
-            android:id="@+id/btn_spinner"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/text"
-            android:layout_marginTop="33dp"
-            android:layout_toRightOf="@+id/text2" />
+        android:id="@+id/btn_spinner"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text"
+        android:layout_marginTop="33dp"
+        android:layout_toRightOf="@+id/text2" />
 
     <Button
         android:id="@+id/btn_startQuiz"
