@@ -33,7 +33,7 @@
                 android:value="" />
         </activity>
         <service android:name=".BroadcastService_Quiz"/>
-        <service android:name=".BroadcastService_Correctword"/>
+
         <activity android:name=".Vocabulary" />
         <activity android:name=".Grammar" />
         <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
