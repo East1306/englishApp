@@ -47,13 +47,11 @@ public class Activity_Quiz extends AppCompatActivity {
     int pos=0;//vị trí câu hỏi trong danh sách
     int soCau;
     int kq=0; //lưu số câu trả lời đúng
-<<<<<<< HEAD
     int HighScore = 0;
     ArrayList <QuestionNare> L ; //chứa câu hỏi
-=======
     int k = 0;
-    ArrayList <QuestionNare> L; //chứa câu hỏi
->>>>>>> 09c733c68d0c90a679fe86ffc6a914055cc0e941
+
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -249,7 +247,7 @@ public class Activity_Quiz extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-<<<<<<< HEAD
+
 
     void LoadHighScore(){
         SharedPreferences sharedPreferences = getSharedPreferences("MyData",
@@ -265,7 +263,7 @@ public class Activity_Quiz extends AppCompatActivity {
         editor.apply();
     }
 
-=======
+
     int Chon(int vitri)
     {
         int Z = 0;
@@ -290,5 +288,5 @@ public class Activity_Quiz extends AppCompatActivity {
         }
         return Z;
     }
->>>>>>> 09c733c68d0c90a679fe86ffc6a914055cc0e941
+
 }
