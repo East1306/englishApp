@@ -25,16 +25,12 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-//class QuestionNare {
-//    public String ID,title,text;
-//}
 public class Listening extends AppCompatActivity {
     MediaPlayer player;
     TextView Cauhoi,Noidung;
     Button back,next;
     int pos = 0;
     ArrayList<QuestionNare> L = new ArrayList();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,9 +42,6 @@ public class Listening extends AppCompatActivity {
         ReadData();
         Display(pos);
 
-//        if (pos == 0){
-//            back.setVisibility(View.INVISIBLE);
-//        }
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

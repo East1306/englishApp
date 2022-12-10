@@ -18,7 +18,6 @@ public class activity_ketqua extends Activity {
         setContentView(R.layout.activity_ketqua);
         KQ = (TextView) findViewById(R.id.TxtKQ);
         BT = (Button)findViewById(R.id.BtnBack);
-//Phần Intent và Bundle đã giải thích code ở bài trước
         Intent callerIntent=getIntent();
         Bundle packageFromCaller= callerIntent.getBundleExtra("MyPackage");
         KQ.setText(packageFromCaller.getInt("KQ")+"/"+

@@ -1,13 +1,11 @@
 package com.nhi.english;
 
-
 import android.annotation.SuppressLint;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -27,6 +25,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -44,12 +44,14 @@ public class Activity_Quiz extends AppCompatActivity {
     RadioGroup RG;
     Button BT;
     RadioButton A,B,C,D;
+    CountDownTimer countDownTimer;
     int pos=0;//vị trí câu hỏi trong danh sách
     int soCau;
     int kq=0; //lưu số câu trả lời đúng
     int HighScore = 0;
     ArrayList <QuestionNare> L ; //chứa câu hỏi
     int k = 0;
+    int countdown = 20;
 
 
     @SuppressLint("MissingInflatedId")
@@ -71,9 +73,11 @@ public class Activity_Quiz extends AppCompatActivity {
 
         Intent intent_ = getIntent();
         soCau = intent_.getExtras().getInt("pos");
-
         ReadData();
+        Collections.shuffle(L);
+        StartCountDown();
         Display(pos);
+
         BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,59 +86,44 @@ public class Activity_Quiz extends AppCompatActivity {
                     case R.id.RdbA:
 //Nếu đáp án là câu A thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("A")==0) kq = kq+1;
+                        NextPage();
                         break;
                     case R.id.RdbB:
 //Nếu đáp án là câu B thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("B")==0) kq = kq+1;
+                        NextPage();
                         break;
                     case R.id.RdbC:
 //Nếu đáp án là câu C thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("C")==0) kq = kq+1;
+                        NextPage();
                         break;
                     case R.id.RdbD:
 //Nếu đáp án là câu D thì cộng kq lên 1
                         if (L.get(pos).Answer.compareTo("D")==0) kq = kq+1;
+                        NextPage();
                         break;
                 }
-                pos++; //Xong 1 câu thì tăng pos lên 1 để làm câu kế tiếp
-//Nếu trả lời hết câu hỏi
-                if (pos >= L.size()) {
-                    Intent intent = new Intent(Activity_Quiz.this, activity_ketqua.class);
-                    Bundle bundle = new Bundle();
-                    bundle.putInt("KQ", kq);
-                    bundle.putInt("Socau", pos);
-                    intent.putExtra("MyPackage", bundle);
-                    startActivity(intent);
-                    pos =0; //Cho vị trí pos về câu hỏi đầu tiên
-                    kq =0; //cho số câu hỏi đúng bằng 0, để làm lại
-                    Display(pos); // Hiển thị lại nội dung
-                    if (kq > HighScore) {
-                        HighScore = kq;
-                        SaveHighScore();
-                    }
-                    finish();
-                }
-                else {
-                    Display(pos); //Hiển thị câu hỏi kế tiếp
-                }
+
+
 
             }
-
         });
     }
-    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            updateGUI(intent);
-        }
-    };
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        registerReceiver(broadcastReceiver, new IntentFilter(BroadcastService_Quiz.COUNTDOWN_CDT));
-        Log.i(TAG, "Registered broadcast receiver");
-    }
+//    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+//        @Override
+//        public void onReceive(Context context, Intent intent) {
+//            updateGUI(intent);
+//        }
+//    };
+//
+//    @Override
+//    protected void onResume() {
+//        super.onResume();
+//        registerReceiver(broadcastReceiver, new IntentFilter(BroadcastService_Quiz.COUNTDOWN_CDT));
+//        Log.i(TAG, "Registered broadcast receiver");
+//    }
 //
 //    @Override
 //    protected void onPause() {
@@ -160,16 +149,17 @@ public class Activity_Quiz extends AppCompatActivity {
 //        super.onDestroy();
 //    }
 //
-    private void updateGUI(Intent intent){
-        if (intent.getExtras() != null){
-            long millisUntilFinished = intent.getLongExtra("countdown", 20000);
-            Log.i(TAG, "Countdown seconds remaining: " + millisUntilFinished/1000);
+//void    private void updateGUI(Intent intent){
+//        if (intent.getExtras() != null){
+//            long millisUntilFinished = intent.getLongExtra("countdown", 20000);
+//            Log.i(TAG, "Countdown seconds remaining: " + millisUntilFinished/1000);
+//
+//            txt.setText(Long.toString(millisUntilFinished / 1000));
+//            SharedPreferences sharedPreferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
+//            sharedPreferences.edit().putLong("time", millisUntilFinished).apply();
+//        }
+//    }
 
-            txt.setText(Long.toString(millisUntilFinished / 1000));
-            SharedPreferences sharedPreferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
-            sharedPreferences.edit().putLong("time", millisUntilFinished).apply();
-        }
-    }
     //Hiển thị nội dung+
     void Display(int i){
         Log.i(TAG, "Started Service");
@@ -178,37 +168,31 @@ public class Activity_Quiz extends AppCompatActivity {
         B.setText(L.get(i).AnswerB);
         C.setText(L.get(i).AnswerC);
         D.setText(L.get(i).AnswerD);
-        Ketqua.setText("Câu đúng:" + kq);
-        Intent intent = new Intent(Activity_Quiz.this, BroadcastService_Quiz.class);
-        startService(intent);
+        Ketqua.setText("Điểm : "+String.valueOf(kq));
         RG.clearCheck(); //xóa checked
     }
     void ReadData() {
         try {
             Log.e("","size");
-//Tạo đối tượng DocumentBuilder (builder )
             DocumentBuilderFactory DBF = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = DBF.newDocumentBuilder();
-//Tạo FileInputStream từ tập tin XML nguồn
             InputStream in = getAssets().open("quiz_data.xml");
-//Dùng phương thức parse của đối tượng builder để tạo Document
             Document doc = builder.parse(in);
-            Element root = doc.getDocumentElement();//lấy tag Root
-            NodeList list = root.getChildNodes();// lấy toàn bộ node con của Root
+            Element root = doc.getDocumentElement();
+            NodeList list = root.getChildNodes();
             for (int i = 0; i < list.getLength(); i++) {
 
-// duyệt từ node đầu tiên cho tới node cuối cùng
-                Node node = list.item(i);// mỗi lần duyệt thì lấy ra 1 node
-// kiểm tra xem node đó có phải là Element hay không
+                Node node = list.item(i);
+
                 if (node instanceof Element) {
-                    Element Item = (Element) node;// lấy được tag Item
-// lấy tag ID bên trong của tag Item
+                    Element Item = (Element) node;
+
                     NodeList listChild = Item.getElementsByTagName("ID");
-//lấy nội dung của tag ID
+
                     String ID = listChild.item(0).getTextContent();
-// lấy tag Question
+
                     listChild = Item.getElementsByTagName("Question");
-// lấy nội dung Question
+
                     String Question = listChild.item(0).getTextContent();
                     listChild = Item.getElementsByTagName("AnswerA");
                     String AnswerA = listChild.item(0).getTextContent();
@@ -220,7 +204,7 @@ public class Activity_Quiz extends AppCompatActivity {
                     String AnswerD = listChild.item(0).getTextContent();
                     listChild = Item.getElementsByTagName("Answer");
                     String Answer = listChild.item(0).getTextContent();
-//lưu vào list
+
                     QuestionNare Q1 = new QuestionNare();
                     Q1.ID = ID;
                     Q1.Q = Question;
@@ -257,7 +241,7 @@ public class Activity_Quiz extends AppCompatActivity {
         }
     }
     void SaveHighScore(){
-        SharedPreferences sharedPreferences = getSharedPreferences("MyData",Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("H",HighScore);
         editor.apply();
@@ -287,6 +271,68 @@ public class Activity_Quiz extends AppCompatActivity {
                 Z = 10;
         }
         return Z;
+    }
+
+    void StartCountDown()
+    {
+
+        countDownTimer = new CountDownTimer(21000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Log.e("2","2");
+                if(countdown>9)
+                {
+                    txt.setText("00:"+String.valueOf(countdown));
+                }
+                else
+                {
+                    txt.setText("00:0"+String.valueOf(countdown));
+                }
+                countdown--;
+            }
+
+            @Override
+            public void onFinish() {
+                countdown = 20;
+                countDownTimer.cancel();
+                StartCountDown();
+                pos++;
+                if (pos >= L.size()) {
+                    Intent intent = new Intent(Activity_Quiz.this,activity_ketqua.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("KQ",kq);
+                    bundle.putInt("Socau",pos);
+                    intent.putExtra("MyPackage",bundle);
+                    startActivity(intent);
+                    pos =0; //Cho vị trí pos về câu hỏi đầu tiên
+                    kq =0; //cho số câu hỏi đúng bằng 0, để làm lại
+                    Display(pos); // Hiển thị lại nội dung
+                }
+                else {
+                    Display(pos); //Hiển thị câu hỏi kế tiếp
+                }
+            }
+        }.start();
+    }
+    void NextPage()
+    {
+        countdown=20;
+        pos++; //Xong 1 câu thì tăng pos lên 1 để làm câu kế tiếp
+//Nếu trả lời hết câu hỏi
+        if (pos >= L.size()) {
+            countDownTimer.cancel();;
+            Intent intent = new Intent(Activity_Quiz.this,activity_ketqua.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("KQ",kq);
+            bundle.putInt("Socau",pos);
+            intent.putExtra("MyPackage",bundle);
+            startActivity(intent);
+        }
+        else {
+            countDownTimer.cancel();
+            StartCountDown();
+            Display(pos); //Hiển thị câu hỏi kế tiếp
+        }
     }
 
 }
