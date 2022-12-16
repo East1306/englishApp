@@ -75,7 +75,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="n/o/l/t/a/s/C/o/r/a/u/g/t/n/i"
             android:textAlignment="center"
             android:textColor="#CC000000"
             android:textSize="26sp"
@@ -83,7 +82,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="5dp"
@@ -101,7 +100,6 @@
             android:textAlignment="center"
             android:textColor="#CC000000 "
             android:textSize="28dp"
-            android:text="Congratulations"
             android:textStyle="bold" />
     </LinearLayout>
 

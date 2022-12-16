@@ -111,55 +111,6 @@ public class Activity_Quiz extends AppCompatActivity {
         });
     }
 
-//    private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-//        @Override
-//        public void onReceive(Context context, Intent intent) {
-//            updateGUI(intent);
-//        }
-//    };
-//
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        registerReceiver(broadcastReceiver, new IntentFilter(BroadcastService_Quiz.COUNTDOWN_CDT));
-//        Log.i(TAG, "Registered broadcast receiver");
-//    }
-//
-//    @Override
-//    protected void onPause() {
-//        super.onPause();
-//        unregisterReceiver(broadcastReceiver);
-//        Log.i(TAG, "Unregistered broadcast receiver");
-//    }
-//
-//    @Override
-//    protected void onStop() {
-//        try {
-//            unregisterReceiver(broadcastReceiver);
-//        }catch (Exception e){
-//
-//        }
-//        super.onStop();
-//    }
-//
-//    @Override
-//    protected void onDestroy() {
-//        stopService(new Intent(this, BroadcastService_Quiz.class));
-//        Log.i(TAG, "Stopped service");
-//        super.onDestroy();
-//    }
-//
-//void    private void updateGUI(Intent intent){
-//        if (intent.getExtras() != null){
-//            long millisUntilFinished = intent.getLongExtra("countdown", 20000);
-//            Log.i(TAG, "Countdown seconds remaining: " + millisUntilFinished/1000);
-//
-//            txt.setText(Long.toString(millisUntilFinished / 1000));
-//            SharedPreferences sharedPreferences = getSharedPreferences(getPackageName(), MODE_PRIVATE);
-//            sharedPreferences.edit().putLong("time", millisUntilFinished).apply();
-//        }
-//    }
-
     //Hiển thị nội dung+
     void Display(int i){
         Log.i(TAG, "Started Service");

@@ -75,44 +75,50 @@ public class Listening extends AppCompatActivity {
 
         if (player == null) {
             switch (L.get(pos).title){
-                        case"Yoda-the cat with four ears":
-                            player = MediaPlayer.create(this, R.raw.yoda_the_cat__with_four_ears);
-                            break;
-                        case"Salt coffee – Last Part":
-                            player = MediaPlayer.create(this, R.raw.salt_coffee_last_part);
-                            break;
-                        case"Dating"  :
-                            player = MediaPlayer.create(this, R.raw.dating);
-                            break;
-                        case"Reasons of love":
-                            player = MediaPlayer.create(this,R.raw.reasons_of_love);
-                            break;
-                        case"The North Sea Protection Works":
-                            player = MediaPlayer.create(this,R.raw.the_north_sea_protection_works);
-                            break;
-                        case"Love Map":
-                            player = MediaPlayer.create(this,R.raw.love_map);
-                            break;
-                        case"The Panama Canal":
-                            player = MediaPlayer.create(this,R.raw.the_panama_canal);
-                            break;
-                        case"The Empire State Building":
-                            player = MediaPlayer.create(this,R.raw.the_empire_state_building);
-                            break;
-                        case"The Itaipu Dam":
-                            player = MediaPlayer.create(this,R.raw.the_itaipu_dam);
-                            break;
-                        case"Young children play sports":
-                            player = MediaPlayer.create(this,R.raw.young_children_play_sports__advantages_and_disadvantages);
-                            break;
-                    }
-                    player.start();
-                }
+                case"Yoda-the cat with four ears":
+                    player = MediaPlayer.create(this, R.raw.yoda_the_cat__with_four_ears);
+                    break;
+                case"Salt coffee – Last Part":
+                    player = MediaPlayer.create(this, R.raw.salt_coffee_last_part);
+                    break;
+                case"Dating"  :
+                    player = MediaPlayer.create(this, R.raw.dating);
+                    break;
+                case"Reasons of love":
+                    player = MediaPlayer.create(this,R.raw.reasons_of_love);
+                    break;
+                case"The North Sea Protection Works":
+                    player = MediaPlayer.create(this,R.raw.the_north_sea_protection_works);
+                    break;
+                case"Love Map":
+                    player = MediaPlayer.create(this,R.raw.love_map);
+                    break;
+                case"The Panama Canal":
+                    player = MediaPlayer.create(this,R.raw.the_panama_canal);
+                    break;
+                case"The Empire State Building":
+                    player = MediaPlayer.create(this,R.raw.the_empire_state_building);
+                    break;
+                case"The Itaipu Dam":
+                    player = MediaPlayer.create(this,R.raw.the_itaipu_dam);
+                    break;
+                case"Young children play sports":
+                    player = MediaPlayer.create(this,R.raw.young_children_play_sports__advantages_and_disadvantages);
+                    break;
+            }
+            player.start();
+            Toast.makeText(this,"MediaPlayer is playing",Toast.LENGTH_SHORT).show();
         }
+        else{
+            player.start();
+            Toast.makeText(this,"MediaPlayer is playing",Toast.LENGTH_SHORT).show();
+        }
+    }
 
     public void pause(View v){
         if(player != null){
             player.pause();
+            Toast.makeText(this,"MediaPlayer has paused",Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -122,7 +128,7 @@ public class Listening extends AppCompatActivity {
 
     private void stopPlayer(){
         if(player !=null){
-            player.release();
+            player.stop();
             player = null;
             Toast.makeText(this,"MediaPlayer has stopped",Toast.LENGTH_SHORT).show();
         }
