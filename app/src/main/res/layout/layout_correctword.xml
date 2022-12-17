@@ -71,10 +71,10 @@
         android:padding="20dp">
 
         <TextView
+            android:id="@+id/txtQuestion"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:text="n/o/l/t/a/s/C/o/r/a/u/g/t/n/i"
             android:textAlignment="center"
             android:textColor="#CC000000"
             android:textSize="26sp"
@@ -82,7 +82,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="5dp"
@@ -92,14 +92,14 @@
         android:orientation="vertical"
         android:padding="20dp">
 
-        <TextView
+        <EditText
+            android:id="@+id/InputAnswer"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:textAlignment="center"
-            android:textColor="#CC000000"
+            android:textColor="#CC000000 "
             android:textSize="28dp"
-            android:text="Congratulations"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -112,6 +112,7 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/btnAnswer"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:text="Answer"
@@ -125,9 +126,10 @@
             android:textAllCaps="false"/>
 
         <Button
+            android:id="@+id/btnSkip"
             android:layout_width="130dp"
             android:layout_height="58dp"
-            android:text="Next"
+            android:text="Skip"
             android:textSize="25dp"
             android:layout_gravity="center"
             android:textColor="@color/white"

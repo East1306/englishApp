@@ -1,13 +1,10 @@
 package com.nhi.english;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.nhi.english.Revise_PhuongDong.ReviseVocabulary;
@@ -17,7 +14,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
     private ImageView imgbtnCW;
     private ImageView img_revise;
     private ImageView img_listen;
-
+    private ImageView img_highscore;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +24,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
         imgbtnCW = (ImageView) findViewById(R.id.btn_correctword);
         img_revise = (ImageView) findViewById(R.id.btn_revision);
         img_listen = (ImageView) findViewById(R.id.btn_listen);
+        img_highscore = (ImageView) findViewById(R.id.btn_highscore);
 
         imgbtnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,6 +60,12 @@ public class Activity_HomeMenu extends AppCompatActivity {
             }
         });
 
-
+        img_highscore.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Activity_HomeMenu.this, Activity_highscores.class);
+                startActivity(intent);
+            }
+        });
     }
 }

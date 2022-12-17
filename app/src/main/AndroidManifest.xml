@@ -32,8 +32,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <service android:name=".BroadcastService_Quiz"/>
-        <service android:name=".BroadcastService_Correctword"/>
+
+
         <activity android:name=".Vocabulary" />
         <activity android:name=".Grammar" />
         <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
@@ -71,8 +71,8 @@
         <activity android:name=".U10_Grammar"/>
         <activity android:name=".activity_ketqua"/>
         <activity android:name=".Listening"/>
-        <activity android:name=".Activity_correctword"/>
         <activity android:name=".Activity_highscores"/>
+        <activity android:name=".Activity_correctword"/>
         <activity android:name=".Activity_Quiz"/>
     </application>
 

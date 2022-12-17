@@ -20,21 +20,18 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-//class QuestionNare {
-//    public String ID,title,text;
-//}
 public class Listening extends AppCompatActivity {
     MediaPlayer player;
     TextView Cauhoi,Noidung;
     Button back,next;
     int pos = 0;
     ArrayList<QuestionNare> L = new ArrayList();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,11 +41,8 @@ public class Listening extends AppCompatActivity {
         back = findViewById(R.id.BtnBack);
         next = findViewById(R.id.BtnNext);
         ReadData();
+        Collections.shuffle(L);
         Display(pos);
-
-//        if (pos == 0){
-//            back.setVisibility(View.INVISIBLE);
-//        }
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,87 +71,69 @@ public class Listening extends AppCompatActivity {
         });
     }
 
-
     public void play(View v){
-        switch(pos){
-            case 0:
-                if (player == null){
-                    player = MediaPlayer.create(this,R.raw.yoda_the_cat__with_four_ears);
-                }
-                player.start();
-                break;
-            case 1:
-                if (player == null){
-                    player = MediaPlayer.create(this,R.raw.salt_coffee_last_part);
-                }
-                player.start();
-                break;
-            case 2:
-                if (player == null){
-                    player = MediaPlayer.create(this,R.raw.dating);
-                }
-                player.start();
-                break;
-            case 3:
-                if (player == null){
+
+        if (player == null) {
+            switch (L.get(pos).title){
+                case"Yoda-the cat with four ears":
+                    player = MediaPlayer.create(this, R.raw.yoda_the_cat__with_four_ears);
+                    break;
+                case"Salt coffee – Last Part":
+                    player = MediaPlayer.create(this, R.raw.salt_coffee_last_part);
+                    break;
+                case"Dating"  :
+                    player = MediaPlayer.create(this, R.raw.dating);
+                    break;
+                case"Reasons of love":
                     player = MediaPlayer.create(this,R.raw.reasons_of_love);
-                }
-                player.start();
-                break;
-            case 4:
-                if (player == null){
+                    break;
+                case"The North Sea Protection Works":
                     player = MediaPlayer.create(this,R.raw.the_north_sea_protection_works);
-                }
-                player.start();
-                break;
-            case 5:
-                if (player == null){
+                    break;
+                case"Love Map":
                     player = MediaPlayer.create(this,R.raw.love_map);
-                }
-                player.start();
-                break;
-            case 6:
-                if (player == null){
+                    break;
+                case"The Panama Canal":
                     player = MediaPlayer.create(this,R.raw.the_panama_canal);
-                }
-                player.start();
-                break;
-            case 7:
-                if (player == null){
+                    break;
+                case"The Empire State Building":
                     player = MediaPlayer.create(this,R.raw.the_empire_state_building);
-                }
-                player.start();
-                break;
-            case 8:
-                if (player == null){
+                    break;
+                case"The Itaipu Dam":
                     player = MediaPlayer.create(this,R.raw.the_itaipu_dam);
-                }
-                player.start();
-                break;
-            case 9:
-                if (player == null){
+                    break;
+                case"Young children play sports":
                     player = MediaPlayer.create(this,R.raw.young_children_play_sports__advantages_and_disadvantages);
-                }
-                player.start();
-                break;
+                    break;
+            }
+            player.start();
+            Toast.makeText(this,"MediaPlayer is playing",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            player.start();
+            Toast.makeText(this,"MediaPlayer is playing",Toast.LENGTH_SHORT).show();
         }
     }
+
     public void pause(View v){
         if(player != null){
             player.pause();
+            Toast.makeText(this,"MediaPlayer has paused",Toast.LENGTH_SHORT).show();
         }
     }
 
     public void stop(View v){
         stopPlayer();
     }
+
     private void stopPlayer(){
         if(player !=null){
-            player.release();
+            player.stop();
             player = null;
             Toast.makeText(this,"MediaPlayer has stopped",Toast.LENGTH_SHORT).show();
         }
     }
+
     protected void onStop(){
         super.onStop();
         stopPlayer();
@@ -167,6 +143,7 @@ public class Listening extends AppCompatActivity {
         Cauhoi.setText(L.get(i).title);
         Noidung.setText(L.get(i).text);
     }
+
     void ReadData() {
         try {
 
@@ -199,6 +176,7 @@ public class Listening extends AppCompatActivity {
                     L.add(Q1);
                 };
             }
+
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
@@ -208,5 +186,6 @@ public class Listening extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }
