@@ -83,126 +83,65 @@ public class Listening extends AppCompatActivity {
             case 0:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.yoda_the_cat__with_four_ears);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 1:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.salt_coffee_last_part);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 2:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.dating);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 3:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.reasons_of_love);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 4:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.the_north_sea_protection_works);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 5:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.love_map);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 6:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.the_panama_canal);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 7:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.the_empire_state_building);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 8:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.the_itaipu_dam);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
             case 9:
                 if (player == null){
                     player = MediaPlayer.create(this,R.raw.young_children_play_sports__advantages_and_disadvantages);
-                    player.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                        @Override
-                        public void onCompletion(MediaPlayer mp) {
-                            stopPlayer();
-                        }
-                    });
                 }
                 player.start();
                 break;
         }
     }
-
     public void pause(View v){
         if(player != null){
             player.pause();

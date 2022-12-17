@@ -47,86 +47,27 @@
         android:layout_marginRight="20dp"
         >
     </TextView>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        android:background="@color/buttonColor"
-        android:layout_marginTop="20dp">
-        <ImageButton
+        <ImageView
             android:id="@+id/buttonPlaySound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="play sound"
-            android:background="@drawable/ic_baseline_play_arrow_24"
-            android:backgroundTint="@color/green"
-            android:padding="40dp"
-            android:textColor="@color/green"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            >
-        </ImageButton>
-        <ImageButton
-            android:id="@+id/buttonPauseSound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="play sound"
-            android:background="@drawable/ic_baseline_pause_24"
-            android:backgroundTint="@color/green"
-            android:padding="40dp"
-            android:textColor="@color/green"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ic_baseline_play_arrow_24"
             android:layout_gravity="center"
             >
-        </ImageButton>
-        <ImageButton
-            android:id="@+id/buttonStopSound"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="play sound"
-            android:background="@drawable/ic_baseline_stop_24"
-            android:backgroundTint="@color/green"
-            android:padding="40dp"
-            android:textColor="@color/green"
-            android:layout_gravity="center"
-            android:layout_marginRight="20dp"
-            >
-        </ImageButton>
-    </LinearLayout>
+        </ImageView>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center">
 
-        <TextView
-            android:id="@+id/timePlaying"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="00:00"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold">
-        </TextView>
-        <HorizontalScrollView
-            android:layout_width="285dp"
-            android:layout_height="match_parent">
-            <SeekBar
-                android:id="@+id/mSeekBarTime"
-                android:layout_width="285dp"
-                android:layout_height="match_parent">
-            </SeekBar>
-        </HorizontalScrollView>
 
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="366dp"
+            android:layout_height="match_parent" />
 
-        <TextView
-            android:id="@+id/timePlaySound"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="00:00"
-            android:textColor="@color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"></TextView>
     </LinearLayout>
     <RadioGroup
         android:id="@+id/RadioGroupAnswer"
@@ -163,6 +104,7 @@
             android:text="D."
             android:textSize="25dp"
             android:padding="10dp"/>
+
     </RadioGroup>
     <TextView
         android:id="@+id/explain"
@@ -175,4 +117,5 @@
         android:textColor="@color/black"
         >
     </TextView>
+
 </LinearLayout>

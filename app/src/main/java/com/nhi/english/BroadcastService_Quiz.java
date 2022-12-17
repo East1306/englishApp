@@ -8,6 +8,7 @@ import android.content.SharedPreferences;
 import android.os.CountDownTimer;
 import android.os.IBinder;
 import android.util.Log;
+import android.widget.TextView;
 
 public class BroadcastService_Quiz extends Service{
 
@@ -16,7 +17,6 @@ public class BroadcastService_Quiz extends Service{
     Intent intent = new Intent(COUNTDOWN_CDT);
     BroadcastService_Quiz broadcastServiceQuiz = null;
     SharedPreferences sharedPreferences;
-
     CountDownTimer countDownTimer = null;
 
     @Override
@@ -33,13 +33,14 @@ public class BroadcastService_Quiz extends Service{
             @Override
             public void onTick(long millisUntilFinished) {
                 Log.i(TAG, "Countdown seconds remaining: " + millisUntilFinished);
+
                 intent.putExtra("countdown", millisUntilFinished);
                 sendBroadcast(intent);
             }
 
             @Override
             public void onFinish() {
-
+                Log.i(TAG, "onFinish: Timer is finished");
             }
         };
         countDownTimer.start();

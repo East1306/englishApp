@@ -8,9 +8,12 @@ import android.os.Message;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -28,6 +31,8 @@ import java.io.InputStream;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Handler;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -35,17 +40,20 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 public class ReviseListen extends AppCompatActivity {
-    ImageButton playSound, stopSound, pauseSound;
+    ImageView playSound;
     ImageButton next, back;
     TextView time, question, explain;
     RadioButton A, B, C, D;
+    RadioGroup rg;
     SeekBar mSeekBarTime;
-
+    int countPlaying = 0;
     int pos = 0;
+    int result;
     String idSession;
     ArrayList<Integer> tmp = new ArrayList<>();
     ArrayList<Question> list_ = new ArrayList<>();
     MediaPlayer sound;
+    private ArrayList listButton;
 
     //    ArrayList<String> sessions = new ArrayList<>();
     @SuppressLint("MissingInflatedId")
@@ -54,12 +62,11 @@ public class ReviseListen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listening);
 
-        playSound = (ImageButton) findViewById(R.id.buttonPlaySound);
-        stopSound = (ImageButton) findViewById(R.id.buttonStopSound);
-        pauseSound = (ImageButton) findViewById(R.id.buttonPauseSound);
+        playSound = findViewById(R.id.buttonPlaySound);
+        mSeekBarTime = (SeekBar) findViewById(R.id.seekBar);
         next = (ImageButton) findViewById(R.id.ic_next);
         back = (ImageButton) findViewById(R.id.ic_back);
-        time = (TextView) findViewById(R.id.timePlaySound);
+//        time = (TextView) findViewById(R.id.timePlaySound);
         explain = (TextView) findViewById(R.id.explain);
         question = (TextView) findViewById(R.id.contentListen);
         A = (RadioButton) findViewById(R.id.RdbA);
@@ -84,40 +91,94 @@ public class ReviseListen extends AppCompatActivity {
 //        Intent get = getIntent();
 //        pos = get.getExtras().getInt("Style");
         Display(pos);
+        creatSound(idSession);
+        Toast.makeText(ReviseListen.this, "You have two listens", Toast.LENGTH_LONG).show();
 
         playSound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (sound == null) {
+                ++countPlaying;
+                if (countPlaying <= 2 || sound == null) {
                     creatSound(idSession);
+                }else{
+                    Toast.makeText(ReviseListen.this, "Listens are over", Toast.LENGTH_LONG).show();
                 }
-                sound.start();
+                if(!sound.isPlaying()){
+                    sound.start();
+                    playSound.setImageResource(R.drawable.ic_baseline_pause_24);
+                }else{
+                    sound.pause();
+                    playSound.setImageResource(R.drawable.ic_baseline_play_arrow_24);
+                }
             }
         });
 
-        pauseSound.setOnClickListener(new View.OnClickListener() {
+        mSeekBarTime.setMax(sound.getDuration());
+        new Timer().scheduleAtFixedRate(new TimerTask() {
             @Override
-            public void onClick(View view) {
-                sound.pause();
+            public void run() {
+                mSeekBarTime.setProgress(sound.getCurrentPosition());
+            }
+        }, 0, 900);
+        sound.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                playSound.setImageResource(R.drawable.ic_baseline_play_arrow_24);
             }
         });
-
-        stopSound.setOnClickListener(new View.OnClickListener() {
+//        sound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+//            @Override
+//            public void onPrepared(MediaPlayer mediaPlayer) {
+//            }
+//        });
+        mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
-            public void onClick(View view) {
-                sound.release();
-                sound = null;
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                sound.seekTo(progress);
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
 
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                int idCheck = rg.getCheckedRadioButtonId();
+                switch(idCheck){
+                    case R.id.RdbA:
+                        if(list_.get(pos).Answer.compareTo("A") == 0){
+                            result += 1;
+                        }
+                    case R.id.RdbB:
+                        if(list_.get(pos).Answer.compareTo("B") == 0){
+                            result += 1;
+                        }
+                    case R.id.RdbC:
+                        if(list_.get(pos).Answer.compareTo("C") == 0){
+                            result += 1;
+                        }
+                    case R.id.RdbD:
+                        if(list_.get(pos).Answer.compareTo("D") == 0){
+                            result += 1;
+                        }
+                }
+                listButton.add(idCheck);
                 ++pos;
                 if (pos >= list_.size()) {
                     sound.stop();
-                    Intent intent = new Intent(ReviseListen.this, ReviseSpeaking.class);
-                    startActivity(intent);
+                    Intent intent_ = new Intent(ReviseListen.this, ReviseSpeaking.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("kp", result);
+                    bundle.putStringArrayList("button", listButton);
+                    intent_.putExtra("ReviseListen", bundle);
+                    startActivity(intent_);
                 } else {
                     Display(pos);
                 }
@@ -210,11 +271,6 @@ public class ReviseListen extends AppCompatActivity {
             A.setText(list_.get(i).answerA);
             B.setText(list_.get(i).answerB);
             C.setText(list_.get(i).answerC);
-//            if (list_.get(i).answerC != null){
-//                C.setText(list_.get(i).answerC);
-//            } else{
-//                C.setVisibility(View.INVISIBLE);
-//            }
             if (list_.get(i).answerD != null) {
                 D.setText(list_.get(i).answerD);
             } else {
@@ -222,67 +278,4 @@ public class ReviseListen extends AppCompatActivity {
             }
         }
     }
-
-//     sound.setOnPreparedListener(new MediaPlayer.OnPreparedListener()
-//
-//    {
-//        @Override
-//        public void onPrepared (MediaPlayer mp){
-//        mSeekBarTime.setMax(sound.getDuration());
-//        sound.start();
-//    }
-//    });
-//
-//        mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener()
-//
-//    {
-//        @Override
-//        public void onProgressChanged (SeekBar seekBar,int progress, boolean fromUser){
-//        if (fromUser) {
-//            sound.seekTo(progress);
-//            mSeekBarTime.setProgress(progress);
-//        }
-//    }
-//
-//        @Override
-//        public void onStartTrackingTouch (SeekBar seekBar){
-//
-//    }
-//
-//        @Override
-//        public void onStopTrackingTouch (SeekBar seekBar){
-//
-//    }
-//    });
-//
-//        new
-//
-//    Thread(new Runnable() {
-//        @Override
-//        public void run () {
-//            while (sound != null) {
-//                try {
-//                    if (sound.isPlaying()) {
-//                        Message message = new Message();
-//                        message.what = sound.getCurrentPosition();
-//                        handler.sendMessage(message);
-//                        Thread.sleep(1000);
-//                    }
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }
-//    })
-//
-//    start();
-//
-//    @SuppressLint("Handler Leak")
-//    Handler handler = new Handler() {
-//        @Override
-//        public void handleMessage(Message msg) {
-//            mSeekBarTime.setProgress(msg.what);
-//        }
-//    };
-//}
 }

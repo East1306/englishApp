@@ -2,11 +2,13 @@ package com.nhi.english.Revise_PhuongDong;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,7 +42,7 @@ public class ReviseVocabulary extends AppCompatActivity {
     ArrayList<Question> list = new ArrayList<>();
     ArrayList<Question> listVoca = new ArrayList<>();
     ArrayList<Question> listGram = new ArrayList<>();
-
+    private ArrayList<String> listAnswer = new ArrayList<>();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -87,17 +89,6 @@ public class ReviseVocabulary extends AppCompatActivity {
 
         Display(pos);
 
-        int idCheck = rg.getCheckedRadioButtonId();
-        switch (idCheck){
-            case R.id.RdbA:
-                if(list.get(pos).Answer.compareTo("A") == 0) result += 1;
-            case R.id.RdbB:
-                if(list.get(pos).Answer.compareTo("B") == 0) result += 1;
-            case R.id.RdbC:
-                if(list.get(pos).Answer.compareTo("C") == 0) result += 1;
-            case R.id.RdbD:
-                if(list.get(pos).Answer.compareTo("D") == 0) result += 1;
-        }
         if (pos == 0){
             back.setVisibility(View.INVISIBLE);
         }
@@ -111,14 +102,36 @@ public class ReviseVocabulary extends AppCompatActivity {
                 Display(pos);
             }
         });
-
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+//                Toast.makeText(ReviseVocabulary.this, "PLease click next to save answer"
+//                        ,Toast.LENGTH_SHORT).show();
+            }
+        });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 back.setVisibility(View.VISIBLE);
+                int idCheck = rg.getCheckedRadioButtonId();
+                CheckAnswer(idCheck, list);
+//                switch (list.get(pos).style){
+//                    case "1":
+//                        CheckAnswer(idCheck, listVoca);
+//                        break;
+//                    case "2":
+//                        CheckAnswer(idCheck, listGram);
+//                        break;
+//                }
+                Log.d("Button:", String.valueOf(idCheck));
+                Log.d("Result:", String.valueOf(result));
                 pos++;
                 if (pos == list.size()){
                     Intent intents = new Intent(ReviseVocabulary.this, ReviseListen.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("kpVoca", result);
+                    bundle.putStringArrayList("buttonVoca", listAnswer);
+                    intents.putExtra("ReviseVocabulary", bundle);
                     intents.putExtra("Style", pos);
                     startActivity(intents);
                 }else {
@@ -207,76 +220,51 @@ public class ReviseVocabulary extends AppCompatActivity {
         }else{
             D.setVisibility(View.INVISIBLE);
         }
-//        rg.clearCheck();
+        rg.clearCheck();
+        try {
+            rg.check(Integer.parseInt(listAnswer.get(i)));
+        }catch (Exception ex){
+            rg.clearCheck();
+        }
+    }
+//
+    private void CheckAnswer(int idCheck, ArrayList<Question> listQuestion){
+        switch(idCheck){
+            case R.id.RdbA:
+                if(listQuestion.get(pos).Answer.compareTo("A") == 0){
+                    result += 1;
+                    break;
+                }
+            case R.id.RdbB:
+                if(listQuestion.get(pos).Answer.compareTo("A") == 0){
+                    result += 1;
+                    break;
+                }
+            case R.id.RdbC:
+                if(listQuestion.get(pos).Answer.compareTo("A") == 0){
+                    result += 1;
+                    break;
+                }
+            case R.id.RdbD:
+                if(listQuestion.get(pos).Answer.compareTo("A") == 0){
+                    result += 1;
+                    break;
+                }
+        }
+        if (!checkList(String.valueOf(idCheck),pos)){
+            listAnswer.add(String.valueOf(idCheck));
+        }
+    }
+
+    Boolean checkList(String a,  int index){
+        for (int i = 0; i < listAnswer.size(); i++){
+            if(index == listAnswer.indexOf(listAnswer.get(i))){
+                if(a.compareTo(listAnswer.get(i))!= 0){
+                    listAnswer.set(listAnswer.indexOf(listAnswer.get(i)), a);
+                }
+                return true;
+            }
+        }
+        return false;
     }
 }
-
-//package com.nhi.english;
-//
-//
-//import android.annotation.SuppressLint;
-//import android.os.Bundle;
-//import android.view.View;
-//import android.widget.ImageButton;
-//import android.widget.RadioButton;
-//import android.widget.TextView;
-//
-//import androidx.annotation.Nullable;
-//import androidx.appcompat.app.AppCompatActivity;
-//
-//import java.util.ArrayList;
-//
-//class Question{
-//    int id;
-//    String content;
-//    String answerA, answerB, answerC, answerD;
-//}
-//
-//public class ReviseVocabulary extends AppCompatActivity {
-//    TextView question;
-//    TextView explain;
-//    RadioButton A, B, C, D;
-//    ImageButton back, next;
-//    int pos = 0;
-//    ArrayList<Question> list = new ArrayList<>();
-//
-//
-//    @SuppressLint("MissingInflatedId")
-//    @Override
-//    protected void onCreate(@Nullable Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.Vocabulary);
-//
-//        question = (TextView) findViewById(R.id.question);
-//        explain = (TextView) findViewById(R.id.explain);
-//        A = (RadioButton) findViewById(R.id.RdbA);
-//        B = (RadioButton) findViewById(R.id.RdbB);
-//        C = (RadioButton) findViewById(R.id.RdbC);
-//        D = (RadioButton) findViewById(R.id.RdbD);
-//        back = (ImageButton) findViewById(R.id.ic_back);
-//        next = (ImageButton) findViewById(R.id.ic_next);
-//
-//        back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
-//        next.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//
-//            }
-//        });
-//
-//        ReadData();
-//        Display();
-//
-//
-//    }
-//
-//    void ReadData(){
-//    }
-//    void Display(){
-//    }
-//}

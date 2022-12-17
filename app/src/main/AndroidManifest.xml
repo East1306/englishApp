@@ -39,7 +39,6 @@
         <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
         <activity android:name=".Revise_PhuongDong.ReviseReading"/>
-<<<<<<< HEAD
         <activity android:name=".Revise_PhuongDong.ReviseListen"/>
         <activity android:name=".Revise_PhuongDong.Result"/>
 <!--        <activity android:name=".Vocabulary"/>-->
@@ -60,7 +59,7 @@
         <activity android:name=".U13_Vocabulary"/>
         <activity android:name=".U14_Vocabulary"/>
         <activity android:name=".U15_Vocabulary"/>
-<!--        <activity android:name=".U1_Grammar"/>-->
+
         <activity android:name=".U2_Grammar"/>
         <activity android:name=".U3_Grammar"/>
         <activity android:name=".U4_Grammar"/>
@@ -70,8 +69,6 @@
         <activity android:name=".U8_Grammar"/>
         <activity android:name=".U9_Grammar"/>
         <activity android:name=".U10_Grammar"/>
-=======
->>>>>>> 6f453d3e4637a3d059f13cfbf70d6eeb16906542
         <activity android:name=".activity_ketqua"/>
         <activity android:name=".Listening"/>
         <activity android:name=".Activity_correctword"/>
