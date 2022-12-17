@@ -161,16 +161,11 @@ public class Listening extends AppCompatActivity {
 
                 if (node instanceof Element) {
                     Element Item = (Element) node;
-
                     NodeList listChild = Item.getElementsByTagName("Title");
-
                     String Title = listChild.item(0).getTextContent();
                     listChild = Item.getElementsByTagName("Text");
-
                     String Text = listChild.item(0).getTextContent();
-
                     QuestionNare Q1 = new QuestionNare();
-
                     Q1.title=Title;
                     Q1.text=Text;
                     L.add(Q1);

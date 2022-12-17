@@ -37,7 +37,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
         imgbtnCW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Activity_HomeMenu.this, Activity_correctword.class);
+                Intent intent = new Intent(Activity_HomeMenu.this, Activity_layout_correct.class);
                 startActivity(intent);
             }
         });

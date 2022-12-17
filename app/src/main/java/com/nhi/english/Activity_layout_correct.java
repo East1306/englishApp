@@ -2,6 +2,7 @@ package com.nhi.english;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,57 +22,52 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-public class Activity_layout_correctword extends AppCompatActivity {
 
-    Correct_Word{
-
-    }
-    Random random;
+class Correct {
+    public String ID;
+    public String Q;
+}
+public class Activity_layout_correct extends AppCompatActivity {
 
     TextView Question;
     EditText Answer;
     Button btnAnswer,btnSkip;
     int pos = 0;
-    ArrayList<QuestionNare> L = new ArrayList();
+    ArrayList<Correct> L = new ArrayList();
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle saveInstanceState) {
 
-
         super.onCreate(saveInstanceState);
         setContentView(R.layout.layout_correctword);
-
-        Question = findViewById(R.id.txtQuestion);
-        Answer = findViewById(R.id.InputAnswer);
-        btnAnswer = findViewById(R.id.btnAnswer);
-        btnSkip = findViewById(R.id.btnSkip);
-
+        Question =(TextView) findViewById(R.id.txtQuestion);
+        Answer = (EditText) findViewById(R.id.InputAnswer);
+        btnAnswer =(Button) findViewById(R.id.btnAnswer);
+        btnSkip =(Button) findViewById(R.id.btnSkip);
         ReadData();
         Collections.shuffle(L);
         Display(pos);
 
-        random = new Random();
-
-        Question.setText(mixWords());
-
         btnAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pos++;
-                if(Answer.getText().toString().equalsIgnoreCase()){
-                    Toast.makeText(Activity_layout_correctword.this, "You are correct:)",Toast.LENGTH_SHORT).show();
+
+                if(Answer.getText().toString().equalsIgnoreCase(L.get(pos).Q)){
+                    Toast.makeText(Activity_layout_correct.this, "You are correct:)",Toast.LENGTH_SHORT).show();
+                    pos++;
+                    Display(pos);
                 }
                 else{
-                    Toast.makeText(Activity_layout_correctword.this, "You are Wrong:)",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_layout_correct.this, "You are Wrong:)",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -79,41 +75,34 @@ public class Activity_layout_correctword extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                Question.setText(mixWords());
-
+                pos++;
+                Display(pos);
             }
         });
     }
 
-
     private String mixWords(String word){
 
-        List<String> words = Arrays.asList(word.split( ""));
-
+        List<String> words = Arrays.asList(word.split(""));
         Collections.shuffle(words);
         String mixed = "";
-
         for(String i : words){
-
             mixed += i;
         }
-
         return mixed;
     }
 
     void Display(int i){
-        Question.setText(L.get(i).);
+        Answer.setText(" ");
+        Question.setText(mixWords(L.get(i).Q).toLowerCase(Locale.ROOT));
     }
 
     void ReadData() {
-        try {
 
+        try {
             DocumentBuilderFactory DBF = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = DBF.newDocumentBuilder();
-
             InputStream in = getAssets().open("correct_words_data.xml");
-
             Document doc = builder.parse(in);
             Element root = doc.getDocumentElement();
             NodeList list = root.getChildNodes();
@@ -123,21 +112,16 @@ public class Activity_layout_correctword extends AppCompatActivity {
 
                 if (node instanceof Element) {
                     Element Item = (Element) node;
-
                     NodeList listChild = Item.getElementsByTagName("ID");
-
-                    String Title = listChild.item(0).getTextContent();
+                    String ID = listChild.item(0).getTextContent();
                     listChild = Item.getElementsByTagName("Question");
-
-                    String Text = listChild.item(0).getTextContent();
-
-                    QuestionNare Q1 = new QuestionNare();
-
-                    Q1.Question=Question;
+                    String Question = listChild.item(0).getTextContent();
+                    Correct Q1 = new Correct();
+                    Q1.ID = ID;
+                    Q1.Q = Question;
                     L.add(Q1);
                 };
             }
-
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {

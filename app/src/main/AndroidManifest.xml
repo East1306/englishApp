@@ -4,9 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-<!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
-<!--    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>-->
-<!--    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -39,13 +36,8 @@
         <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
         <activity android:name=".Revise_PhuongDong.ReviseReading"/>
-
         <activity android:name=".Revise_PhuongDong.ReviseListen"/>
         <activity android:name=".Revise_PhuongDong.Result"/>
-<!--        <activity android:name=".Vocabulary"/>-->
-<!--        <activity android:name=".Grammar"/>-->
-<!--        <activity android:name=".U1_Vocabulary"-->
-<!--            tools:ignore="DuplicateActivity" />-->
         <activity android:name=".U2_Vocabulary"/>
         <activity android:name=".U3_Vocabulary"/>
         <activity android:name=".U4_Vocabulary"/>
@@ -60,7 +52,6 @@
         <activity android:name=".U13_Vocabulary"/>
         <activity android:name=".U14_Vocabulary"/>
         <activity android:name=".U15_Vocabulary"/>
-<!--        <activity android:name=".U1_Grammar"/>-->
         <activity android:name=".U2_Grammar"/>
         <activity android:name=".U3_Grammar"/>
         <activity android:name=".U4_Grammar"/>
@@ -70,12 +61,11 @@
         <activity android:name=".U8_Grammar"/>
         <activity android:name=".U9_Grammar"/>
         <activity android:name=".U10_Grammar"/>
-
         <activity android:name=".activity_ketqua"/>
         <activity android:name=".Listening"/>
         <activity android:name=".Activity_highscores"/>
-        <activity android:name=".Activity_correctword"/>
         <activity android:name=".Activity_Quiz"/>
+        <activity android:name=".Activity_layout_correct"/>
     </application>
 
 </manifest>

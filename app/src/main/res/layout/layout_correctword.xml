@@ -78,7 +78,8 @@
             android:textAlignment="center"
             android:textColor="#CC000000"
             android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textStyle="bold" >
+        </TextView>
     </LinearLayout>
 
     <LinearLayout
