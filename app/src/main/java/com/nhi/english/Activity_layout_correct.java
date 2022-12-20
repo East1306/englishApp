@@ -1,7 +1,9 @@
 package com.nhi.english;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -38,11 +40,14 @@ class Correct {
 }
 public class Activity_layout_correct extends AppCompatActivity {
 
-    TextView Question;
+    TextView Question,Time;
     EditText Answer;
     Button btnAnswer,btnSkip;
     int pos = 0;
     ArrayList<Correct> L = new ArrayList();
+    CountDownTimer countDownTimer;
+    int countdown = 30;
+    int kq=0;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -53,8 +58,10 @@ public class Activity_layout_correct extends AppCompatActivity {
         Answer = (EditText) findViewById(R.id.InputAnswer);
         btnAnswer =(Button) findViewById(R.id.btnAnswer);
         btnSkip =(Button) findViewById(R.id.btnSkip);
+        Time = (TextView) findViewById(R.id.txttime_correctword);
         ReadData();
         Collections.shuffle(L);
+        StartCountDown();
         Display(pos);
 
         btnAnswer.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +70,8 @@ public class Activity_layout_correct extends AppCompatActivity {
 
                 if(Answer.getText().toString().equalsIgnoreCase(L.get(pos).Q)){
                     Toast.makeText(Activity_layout_correct.this, "You are correct:)",Toast.LENGTH_SHORT).show();
-                    pos++;
-                    Display(pos);
+                    kq++;
+                    NextPage();
                 }
                 else{
                     Toast.makeText(Activity_layout_correct.this, "You are Wrong:)",Toast.LENGTH_SHORT).show();
@@ -75,8 +82,7 @@ public class Activity_layout_correct extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                pos++;
-                Display(pos);
+                NextPage();
             }
         });
     }
@@ -92,6 +98,67 @@ public class Activity_layout_correct extends AppCompatActivity {
         return mixed;
     }
 
+    void StartCountDown()
+    {
+        countDownTimer = new CountDownTimer(31000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                Log.e("3","3");
+                if(countdown>9)
+                {
+                    Time.setText("00:"+String.valueOf(countdown));
+                }
+                else
+                {
+                    Time.setText("00:0"+String.valueOf(countdown));
+                }
+                countdown--;
+            }
+
+            @Override
+            public void onFinish() {
+                countdown = 30;
+                countDownTimer.cancel();
+                StartCountDown();
+                pos++;
+                if (pos >= L.size()) {
+                    Intent intent = new Intent(Activity_layout_correct.this,activity_ketqua.class);
+                    Bundle bundle = new Bundle();
+                    bundle.putInt("KQ",kq);
+                    bundle.putInt("Socau",pos);
+                    intent.putExtra("MyPackage",bundle);
+                    startActivity(intent);
+                    pos =0; //Cho vị trí pos về câu hỏi đầu tiên
+                    kq =0; //cho số câu hỏi đúng bằng 0, để làm lại
+                    Display(pos); // Hiển thị lại nội dung
+                }
+                else {
+                    Display(pos); //Hiển thị câu hỏi kế tiếp
+                }
+            }
+        }.start();
+    }
+
+    void NextPage()
+    {
+        countdown=20;
+        pos++; //Xong 1 câu thì tăng pos lên 1 để làm câu kế tiếp
+//Nếu trả lời hết câu hỏi
+        if (pos >= L.size()) {
+            countDownTimer.cancel();;
+            Intent intent = new Intent(Activity_layout_correct.this,activity_ketqua.class);
+            Bundle bundle = new Bundle();
+            bundle.putInt("KQ",kq);
+            bundle.putInt("Socau",pos);
+            intent.putExtra("MyPackage",bundle);
+            startActivity(intent);
+        }
+        else {
+            countDownTimer.cancel();
+            StartCountDown();
+            Display(pos); //Hiển thị câu hỏi kế tiếp
+        }
+    }
     void Display(int i){
         Answer.setText(" ");
         Question.setText(mixWords(L.get(i).Q).toLowerCase(Locale.ROOT));
