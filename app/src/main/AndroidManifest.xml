@@ -65,7 +65,7 @@
         <activity android:name=".Listening"/>
         <activity android:name=".Activity_highscores"/>
         <activity android:name=".Activity_Quiz"/>
-        <activity android:name=".Activity_layout_correct"/>
+        <activity android:name=".Activity_correct"/>
     </application>
 
 </manifest>

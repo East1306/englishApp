@@ -27,7 +27,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
-import java.util.Random;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -37,10 +36,11 @@ import javax.xml.parsers.ParserConfigurationException;
 class Correct {
     public String ID;
     public String Q;
+    public String Q1;
 }
-public class Activity_layout_correct extends AppCompatActivity {
+public class Activity_correct extends AppCompatActivity {
 
-    TextView Question,Time;
+    TextView VN_Question, EN_Question ,Time, Correct_Answer;
     EditText Answer;
     Button btnAnswer,btnSkip;
     int pos = 0;
@@ -54,11 +54,13 @@ public class Activity_layout_correct extends AppCompatActivity {
 
         super.onCreate(saveInstanceState);
         setContentView(R.layout.layout_correctword);
-        Question =(TextView) findViewById(R.id.txtQuestion);
+        VN_Question =(TextView) findViewById(R.id.txtVN_Question);
+        EN_Question =(TextView) findViewById(R.id.txtEN_Question);
         Answer = (EditText) findViewById(R.id.InputAnswer);
         btnAnswer =(Button) findViewById(R.id.btnAnswer);
         btnSkip =(Button) findViewById(R.id.btnSkip);
         Time = (TextView) findViewById(R.id.txttime_correctword);
+        Correct_Answer = (TextView) findViewById(R.id.txt_correct_answer);
         ReadData();
         Collections.shuffle(L);
         StartCountDown();
@@ -67,14 +69,13 @@ public class Activity_layout_correct extends AppCompatActivity {
         btnAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if(Answer.getText().toString().equalsIgnoreCase(L.get(pos).Q)){
-                    Toast.makeText(Activity_layout_correct.this, "You are correct:)",Toast.LENGTH_SHORT).show();
+                if(L.get(pos).Q.equalsIgnoreCase(Answer.getText().toString())){
+                    Toast.makeText(Activity_correct.this, "You are correct:)",Toast.LENGTH_SHORT).show();
                     kq++;
                     NextPage();
                 }
                 else{
-                    Toast.makeText(Activity_layout_correct.this, "You are Wrong:)",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_correct.this, "You are Wrong:)",Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -122,7 +123,7 @@ public class Activity_layout_correct extends AppCompatActivity {
                 StartCountDown();
                 pos++;
                 if (pos >= L.size()) {
-                    Intent intent = new Intent(Activity_layout_correct.this,activity_ketqua.class);
+                    Intent intent = new Intent(Activity_correct.this,activity_ketqua.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("KQ",kq);
                     bundle.putInt("Socau",pos);
@@ -141,12 +142,12 @@ public class Activity_layout_correct extends AppCompatActivity {
 
     void NextPage()
     {
-        countdown=20;
+        countdown=30;
         pos++; //Xong 1 câu thì tăng pos lên 1 để làm câu kế tiếp
 //Nếu trả lời hết câu hỏi
         if (pos >= L.size()) {
             countDownTimer.cancel();;
-            Intent intent = new Intent(Activity_layout_correct.this,activity_ketqua.class);
+            Intent intent = new Intent(Activity_correct.this,activity_ketqua.class);
             Bundle bundle = new Bundle();
             bundle.putInt("KQ",kq);
             bundle.putInt("Socau",pos);
@@ -160,8 +161,10 @@ public class Activity_layout_correct extends AppCompatActivity {
         }
     }
     void Display(int i){
-        Answer.setText(" ");
-        Question.setText(mixWords(L.get(i).Q).toLowerCase(Locale.ROOT));
+        Answer.setText("");
+        VN_Question.setText(L.get(pos).Q1);
+        EN_Question.setText(mixWords(L.get(i).Q));
+        Correct_Answer.setText("Correct answer: "+ kq);
     }
 
     void ReadData() {
@@ -178,14 +181,23 @@ public class Activity_layout_correct extends AppCompatActivity {
                 Node node = list.item(i);
 
                 if (node instanceof Element) {
+
                     Element Item = (Element) node;
-                    NodeList listChild = Item.getElementsByTagName("ID");
+                    NodeList listChild;
+
+                    listChild = Item.getElementsByTagName("ID");
                     String ID = listChild.item(0).getTextContent();
+
                     listChild = Item.getElementsByTagName("Question");
                     String Question = listChild.item(0).getTextContent();
+
+                    listChild = Item.getElementsByTagName("Question1");
+                    String Question1 = listChild.item(0).getTextContent();
+
                     Correct Q1 = new Correct();
                     Q1.ID = ID;
                     Q1.Q = Question;
+                    Q1.Q1 = Question1;
                     L.add(Q1);
                 };
             }
