@@ -47,18 +47,17 @@ public class Listening extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 pos--;
-                if (pos < 0){
-                    Intent intent = new Intent(Listening.this, Activity_HomeMenu.class);
-                    startService(intent);
+                if (pos < 0) {
+                    finish();
+                }else{
+                    stopPlayer();
+                    Display(pos);
                 }
-                stopPlayer();
-                Display(pos);
             }
         });
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                back.setVisibility(View.VISIBLE);
                 pos++;
                 if (pos >= L.size()) {
                     finish();
@@ -161,16 +160,11 @@ public class Listening extends AppCompatActivity {
 
                 if (node instanceof Element) {
                     Element Item = (Element) node;
-
                     NodeList listChild = Item.getElementsByTagName("Title");
-
                     String Title = listChild.item(0).getTextContent();
                     listChild = Item.getElementsByTagName("Text");
-
                     String Text = listChild.item(0).getTextContent();
-
                     QuestionNare Q1 = new QuestionNare();
-
                     Q1.title=Title;
                     Q1.text=Text;
                     L.add(Q1);

@@ -1,4 +1,4 @@
-<Word>
+<Correct>
     /*
     Style 1: Easy
     Style 2: Hard
@@ -8,6 +8,7 @@
         <Style>1</Style> //Easy
         <ID>1</ID>
         <Question>Event</Question>
+        <Question1>Sự kiện</Question1>
     </Item>
     <Item>
         <Style>1</Style>
@@ -506,5 +507,4 @@
         <ID>50</ID>
         <Question>Cumbersome</Question>
     </Item>
-
-</Word>
+</Correct>

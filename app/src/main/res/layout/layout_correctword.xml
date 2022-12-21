@@ -46,7 +46,6 @@
             />
     </LinearLayout>
 
-
     <TextView
         android:id="@+id/txttime_correctword"
         android:layout_width="wrap_content"
@@ -71,14 +70,37 @@
         android:padding="20dp">
 
         <TextView
-            android:id="@+id/txtQuestion"
+            android:id="@+id/txtVN_Question"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:textAlignment="center"
             android:textColor="#CC000000"
             android:textSize="26sp"
-            android:textStyle="bold" />
+            android:textStyle="bold" >
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/bg_ques_custom"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/txtEN_Question"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="#CC000000"
+            android:textSize="26sp"
+            android:textStyle="bold" >
+        </TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -86,7 +108,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:background="@drawable/bg_ques_custom"
         android:orientation="vertical"
@@ -105,7 +127,7 @@
 
 
     <LinearLayout
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:layout_gravity="center"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
@@ -143,6 +165,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/txt_correct_answer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"

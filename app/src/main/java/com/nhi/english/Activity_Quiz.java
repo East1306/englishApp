@@ -38,9 +38,8 @@ class QuestionNare {
     public String AnswerA, AnswerB, AnswerC, AnswerD, Answer;
 }
 public class Activity_Quiz extends AppCompatActivity {
-    TextView txt;
     String TAG = "Main";
-    TextView Cauhoi,Ketqua;
+    TextView Cauhoi,Ketqua,txt;
     RadioGroup RG;
     Button BT;
     RadioButton A,B,C,D;
@@ -50,7 +49,6 @@ public class Activity_Quiz extends AppCompatActivity {
     int kq=0; //lưu số câu trả lời đúng
     int HighScore = 0;
     ArrayList <QuestionNare> L ; //chứa câu hỏi
-    int k = 0;
     int countdown = 20;
 
 
@@ -104,9 +102,6 @@ public class Activity_Quiz extends AppCompatActivity {
                         NextPage();
                         break;
                 }
-
-
-
             }
         });
     }
@@ -226,7 +221,6 @@ public class Activity_Quiz extends AppCompatActivity {
 
     void StartCountDown()
     {
-
         countDownTimer = new CountDownTimer(21000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
