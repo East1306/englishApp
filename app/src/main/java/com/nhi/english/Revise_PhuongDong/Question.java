@@ -22,6 +22,7 @@ public class Question implements Parcelable {
 
     public Question(Parcel in) {
         id = in.readString();
+        style = in.readString();
         content = in.readString();
         answerA = in.readString();
         answerB = in.readString();
@@ -50,6 +51,7 @@ public class Question implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(id);
+        parcel.writeString(style);
         parcel.writeString(content);
         parcel.writeString(answerA);
         parcel.writeString(answerB);

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.nhi.english.Revise_PhuongDong.ReviseVocabulary;
+import com.nhi.english.Revise_PhuongDong.Revise;
 
 public class Activity_HomeMenu extends AppCompatActivity {
     private ImageView imgbtnQuiz;
@@ -54,8 +54,8 @@ public class Activity_HomeMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Activity_HomeMenu.this,
-                                            ReviseVocabulary.class);
-                intent.putExtra("key", 1306);
+                                            Revise.class);
+//                intent.putExtra("key", 1306);
                 startActivity(intent);
             }
         });

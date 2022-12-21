@@ -33,10 +33,15 @@
 
         <activity android:name=".Vocabulary" />
         <activity android:name=".Grammar" />
-        <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
+        <activity android:name=".Revise_PhuongDong.Revise" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
+<<<<<<< HEAD
         <activity android:name=".Revise_PhuongDong.ReviseReading"/>
         <activity android:name=".Revise_PhuongDong.ReviseListen"/>
+=======
+        <activity android:name=".Revise_PhuongDong.Reading"/>
+        <activity android:name=".Revise_PhuongDong.ReferenceClassListen"/>
+>>>>>>> 3ccf8e5916cded66972071ffa5eba1edc04a4f77
         <activity android:name=".Revise_PhuongDong.Result"/>
         <activity android:name=".U2_Vocabulary"/>
         <activity android:name=".U3_Vocabulary"/>
@@ -52,6 +57,10 @@
         <activity android:name=".U13_Vocabulary"/>
         <activity android:name=".U14_Vocabulary"/>
         <activity android:name=".U15_Vocabulary"/>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3ccf8e5916cded66972071ffa5eba1edc04a4f77
         <activity android:name=".U2_Grammar"/>
         <activity android:name=".U3_Grammar"/>
         <activity android:name=".U4_Grammar"/>
