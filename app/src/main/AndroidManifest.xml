@@ -15,7 +15,7 @@
         android:theme="@style/Theme.English"
         tools:targetApi="31">
         <activity
-            android:name=".Activity_HomeMenu"
+            android:name=".PhatLe.Activity_HomeMenu"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Numofquestion"
+            android:name=".PhatLe.Numofquestion"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -31,50 +31,41 @@
         </activity>
 
 
-        <activity android:name=".Vocabulary" />
-        <activity android:name=".Grammar" />
+        <activity android:name=".Nhi.Vocabulary" />
+        <activity android:name=".Nhi.Grammar" />
         <activity android:name=".Revise_PhuongDong.Revise" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
-<<<<<<< HEAD
-        <activity android:name=".Revise_PhuongDong.ReviseReading"/>
-        <activity android:name=".Revise_PhuongDong.ReviseListen"/>
-=======
         <activity android:name=".Revise_PhuongDong.Reading"/>
         <activity android:name=".Revise_PhuongDong.ReferenceClassListen"/>
->>>>>>> 3ccf8e5916cded66972071ffa5eba1edc04a4f77
         <activity android:name=".Revise_PhuongDong.Result"/>
-        <activity android:name=".U2_Vocabulary"/>
-        <activity android:name=".U3_Vocabulary"/>
-        <activity android:name=".U4_Vocabulary"/>
-        <activity android:name=".U5_Vocabulary"/>
-        <activity android:name=".U6_Vocabulary"/>
-        <activity android:name=".U7_Vocabulary"/>
-        <activity android:name=".U8_Vocabulary"/>
-        <activity android:name=".U9_Vocabulary"/>
-        <activity android:name=".U10_Vocabulary"/>
-        <activity android:name=".U11_Vocabulary"/>
-        <activity android:name=".U12_Vocabulary"/>
-        <activity android:name=".U13_Vocabulary"/>
-        <activity android:name=".U14_Vocabulary"/>
-        <activity android:name=".U15_Vocabulary"/>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3ccf8e5916cded66972071ffa5eba1edc04a4f77
-        <activity android:name=".U2_Grammar"/>
-        <activity android:name=".U3_Grammar"/>
-        <activity android:name=".U4_Grammar"/>
-        <activity android:name=".U5_Grammar"/>
-        <activity android:name=".U6_Grammar"/>
-        <activity android:name=".U7_Grammar"/>
-        <activity android:name=".U8_Grammar"/>
-        <activity android:name=".U9_Grammar"/>
-        <activity android:name=".U10_Grammar"/>
-        <activity android:name=".activity_ketqua"/>
-        <activity android:name=".Listening"/>
-        <activity android:name=".Activity_highscores"/>
-        <activity android:name=".Activity_Quiz"/>
-        <activity android:name=".Activity_correct"/>
+        <activity android:name=".Nhi.U2_Vocabulary"/>
+        <activity android:name=".Nhi.U3_Vocabulary"/>
+        <activity android:name=".Nhi.U4_Vocabulary"/>
+        <activity android:name=".Nhi.U5_Vocabulary"/>
+        <activity android:name=".Nhi.U6_Vocabulary"/>
+        <activity android:name=".Nhi.U7_Vocabulary"/>
+        <activity android:name=".Nhi.U8_Vocabulary"/>
+        <activity android:name=".Nhi.U9_Vocabulary"/>
+        <activity android:name=".Nhi.U10_Vocabulary"/>
+        <activity android:name=".Nhi.U11_Vocabulary"/>
+        <activity android:name=".Nhi.U12_Vocabulary"/>
+        <activity android:name=".Nhi.U13_Vocabulary"/>
+        <activity android:name=".Nhi.U14_Vocabulary"/>
+        <activity android:name=".Nhi.U15_Vocabulary"/>
+        <activity android:name=".Nhi.U2_Grammar"/>
+        <activity android:name=".Nhi.U3_Grammar"/>
+        <activity android:name=".Nhi.U4_Grammar"/>
+        <activity android:name=".Nhi.U5_Grammar"/>
+        <activity android:name=".Nhi.U6_Grammar"/>
+        <activity android:name=".Nhi.U7_Grammar"/>
+        <activity android:name=".Nhi.U8_Grammar"/>
+        <activity android:name=".Nhi.U9_Grammar"/>
+        <activity android:name=".Nhi.U10_Grammar"/>
+        <activity android:name=".PhatLe.activity_ketqua"/>
+        <activity android:name=".MinhTriet.Listening"/>
+        <activity android:name=".PhatLe.Activity_highscores"/>
+        <activity android:name=".PhatLe.Activity_Quiz"/>
+        <activity android:name=".MinhTriet.Activity_correct"/>
     </application>
 
 </manifest>
