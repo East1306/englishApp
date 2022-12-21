@@ -28,6 +28,10 @@ public class Result extends AppCompatActivity {
         result = (TextView) findViewById(R.id.getPoint);
         finish = (Button) findViewById(R.id.finish);
 
+        Intent intent = getIntent();
+        result.setText("Correct: " +
+                        intent.getStringExtra("Result") + "/" +
+                        intent.getStringExtra("Total sentense"));
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

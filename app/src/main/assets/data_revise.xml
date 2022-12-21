@@ -114,7 +114,7 @@
     <Item>
         <Style>2</Style>
         <ID>8</ID>
-        <Question> Which sentence contains a definite article?</Question>
+        <Question>Which sentence contains a definite article?</Question>
         <AnswerA>We saw a movie.</AnswerA>
         <AnswerB>The movie was great</AnswerB>
         <AnswerC></AnswerC>
@@ -189,8 +189,7 @@
     <Item>
         <Style>4</Style>
         <ID>1</ID>
-        <Question>Which of these can children have in the restaurant?
-        </Question>
+        <Question>Which of these can children have in the restaurant?</Question>
         <AnswerA>a children's menu</AnswerA>
         <AnswerB>earlier mealtimes</AnswerB>
         <AnswerC>a children's party</AnswerC>
@@ -236,8 +235,7 @@
     <Item>
         <Style>4</Style>
         <ID>2</ID>
-        <Question>
-            What does the course pack include?</Question>
+        <Question>What does the course pack include?</Question>
         <AnswerA>multimedia items</AnswerA>
         <AnswerB>a list of books to buy</AnswerB>
         <AnswerC>lesson and assignment dates</AnswerC>

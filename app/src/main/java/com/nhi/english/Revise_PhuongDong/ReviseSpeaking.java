@@ -10,6 +10,7 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Environment;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -24,7 +25,7 @@ import androidx.core.content.ContextCompat;
 import com.nhi.english.R;
 
 import java.io.File;
-import java.io.IOException;
+import java.util.ArrayList;
 
 
 public class ReviseSpeaking extends AppCompatActivity {
@@ -34,6 +35,11 @@ public class ReviseSpeaking extends AppCompatActivity {
 
     ImageButton back;
     Button record, stop, play, submit;
+
+    //Giữ những câu hỏi _ câu trả lời từ class Revise qua
+    ArrayList<Question> listQuestion = new ArrayList<>();
+    ArrayList<Answer> listAnswer = new ArrayList<>();
+    String sound, result;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,18 @@ public class ReviseSpeaking extends AppCompatActivity {
         play = (Button) findViewById(R.id.buttonPlay);
         submit = (Button) findViewById(R.id.buttonSubmit);
         back = (ImageButton) findViewById(R.id.ic_back);
+
+        Intent callerIntent = getIntent();
+        //Lấy Bundle dựa vào Revise
+        Bundle packageFormCaller= callerIntent.getBundleExtra("Revise");
+        listQuestion = packageFormCaller.getParcelableArrayList("Question");
+        listAnswer = packageFormCaller.getParcelableArrayList("Answer");
+        sound = packageFormCaller.getString("Sound");
+        result = packageFormCaller.getString("Result");
+        Log.d("ID Session", sound);
+        for (Question i: listQuestion){
+            Log.d("Question", i.content);
+        }
 
         if(isMicrophonePresent()){
             getMicrophonePermission();
@@ -71,7 +89,6 @@ public class ReviseSpeaking extends AppCompatActivity {
         stop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mediaRecorder.stop();
                 mediaRecorder.release();
                 mediaRecorder = null;
 
@@ -97,7 +114,14 @@ public class ReviseSpeaking extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ReviseSpeaking.this, ReviseListen.class);
+                Intent intent = new Intent(ReviseSpeaking.this,
+                                                        Revise.class);
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("Question", listQuestion);
+                bundle.putParcelableArrayList("Answer", listAnswer);
+                bundle.putString("Sound", sound);
+                bundle.putString("Result", result);
+                intent.putExtra("Speaking", bundle);
                 startActivity(intent);
             }
         });
@@ -106,6 +130,8 @@ public class ReviseSpeaking extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ReviseSpeaking.this, Result.class);
+                intent.putExtra("Result", result);
+                intent.putExtra("Total sentense", String.valueOf(listQuestion.size()));
                 startActivity(intent);
             }
         });

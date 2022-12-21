@@ -4,9 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.os.Message;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -28,18 +26,16 @@ import org.xml.sax.SAXException;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.util.logging.Handler;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-public class ReviseListen extends AppCompatActivity {
+public class ReferenceClassListen extends AppCompatActivity {
     ImageView playSound;
     ImageButton next, back;
     TextView time, question, explain;
@@ -92,7 +88,7 @@ public class ReviseListen extends AppCompatActivity {
 //        pos = get.getExtras().getInt("Style");
         Display(pos);
         creatSound(idSession);
-        Toast.makeText(ReviseListen.this, "You have two listens", Toast.LENGTH_LONG).show();
+        Toast.makeText(ReferenceClassListen.this, "You have two listens", Toast.LENGTH_LONG).show();
 
         playSound.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,7 +97,7 @@ public class ReviseListen extends AppCompatActivity {
                 if (countPlaying <= 2 || sound == null) {
                     creatSound(idSession);
                 }else{
-                    Toast.makeText(ReviseListen.this, "Listens are over", Toast.LENGTH_LONG).show();
+                    Toast.makeText(ReferenceClassListen.this, "Listens are over", Toast.LENGTH_LONG).show();
                 }
                 if(!sound.isPlaying()){
                     sound.start();
@@ -126,11 +122,6 @@ public class ReviseListen extends AppCompatActivity {
                 playSound.setImageResource(R.drawable.ic_baseline_play_arrow_24);
             }
         });
-//        sound.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-//            @Override
-//            public void onPrepared(MediaPlayer mediaPlayer) {
-//            }
-//        });
         mSeekBarTime.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -173,7 +164,7 @@ public class ReviseListen extends AppCompatActivity {
                 ++pos;
                 if (pos >= list_.size()) {
                     sound.stop();
-                    Intent intent_ = new Intent(ReviseListen.this, ReviseSpeaking.class);
+                    Intent intent_ = new Intent(ReferenceClassListen.this, ReviseSpeaking.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("kp", result);
                     bundle.putStringArrayList("button", listButton);
@@ -190,7 +181,7 @@ public class ReviseListen extends AppCompatActivity {
                 --pos;
                 if (pos < list_.size()) {
                     sound.stop();
-                    Intent intent = new Intent(ReviseListen.this, ReviseVocabulary.class);
+                    Intent intent = new Intent(ReferenceClassListen.this, Revise.class);
                     startActivity(intent);
                 } else {
                     Display(pos);

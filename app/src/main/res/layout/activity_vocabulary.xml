@@ -47,15 +47,30 @@
         android:layout_marginRight="20dp"
         >
     </TextView>
+
     <ImageView
-        android:id="@+id/imageSuggestion"
+        android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:src="@drawable/ic_baseline_play_arrow_24"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        android:background="@drawable/vocabulary"
         >
     </ImageView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="366dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
     <RadioGroup
         android:id="@+id/RadioGroupAnswer"
         android:layout_width="match_parent"

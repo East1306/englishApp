@@ -1,9 +1,7 @@
 package com.nhi.english.Revise_PhuongDong;
 
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -11,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.nhi.english.R;
 
-public class ReviseReading extends AppCompatActivity {
+public class Reading extends AppCompatActivity {
     TextView content;
     ImageButton back, next;
 

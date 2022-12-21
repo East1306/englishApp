@@ -36,10 +36,10 @@
 
         <activity android:name=".Vocabulary" />
         <activity android:name=".Grammar" />
-        <activity android:name=".Revise_PhuongDong.ReviseVocabulary" />
+        <activity android:name=".Revise_PhuongDong.Revise" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
-        <activity android:name=".Revise_PhuongDong.ReviseReading"/>
-        <activity android:name=".Revise_PhuongDong.ReviseListen"/>
+        <activity android:name=".Revise_PhuongDong.Reading"/>
+        <activity android:name=".Revise_PhuongDong.ReferenceClassListen"/>
         <activity android:name=".Revise_PhuongDong.Result"/>
 <!--        <activity android:name=".Vocabulary"/>-->
 <!--        <activity android:name=".Grammar"/>-->
