@@ -29,43 +29,18 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-
-        <activity android:name=".Nhi.Vocabulary" />
-        <activity android:name=".Nhi.Grammar" />
         <activity android:name=".Revise_PhuongDong.Revise" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
         <activity android:name=".Revise_PhuongDong.Reading"/>
         <activity android:name=".Revise_PhuongDong.ReferenceClassListen"/>
         <activity android:name=".Revise_PhuongDong.Result"/>
-        <activity android:name=".Nhi.U2_Vocabulary"/>
-        <activity android:name=".Nhi.U3_Vocabulary"/>
-        <activity android:name=".Nhi.U4_Vocabulary"/>
-        <activity android:name=".Nhi.U5_Vocabulary"/>
-        <activity android:name=".Nhi.U6_Vocabulary"/>
-        <activity android:name=".Nhi.U7_Vocabulary"/>
-        <activity android:name=".Nhi.U8_Vocabulary"/>
-        <activity android:name=".Nhi.U9_Vocabulary"/>
-        <activity android:name=".Nhi.U10_Vocabulary"/>
-        <activity android:name=".Nhi.U11_Vocabulary"/>
-        <activity android:name=".Nhi.U12_Vocabulary"/>
-        <activity android:name=".Nhi.U13_Vocabulary"/>
-        <activity android:name=".Nhi.U14_Vocabulary"/>
-        <activity android:name=".Nhi.U15_Vocabulary"/>
-        <activity android:name=".Nhi.U2_Grammar"/>
-        <activity android:name=".Nhi.U3_Grammar"/>
-        <activity android:name=".Nhi.U4_Grammar"/>
-        <activity android:name=".Nhi.U5_Grammar"/>
-        <activity android:name=".Nhi.U6_Grammar"/>
-        <activity android:name=".Nhi.U7_Grammar"/>
-        <activity android:name=".Nhi.U8_Grammar"/>
-        <activity android:name=".Nhi.U9_Grammar"/>
-        <activity android:name=".Nhi.U10_Grammar"/>
         <activity android:name=".PhatLe.activity_ketqua"/>
         <activity android:name=".MinhTriet.Listening"/>
         <activity android:name=".PhatLe.Activity_highscores"/>
         <activity android:name=".PhatLe.Activity_Quiz"/>
         <activity android:name=".MinhTriet.Activity_correct"/>
+        <activity android:name=".MinhTriet.activity_corect_false"/>
+        <activity android:name=".MinhTriet.MainActivity"/>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-<Correct>
+<Word>
     /*
     Style 1: Easy
     Style 2: Hard
@@ -14,289 +14,289 @@
         <Style>1</Style>
         <ID>2</ID>
         <Question>Knife</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Con dao</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>3</ID>
         <Question>Star</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Ngôi sao</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>4</ID>
         <Question>Class</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Lớp học</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>5</ID>
         <Question>Funny</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Vui tính</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>6</ID>
         <Question>Sunny</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Ánh nắng</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>7</ID>
         <Question>Login</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Đăng nhập</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>8</ID>
         <Question>Basic</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Căn bản</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>9</ID>
         <Question>Block</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Chặn</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>10</ID>
         <Question>Data</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Dữ liệu</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>11</ID>
         <Question>Apple</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Trái táo</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>12</ID>
         <Question>Body</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Cơ thể</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>13</ID>
         <Question>Map</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Bản đồ</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>14</ID>
         <Question>Street</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Đường phố</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>15</ID>
         <Question>World</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Thế giới</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>16</ID>
         <Question>Love</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Tình yêu</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>17</ID>
         <Question>Bird</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Con chim</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>18</ID>
         <Question>Mouth</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Miệng</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>19</ID>
         <Question>Idea</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Ý tưởng</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>20</ID>
         <Question>Area</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Khu vực</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>21</ID>
         <Question>Story</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Câu chuyện</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>22</ID>
         <Question>Arena</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Đấu trường</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>23</ID>
         <Question>Way</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Con đường</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>24</ID>
         <Question>Run</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Chạy</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>25</ID>
         <Question>Win</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Chiến thắng</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>26</ID>
         <Question>News</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Tin tức</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>27</ID>
         <Question>Evil</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Ác quỷ</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>28</ID>
         <Question>Axe</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Cây rìu</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>29</ID>
         <Question>Ring</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Chiếc nhẫn</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>30</ID>
-        <Question>Make</Question>
-        <Question1>Sự kiện</Question1>
+        <Question>Coconut</Question>
+        <Question1>Trái dừa</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>31</ID>
         <Question>White</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Màu trắng</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>32</ID>
         <Question>Black</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Màu đen</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>33</ID>
-        <Question>Best</Question>
-        <Question1>Sự kiện</Question1>
+        <Question>Watermelon</Question>
+        <Question1>Dưa hấu</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>34</ID>
         <Question>Scene</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Bối cảnh</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>35</ID>
         <Question>Jungle</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Rừng nhiệt đới</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>36</ID>
         <Question>Fact</Question>
-        <Question1>Sự kiện</Question1>
+        <Question>Factory</Question>
+        <Question1>Nhà máy</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>37</ID>
         <Question>Movie</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Bộ phim</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>38</ID>
         <Question>Exam</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Cuộc thi</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>39</ID>
         <Question>Army</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Quân đội</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>40</ID>
         <Question>Paper</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Trang giấy</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>41</ID>
         <Question>Free</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Miễn phí</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>42</ID>
         <Question>Truth</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Sự thật</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>43</ID>
         <Question>Child</Question>
-        <Question1>Sự kiện</Question1>
-    </Item>
+        <Question1>Đứa trẻ</Question1></Item>
     <Item>
         <Style>1</Style>
         <ID>44</ID>
         <Question>Goal</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Ghi bàn</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>45</ID>
         <Question>Wind</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Gió</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>46</ID>
         <Question>North</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Phía Bắc</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>47</ID>
         <Question>User</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Người dùng</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>48</ID>
         <Question>Disk</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Đĩa</Question1>
     </Item>
     <Item>
         <Style>1</Style>
         <ID>49</ID>
         <Question>Road</Question>
-        <Question1>Sự kiện</Question1>
+        <Question1>Đường đua</Question1>
     </Item>
     <Item>
         <Style>1</Style>
@@ -306,255 +306,304 @@
     </Item>
 
     //Hard
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>1</ID>-->
-<!--        <Question>Otolaryngology</Question>-->
-<!--        <Question1>bác sĩ chuyên khoa tai mũi họng</Question1>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>2</ID>-->
-<!--        <Question>Offline</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>3</ID>-->
-<!--        <Question>Penguin</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>4</ID>-->
-<!--        <Question>Sixth</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>5</ID>-->
-<!--        <Question>Rural</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>6</ID>-->
-<!--        <Question>Otorhinolaryngologist</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>7</ID>-->
-<!--        <Question>Isthmus</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>8</ID>-->
-<!--        <Question>Anemone</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>9</ID>-->
-<!--        <Question>Squirrel</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>10</ID>-->
-<!--        <Question>Choir</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>11</ID>-->
-<!--        <Question>Worcestershire</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>12</ID>-->
-<!--        <Question>Honorificabilitudinitatibus</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>13</ID>-->
-<!--        <Question>Antidisestablishmentarianism</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>14</ID>-->
-<!--        <Question>Floccinaucihihilipilification</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>15</ID>-->
-<!--        <Question>Supercalifragilisticexpialidocious</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>16</ID>-->
-<!--        <Question>Hepaticocholecystostcholecystntenterostomy</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>17</ID>-->
-<!--        <Question>Pneumonoultramicroscopicsilicovolcanoconiosis</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>18</ID>-->
-<!--        <Question>Literally</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>19</ID>-->
-<!--        <Question>Ironic</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>20</ID>-->
-<!--        <Question>Irregardless</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>21</ID>-->
-<!--        <Question>Colonel</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>22</ID>-->
-<!--        <Question>Nonplussed</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>23</ID>-->
-<!--        <Question>Disinterested</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>24</ID>-->
-<!--        <Question>Enormity</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>25</ID>-->
-<!--        <Question>Lieutenant</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>26</ID>-->
-<!--        <Question>Unabashed</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>27</ID>-->
-<!--        <Question>Sombre</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>28</ID>-->
-<!--        <Question>Edible</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>29</ID>-->
-<!--        <Question>Verdict</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>30</ID>-->
-<!--        <Question>Housemate</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>31</ID>-->
-<!--        <Question>Conservative</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>32</ID>-->
-<!--        <Question>Tabloid</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>33</ID>-->
-<!--        <Question>Abduct</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>34</ID>-->
-<!--        <Question>Flock</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>35</ID>-->
-<!--        <Question>Anorexic</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>36</ID>-->
-<!--        <Question>Mane</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>37</ID>-->
-<!--        <Question>Thaw</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>38</ID>-->
-<!--        <Question>Nick</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>39</ID>-->
-<!--        <Question>Inevitable</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>40</ID>-->
-<!--        <Question>Stocky</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>41</ID>-->
-<!--        <Question>Permissive</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>42</ID>-->
-<!--        <Question>Irritant</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>43</ID>-->
-<!--        <Question>Suntanned</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>44</ID>-->
-<!--        <Question>Monarchy</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>45</ID>-->
-<!--        <Question>Paddle</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>46</ID>-->
-<!--        <Question>Liable</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>47</ID>-->
-<!--        <Question>Glare</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>48</ID>-->
-<!--        <Question>Unripe</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>49</ID>-->
-<!--        <Question>Falter</Question>-->
-<!--    </Item>-->
-<!--    <Item>-->
-<!--        <Style>2</Style>-->
-<!--        <ID>50</ID>-->
-<!--        <Question>Cumbersome</Question>-->
-<!--    </Item>-->
-</Correct>
+    <Item>
+        <Style>2</Style>
+        <ID>1</ID>
+        <Question>Otolaryngology</Question>
+        <Question1>Khoa tai mũi họng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>2</ID>
+        <Question>Offline</Question>
+        <Question1>Ngoại tuyến</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>3</ID>
+        <Question>Penguin</Question>
+        <Question1>Chim cánh cụt</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>4</ID>
+        <Question>Contribute</Question>
+        <Question1>Đóng góp</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>5</ID>
+        <Question>Rural</Question>
+        <Question1>Nông thôn</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>6</ID>
+        <Question>Otorhinolaryngologist</Question>
+        <Question1>Bác sĩ tai mũi họng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>7</ID>
+        <Question>Isthmus</Question>
+        <Question1>Eo đất</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>8</ID>
+        <Question>Anemone</Question>
+        <Question1>Hải quỳ</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>9</ID>
+        <Question>Squirrel</Question>
+        <Question1>Con sóc</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>10</ID>
+        <Question>Choir</Question>
+        <Question1>Hợp xướng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>11</ID>
+        <Question>Explorer</Question>
+        <Question1>Nhà thám hiểm</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>12</ID>
+        <Question>Honorificabilitudinitatibus</Question>
+        <Question1>Kính ngữ</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>13</ID>
+        <Question>Antidisestablishmentarianism</Question>
+        <Question1>Chủ nghĩa chống thành lập</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>14</ID>
+        <Question>Imposter</Question>
+        <Question1>Gián điệp</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>15</ID>
+        <Question>Benefit</Question>
+        <Question1>Lợi ích</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>16</ID>
+        <Question>Inspector</Question>
+        <Question1>Thanh tra</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>17</ID>
+        <Question>Navigate</Question>
+        <Question1>Điều hướng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>18</ID>
+        <Question>Public</Question>
+        <Question1>Công khai</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>19</ID>
+        <Question>Ironic</Question>
+        <Question1>Mỉa mai</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>20</ID>
+        <Question>Irregardless</Question>
+        <Question1>Bất chấp</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>21</ID>
+        <Question>Colonel</Question>
+        <Question1>Đại tá</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>22</ID>
+        <Question>Nonplussed</Question>
+        <Question1>Non nớt</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>23</ID>
+        <Question>Disinterested</Question>
+        <Question1>Vô tư</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>24</ID>
+        <Question>Enormity</Question>
+        <Question1>Khổng lồ</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>25</ID>
+        <Question>Lieutenant</Question>
+        <Question1>Trung uý</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>26</ID>
+        <Question>Captain</Question>
+        <Question1>Đội trưởng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>27</ID>
+        <Question>Sombre</Question>
+        <Question1>U ám</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>28</ID>
+        <Question>Edible</Question>
+        <Question1>Đồ ăn</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>29</ID>
+        <Question>Verdict</Question>
+        <Question1>Bản án</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>30</ID>
+        <Question>Housemate</Question>
+        <Question1>Bạn chung phòng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>31</ID>
+        <Question>Conservative</Question>
+        <Question1>Thận trọng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>32</ID>
+        <Question>Tabloid</Question>
+        <Question1>Báo lá cải</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>33</ID>
+        <Question>Abduct</Question>
+        <Question1>Bắt cóc</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>34</ID>
+        <Question>Flock</Question>
+        <Question1>Bầy thú</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>35</ID>
+        <Question>Activity</Question>
+        <Question1>Hoạt động</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>36</ID>
+        <Question>Mane</Question>
+        <Question1>Bờm</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>37</ID>
+        <Question>Thaw</Question>
+        <Question1>Tan băng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>38</ID>
+        <Question>Nickname</Question>
+        <Question1>Tên biệt danh</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>39</ID>
+        <Question>Inevitable</Question>
+        <Question1>Không thể tránh khỏi</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>40</ID>
+        <Question>Stockyard</Question>
+        <Question1>Kho dự trữ</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>41</ID>
+        <Question>Permissive</Question>
+        <Question1>Cho phép</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>42</ID>
+        <Question>Irritant</Question>
+        <Question1>Chất kích thích</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>43</ID>
+        <Question>Suntanned</Question>
+        <Question1>Rám nắng</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>44</ID>
+        <Question>Monarchy</Question>
+        <Question1>Chế độ quân chủ</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>45</ID>
+        <Question>Paddle</Question>
+        <Question1>Cầu thang</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>46</ID>
+        <Question>Liable</Question>
+        <Question1>Chịu trách nhiệm</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>47</ID>
+        <Question>Glare</Question>
+        <Question1>Lườm</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>48</ID>
+        <Question>Unripe</Question>
+        <Question1>Chưa chín</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>49</ID>
+        <Question>Falter</Question>
+        <Question1>Chùn bước</Question1>
+    </Item>
+    <Item>
+        <Style>2</Style>
+        <ID>50</ID>
+        <Question>Cumbersome</Question>
+        <Question1>Cồng kềnh</Question1>
+    </Item>
+</Word>

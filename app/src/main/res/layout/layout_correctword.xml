@@ -28,6 +28,7 @@
         android:background="@drawable/bg_radius_15">
 
         <TextView
+            android:id="@+id/txtstar"
             android:layout_width="wrap_content"
             android:layout_height="60dp"
             android:layout_marginLeft="20dp"

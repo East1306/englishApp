@@ -48,8 +48,6 @@ public class Activity_Quiz extends AppCompatActivity {
     int HighScore = 0;
     ArrayList <QuestionNare> L ; //chứa câu hỏi
     int countdown = 20;
-
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +55,6 @@ public class Activity_Quiz extends AppCompatActivity {
         setContentView(R.layout.layout_gramma_vocab);
         L = new ArrayList<>();
         txt = findViewById(R.id.txttime);
-
         Cauhoi = (TextView) findViewById(R.id.TxtCauhoi);
         Ketqua = (TextView)findViewById(R.id.TxtKetqua);
         RG = (RadioGroup)findViewById(R.id.RadioGroupTraloi);
@@ -80,19 +77,31 @@ public class Activity_Quiz extends AppCompatActivity {
                 int idCheck = RG.getCheckedRadioButtonId();
                 switch (idCheck) {
                     case R.id.RdbA:
-                        if (L.get(pos).Answer.compareTo("A")==0) kq = kq+1;
+                        if (L.get(pos).Answer.compareTo("A")==0)
+                        {
+                            kq = kq+1;
+                        }
                         NextPage();
                         break;
                     case R.id.RdbB:
-                        if (L.get(pos).Answer.compareTo("B")==0) kq = kq+1;
+                        if (L.get(pos).Answer.compareTo("B")==0)
+                        {
+                            kq = kq+1;
+                        }
                         NextPage();
                         break;
                     case R.id.RdbC:
-                        if (L.get(pos).Answer.compareTo("C")==0) kq = kq+1;
+                        if (L.get(pos).Answer.compareTo("C")==0)
+                        {
+                            kq = kq+1;
+                        }
                         NextPage();
                         break;
                     case R.id.RdbD:
-                        if (L.get(pos).Answer.compareTo("D")==0) kq = kq+1;
+                        if (L.get(pos).Answer.compareTo("D")==0)
+                        {
+                            kq = kq+1;
+                        }
                         NextPage();
                         break;
                 }

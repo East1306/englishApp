@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -36,20 +37,24 @@ import javax.xml.parsers.ParserConfigurationException;
 
 
 class Correct {
+    public String St;
     public String ID;
     public String Q;
     public String Q1;
 }
 public class Activity_correct extends AppCompatActivity {
 
-    TextView VN_Question, EN_Question ,Time, Correct_Answer;
+    ArrayList<Correct> L = new ArrayList();
+    TextView VN_Question, EN_Question ,Time, Correct_Answer, Star;
     EditText Answer;
     Button btnAnswer,btnSkip;
-    int pos = 0;
-    ArrayList<Correct> L = new ArrayList();
     CountDownTimer countDownTimer;
+    int pos = 0;
     int countdown = 30;
     int kq=0;
+    int dlt = 0;
+    int slt = 0;
+    int ns = 0;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -63,6 +68,7 @@ public class Activity_correct extends AppCompatActivity {
         btnSkip =(Button) findViewById(R.id.btnSkip);
         Time = (TextView) findViewById(R.id.txttime_correctword);
         Correct_Answer = (TextView) findViewById(R.id.txt_correct_answer);
+        Star = (TextView) findViewById(R.id.txtstar);
         ReadData();
         Collections.shuffle(L);
         StartCountDown();
@@ -72,12 +78,26 @@ public class Activity_correct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(L.get(pos).Q.equalsIgnoreCase(Answer.getText().toString())){
-                    Toast.makeText(Activity_correct.this, "You are correct:)",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_correct.this, "You are correct <3",Toast.LENGTH_SHORT).show();
                     kq++;
+                    dlt++;
+                    slt = 0;
+                    if(dlt == 3){
+                        ns ++;
+                    }
                     NextPage();
                 }
                 else{
-                    Toast.makeText(Activity_correct.this, "You are Wrong:)",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Activity_correct.this, "You are Wrong !!",Toast.LENGTH_SHORT).show();
+                    dlt = 0;
+                    slt++;
+                    if(slt == 3){
+                        ns --;
+                    }
+                    if(ns < 0){
+                        Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
+                        startActivity(intent);
+                    }
                 }
             }
         });
@@ -85,6 +105,14 @@ public class Activity_correct extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                slt++;
+                if(slt == 3){
+                    ns --;
+                }
+                if(ns < 0){
+                    Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
+                    startActivity(intent);
+                }
                 NextPage();
             }
         });
@@ -96,7 +124,7 @@ public class Activity_correct extends AppCompatActivity {
         Collections.shuffle(words);
         String mixed = "";
         for(String i : words){
-            mixed += i;
+            mixed = mixed + " " + i;
         }
         return mixed;
     }
@@ -106,7 +134,7 @@ public class Activity_correct extends AppCompatActivity {
         countDownTimer = new CountDownTimer(31000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                Log.e("3","3");
+                Log.e("1","1");
                 if(countdown>9)
                 {
                     Time.setText("00:"+String.valueOf(countdown));
@@ -145,8 +173,7 @@ public class Activity_correct extends AppCompatActivity {
     void NextPage()
     {
         countdown=30;
-        pos++; //Xong 1 câu thì tăng pos lên 1 để làm câu kế tiếp
-//Nếu trả lời hết câu hỏi
+        pos++;
         if (pos >= L.size()) {
             countDownTimer.cancel();;
             Intent intent = new Intent(Activity_correct.this,activity_ketqua.class);
@@ -165,12 +192,12 @@ public class Activity_correct extends AppCompatActivity {
     void Display(int i){
         Answer.setText("");
         VN_Question.setText(L.get(pos).Q1);
-        EN_Question.setText(mixWords(L.get(i).Q));
+        EN_Question.setText(mixWords(L.get(i).Q.toUpperCase(Locale.ROOT)));
         Correct_Answer.setText("Correct answer: "+ kq);
+        Star.setText(""+ns);
     }
 
     void ReadData() {
-
         try {
             DocumentBuilderFactory DBF = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = DBF.newDocumentBuilder();
@@ -187,6 +214,9 @@ public class Activity_correct extends AppCompatActivity {
                     Element Item = (Element) node;
                     NodeList listChild;
 
+                    listChild = Item.getElementsByTagName("Style");
+                    String Style = listChild.item(0).getTextContent();
+
                     listChild = Item.getElementsByTagName("ID");
                     String ID = listChild.item(0).getTextContent();
 
@@ -197,6 +227,7 @@ public class Activity_correct extends AppCompatActivity {
                     String Question1 = listChild.item(0).getTextContent();
 
                     Correct Q1 = new Correct();
+                    Q1.St = Style;
                     Q1.ID = ID;
                     Q1.Q = Question;
                     Q1.Q1 = Question1;
