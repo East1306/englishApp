@@ -84,6 +84,7 @@ public class Activity_correct extends AppCompatActivity {
                     slt = 0;
                     if(dlt == 3){
                         ns ++;
+                        dlt = 0;
                     }
                     NextPage();
                 }
@@ -93,10 +94,12 @@ public class Activity_correct extends AppCompatActivity {
                     slt++;
                     if(slt == 3){
                         ns --;
+                        slt = 0;
                     }
                     if(ns < 0){
                         Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
                         startActivity(intent);
+                        NextPage();
                     }
                 }
             }
@@ -105,9 +108,11 @@ public class Activity_correct extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dlt = 0;
                 slt++;
                 if(slt == 3){
                     ns --;
+                    slt = 0;
                 }
                 if(ns < 0){
                     Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
@@ -145,7 +150,6 @@ public class Activity_correct extends AppCompatActivity {
                 }
                 countdown--;
             }
-
             @Override
             public void onFinish() {
                 countdown = 30;
@@ -159,17 +163,23 @@ public class Activity_correct extends AppCompatActivity {
                     bundle.putInt("Socau",pos);
                     intent.putExtra("MyPackage",bundle);
                     startActivity(intent);
-                    pos =0; //Cho vị trí pos về câu hỏi đầu tiên
-                    kq =0; //cho số câu hỏi đúng bằng 0, để làm lại
-                    Display(pos); // Hiển thị lại nội dung
                 }
                 else {
-                    Display(pos); //Hiển thị câu hỏi kế tiếp
+                    dlt = 0;
+                    slt++;
+                    if(slt == 3){
+                        ns --;
+                        slt = 0;
+                    }
+                    if(ns < 0){
+                        Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
+                        startActivity(intent);
+                    }
+                    NextPage();
                 }
             }
         }.start();
     }
-
     void NextPage()
     {
         countdown=30;
@@ -182,6 +192,10 @@ public class Activity_correct extends AppCompatActivity {
             bundle.putInt("Socau",pos);
             intent.putExtra("MyPackage",bundle);
             startActivity(intent);
+        }
+        else if (ns < 0){
+            countDownTimer.cancel();
+            Display(pos);
         }
         else {
             countDownTimer.cancel();
@@ -227,12 +241,25 @@ public class Activity_correct extends AppCompatActivity {
                     String Question1 = listChild.item(0).getTextContent();
 
                     Correct Q1 = new Correct();
-                    Q1.St = Style;
-                    Q1.ID = ID;
-                    Q1.Q = Question;
-                    Q1.Q1 = Question1;
-                    L.add(Q1);
+                    Correct Q2 = new Correct();
+//                    if(Style.equalsIgnoreCase("1")){
+                        Q1.St = Style;
+                        Q1.ID = ID;
+                        Q1.Q = Question;
+                        Q1.Q1 = Question1;
+                        L.add(Q1);
+//                    }
+//                    else{
+//                        Q2.St = Style;
+//                        Q2.ID = ID;
+//                        Q2.Q = Question;
+//                        Q2.Q1 = Question1;
+//                        L.add(Q2);
+//                    }
                 };
+//                if(L.size() >= 10){
+//                    break;
+//                }
             }
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
