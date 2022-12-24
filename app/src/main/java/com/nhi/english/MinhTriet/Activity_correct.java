@@ -44,11 +44,13 @@ class Correct {
 }
 public class Activity_correct extends AppCompatActivity {
 
-    ArrayList<Correct> L = new ArrayList();
+    ArrayList<Correct> L1 = new ArrayList();
+    ArrayList<Correct> L2 = new ArrayList();
     TextView VN_Question, EN_Question ,Time, Correct_Answer, Star;
     EditText Answer;
     Button btnAnswer,btnSkip;
     CountDownTimer countDownTimer;
+    boolean easy = true;
     int pos = 0;
     int countdown = 30;
     int kq=0;
@@ -70,15 +72,17 @@ public class Activity_correct extends AppCompatActivity {
         Correct_Answer = (TextView) findViewById(R.id.txt_correct_answer);
         Star = (TextView) findViewById(R.id.txtstar);
         ReadData();
-        Collections.shuffle(L);
+        Collections.shuffle(L1);
+        Collections.shuffle(L2);
         StartCountDown();
         Display(pos);
 
         btnAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(L.get(pos).Q.equalsIgnoreCase(Answer.getText().toString())){
+                if(L1.get(pos).Q.equalsIgnoreCase(Answer.getText().toString()) || L2.get(pos).Q.equalsIgnoreCase(Answer.getText().toString())){
                     Toast.makeText(Activity_correct.this, "You are correct <3",Toast.LENGTH_SHORT).show();
+                    easy = false;
                     kq++;
                     dlt++;
                     slt = 0;
@@ -110,6 +114,7 @@ public class Activity_correct extends AppCompatActivity {
             public void onClick(View v) {
                 dlt = 0;
                 slt++;
+                easy = true;
                 if(slt == 3){
                     ns --;
                     slt = 0;
@@ -156,7 +161,8 @@ public class Activity_correct extends AppCompatActivity {
                 countDownTimer.cancel();
                 StartCountDown();
                 pos++;
-                if (pos >= L.size()) {
+                easy = true;
+                if (pos >= 10) {
                     Intent intent = new Intent(Activity_correct.this, activity_ketqua.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("KQ",kq);
@@ -184,7 +190,7 @@ public class Activity_correct extends AppCompatActivity {
     {
         countdown=30;
         pos++;
-        if (pos >= L.size()) {
+        if (pos >= 10) {
             countDownTimer.cancel();;
             Intent intent = new Intent(Activity_correct.this,activity_ketqua.class);
             Bundle bundle = new Bundle();
@@ -204,11 +210,22 @@ public class Activity_correct extends AppCompatActivity {
         }
     }
     void Display(int i){
-        Answer.setText("");
-        VN_Question.setText(L.get(pos).Q1);
-        EN_Question.setText(mixWords(L.get(i).Q.toUpperCase(Locale.ROOT)));
-        Correct_Answer.setText("Correct answer: "+ kq);
-        Star.setText(""+ns);
+        if(easy == true){
+            Log.e("1", "Display: Easy_word");
+            Answer.setText("");
+            VN_Question.setText(L1.get(pos).Q1);
+            EN_Question.setText(mixWords(L1.get(i).Q.toUpperCase(Locale.ROOT)));
+            Correct_Answer.setText("Correct answer: "+ kq);
+            Star.setText(""+ns);
+        }
+        else {
+            Log.e("2", "Display: Hard_word");
+            Answer.setText("");
+            VN_Question.setText(L2.get(pos).Q1);
+            EN_Question.setText(mixWords(L2.get(i).Q.toUpperCase(Locale.ROOT)));
+            Correct_Answer.setText("Correct answer: "+ kq);
+            Star.setText(""+ns);
+        }
     }
 
     void ReadData() {
@@ -242,24 +259,21 @@ public class Activity_correct extends AppCompatActivity {
 
                     Correct Q1 = new Correct();
                     Correct Q2 = new Correct();
-//                    if(Style.equalsIgnoreCase("1")){
+                    if(Style.equalsIgnoreCase("1")){
                         Q1.St = Style;
                         Q1.ID = ID;
                         Q1.Q = Question;
                         Q1.Q1 = Question1;
-                        L.add(Q1);
-//                    }
-//                    else{
-//                        Q2.St = Style;
-//                        Q2.ID = ID;
-//                        Q2.Q = Question;
-//                        Q2.Q1 = Question1;
-//                        L.add(Q2);
-//                    }
+                        L1.add(Q1);
+                    }
+                    else{
+                        Q2.St = Style;
+                        Q2.ID = ID;
+                        Q2.Q = Question;
+                        Q2.Q1 = Question1;
+                        L2.add(Q2);
+                    }
                 };
-//                if(L.size() >= 10){
-//                    break;
-//                }
             }
         } catch (ParserConfigurationException e) {
             e.printStackTrace();

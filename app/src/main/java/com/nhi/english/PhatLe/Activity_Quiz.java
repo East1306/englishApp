@@ -109,76 +109,7 @@ public class Activity_Quiz extends AppCompatActivity {
         });
     }
 
-    void Display(int i){
-        Log.i(TAG, "Started Service");
-        Cauhoi.setText(L.get(i).Q);
-        A.setText(L.get(i).AnswerA);
-        B.setText(L.get(i).AnswerB);
-        C.setText(L.get(i).AnswerC);
-        D.setText(L.get(i).AnswerD);
-        Ketqua.setText("Điểm : "+String.valueOf(kq));
-        RG.clearCheck();
-    }
-    void ReadData() {
-        try {
-            Log.e("","size");
-            DocumentBuilderFactory DBF = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = DBF.newDocumentBuilder();
-            InputStream in = getAssets().open("quiz_data.xml");
-            Document doc = builder.parse(in);
-            Element root = doc.getDocumentElement();
-            NodeList list = root.getChildNodes();
-            for (int i = 0; i < list.getLength(); i++) {
 
-                Node node = list.item(i);
-
-                if (node instanceof Element) {
-                    Element Item = (Element) node;
-
-                    NodeList listChild;
-                    listChild = Item.getElementsByTagName("ID");
-
-                    String ID = listChild.item(0).getTextContent();
-
-                    listChild = Item.getElementsByTagName("Question");
-
-                    String Question = listChild.item(0).getTextContent();
-                    listChild = Item.getElementsByTagName("AnswerA");
-                    String AnswerA = listChild.item(0).getTextContent();
-                    listChild = Item.getElementsByTagName("AnswerB");
-                    String AnswerB = listChild.item(0).getTextContent();
-                    listChild = Item.getElementsByTagName("AnswerC");
-                    String AnswerC = listChild.item(0).getTextContent();
-                    listChild = Item.getElementsByTagName("AnswerD");
-                    String AnswerD = listChild.item(0).getTextContent();
-                    listChild = Item.getElementsByTagName("Answer");
-                    String Answer = listChild.item(0).getTextContent();
-
-                    QuestionNare Q1 = new QuestionNare();
-                    Q1.ID = ID;
-                    Q1.Q = Question;
-                    Q1.AnswerA = AnswerA;
-                    Q1.AnswerB = AnswerB;
-                    Q1.AnswerC = AnswerC;
-                    Q1.AnswerD = AnswerD;
-                    Q1.Answer = Answer;
-                    L.add(Q1);
-                    if(L.size() == Chon(soCau)){
-                        break;
-                    }
-                };
-
-            }
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
 
     void LoadHighScore(){
@@ -244,14 +175,15 @@ public class Activity_Quiz extends AppCompatActivity {
                 countDownTimer.cancel();
                 StartCountDown();
                 pos++;
-                if (pos >= L.size()) {
+                if (pos >= Chon(soCau)) {
+                    countDownTimer.cancel();
                     Intent intent = new Intent(Activity_Quiz.this, activity_ketqua.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("KQ",kq);
                     bundle.putInt("Socau",pos);
                     intent.putExtra("MyPackage",bundle);
                     startActivity(intent);
-                    countDownTimer.onFinish();
+
                 }
                 else {
                     Display(pos); //Hiển thị câu hỏi kế tiếp
@@ -263,7 +195,7 @@ public class Activity_Quiz extends AppCompatActivity {
     {
         countdown=20;
         pos++;
-        if (pos >= L.size()) {
+        if (pos >= Chon(soCau)) {
             countDownTimer.cancel();;
             Intent intent = new Intent(Activity_Quiz.this,activity_ketqua.class);
             Bundle bundle = new Bundle();
@@ -279,4 +211,71 @@ public class Activity_Quiz extends AppCompatActivity {
         }
     }
 
+    void Display(int i){
+        Log.i(TAG, "Started Service");
+        Cauhoi.setText(L.get(i).Q);
+        A.setText(L.get(i).AnswerA);
+        B.setText(L.get(i).AnswerB);
+        C.setText(L.get(i).AnswerC);
+        D.setText(L.get(i).AnswerD);
+        Ketqua.setText("Điểm : "+String.valueOf(kq));
+        RG.clearCheck();
+    }
+    void ReadData() {
+        try {
+            Log.e("","size");
+            DocumentBuilderFactory DBF = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = DBF.newDocumentBuilder();
+            InputStream in = getAssets().open("quiz_data.xml");
+            Document doc = builder.parse(in);
+            Element root = doc.getDocumentElement();
+            NodeList list = root.getChildNodes();
+            for (int i = 0; i < list.getLength(); i++) {
+
+                Node node = list.item(i);
+
+                if (node instanceof Element) {
+                    Element Item = (Element) node;
+
+                    NodeList listChild;
+                    listChild = Item.getElementsByTagName("ID");
+
+                    String ID = listChild.item(0).getTextContent();
+
+                    listChild = Item.getElementsByTagName("Question");
+
+                    String Question = listChild.item(0).getTextContent();
+                    listChild = Item.getElementsByTagName("AnswerA");
+                    String AnswerA = listChild.item(0).getTextContent();
+                    listChild = Item.getElementsByTagName("AnswerB");
+                    String AnswerB = listChild.item(0).getTextContent();
+                    listChild = Item.getElementsByTagName("AnswerC");
+                    String AnswerC = listChild.item(0).getTextContent();
+                    listChild = Item.getElementsByTagName("AnswerD");
+                    String AnswerD = listChild.item(0).getTextContent();
+                    listChild = Item.getElementsByTagName("Answer");
+                    String Answer = listChild.item(0).getTextContent();
+
+                    QuestionNare Q1 = new QuestionNare();
+                    Q1.ID = ID;
+                    Q1.Q = Question;
+                    Q1.AnswerA = AnswerA;
+                    Q1.AnswerB = AnswerB;
+                    Q1.AnswerC = AnswerC;
+                    Q1.AnswerD = AnswerD;
+                    Q1.Answer = Answer;
+                    L.add(Q1);
+                };
+
+            }
+        } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
