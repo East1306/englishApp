@@ -19,7 +19,7 @@ public class activity_ketqua extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ketqua);
         KQ = (TextView) findViewById(R.id.TxtKQ);
-        BT = (Button)findViewById(R.id.BtnBack);
+        BT = (Button)findViewById(R.id.btn_quiz_backMenu);
         Intent callerIntent=getIntent();
         Bundle packageFromCaller= callerIntent.getBundleExtra("MyPackage");
         KQ.setText(packageFromCaller.getInt("KQ")+"/"+
