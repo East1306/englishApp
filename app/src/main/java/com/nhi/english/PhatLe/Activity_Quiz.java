@@ -252,6 +252,7 @@ public class Activity_Quiz extends AppCompatActivity {
                     bundle.putInt("Socau",pos);
                     intent.putExtra("MyPackage",bundle);
                     startActivity(intent);
+                    countDownTimer.onFinish();
                 }
                 else {
                     Display(pos); //Hiển thị câu hỏi kế tiếp
