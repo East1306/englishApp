@@ -80,15 +80,7 @@ public class Activity_correct extends AppCompatActivity {
         Diem5 = sharePreferences.getInt("Diem5", 0);
         Log.e("check5",""+Diem5);
 
-        VN_Question =(TextView) findViewById(R.id.txtVN_Question);
-        EN_Question =(TextView) findViewById(R.id.txtEN_Question);
-        Answer = (EditText) findViewById(R.id.InputAnswer);
-        btnAnswer =(ImageView) findViewById(R.id.btnAnswer);
-        btnSkip =(ImageView) findViewById(R.id.btnSkip);
-        Time = (TextView) findViewById(R.id.txttime_correctword);
-        Correct_Answer = (TextView) findViewById(R.id.txt_correct_answer);
-        Star = (TextView) findViewById(R.id.txtstar);
-
+        AnhXa();
 
         ReadData();
         Collections.shuffle(L1);
@@ -147,6 +139,17 @@ public class Activity_correct extends AppCompatActivity {
         });
     }
 
+    void AnhXa(){
+        VN_Question =(TextView) findViewById(R.id.txtVN_Question);
+        EN_Question =(TextView) findViewById(R.id.txtEN_Question);
+        Answer = (EditText) findViewById(R.id.InputAnswer);
+        btnAnswer =(ImageView) findViewById(R.id.btnAnswer);
+        btnSkip =(ImageView) findViewById(R.id.btnSkip);
+        Time = (TextView) findViewById(R.id.txttime_correctword);
+        Correct_Answer = (TextView) findViewById(R.id.txt_correct_answer);
+        Star = (TextView) findViewById(R.id.txtstar);
+    }
+
     private String mixWords(String word){
 
         List<String> words = Arrays.asList(word.split(""));
@@ -163,15 +166,18 @@ public class Activity_correct extends AppCompatActivity {
         countDownTimer = new CountDownTimer(31000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                Log.e("2","2");
                 int count=0;
                 count++;
                 time+=count;
                 if(countdown>9)
                 {
+                    Time.setTextColor(getResources().getColor(R.color.blue));
                     Time.setText("00:"+String.valueOf(countdown));
                 }
                 else
                 {
+                    Time.setTextColor(getResources().getColor(R.color.red));
                     Time.setText("00:0"+String.valueOf(countdown));
                 }
                 countdown--;
@@ -233,6 +239,7 @@ public class Activity_correct extends AppCompatActivity {
         }
     }
     void Display(int i){
+
         if(easy == true){
             Log.e("1", "Display: Easy_word");
             Answer.setText("");

@@ -11,8 +11,6 @@ public class ranking implements Comparable<ranking> {
         this.Correct_Star = Correct_Star;
         this.Ear_Finish_Time = Ear_Finish_Time;
     }
-    public ranking() {
-    }
 
     public int getEar_Finish_Time() {
         return Ear_Finish_Time;
@@ -31,6 +29,9 @@ public class ranking implements Comparable<ranking> {
     }
 
     public int getCorrect_Star() {
+        if(Correct_Star < 0){
+            return Correct_Star = 0;
+        }
         return Correct_Star;
     }
 

@@ -2,78 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/bg_correct_theme_main"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_gravity="center"
-        android:background="@drawable/bg_radius_15">
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp">
         <TextView
-            android:id="@+id/txtstar"
+            android:id="@+id/txttime_correctword"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
-            android:layout_marginLeft="20dp"
-            android:gravity="center"
-            android:text="0"
-            android:textColor="#CC000000"
-            android:textSize="30dp"
-            android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:paddingLeft="30dp"
+            android:text="00:30"
+            android:textColor="#7C746D"
+            android:textSize="32dp"
+            android:textStyle="bold|italic" />
+        <LinearLayout
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/custom_bg_border_quiz_correct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="#7C746D"
+                android:id="@+id/txtstar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:text="0" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:src="@drawable/star"
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            />
-    </LinearLayout>
+            <ImageView
+                android:paddingTop="5dp"
+                android:id="@+id/img_startIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/star"/>
+        </LinearLayout>
+    </RelativeLayout>
 
     <TextView
-        android:id="@+id/txttime_correctword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:background="@drawable/bg_correct_vietsub"
+        android:id="@+id/txtVN_Question"
+        android:layout_marginTop="120dp"
+        android:layout_width="230dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:textColor="#CC000000"
+        android:textSize="26sp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="110dp"
-        android:text="00:30"
-        android:textColor="#000"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
+        android:textStyle="bold" >
+    </TextView>
     <LinearLayout
-        android:layout_width="360dp"
+        android:background="@drawable/custom_bg_border_quiz_correct"
+        android:layout_width="300dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginStart="5dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
-        android:background="@drawable/bg_ques_custom"
-        android:orientation="vertical"
-        android:padding="20dp">
-
-        <TextView
-            android:id="@+id/txtVN_Question"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:textAlignment="center"
-            android:textColor="#CC000000"
-            android:textSize="26sp"
-            android:textStyle="bold" >
-        </TextView>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="5dp"
-        android:background="@drawable/bg_ques_custom"
         android:orientation="vertical"
         android:padding="20dp">
 
@@ -83,26 +73,26 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textAlignment="center"
-            android:textColor="#CC000000"
+            android:textColor="#0A5078"
             android:textSize="26sp"
             android:textStyle="bold" >
         </TextView>
     </LinearLayout>
 
     <LinearLayout
+        android:background="@drawable/custom_bg_border_quiz_correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="5dp"
         android:layout_gravity="center"
-        android:background="@drawable/bg_ques_custom"
         android:orientation="horizontal"
         android:padding="20dp">
 
         <EditText
             android:id="@+id/InputAnswer"
-            android:layout_width="210dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAlignment="center"
@@ -114,7 +104,7 @@
             android:id="@+id/btnAnswer"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/enter"
+            android:src="@drawable/enter_big"
             android:backgroundTint="#2196f3"
             android:textAllCaps="false"
             android:textColor="@color/white"
@@ -127,8 +117,7 @@
             android:src="@drawable/skip"
             android:backgroundTint="#2196f3"
             android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="25dp" />
+            android:textColor="@color/white"/>
     </LinearLayout>
 
     <TextView
@@ -138,6 +127,8 @@
         android:layout_marginTop="30dp"
         android:text="Correct answers: "
         android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#7C746D"
         android:layout_gravity="center"
         />
 </LinearLayout>

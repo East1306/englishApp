@@ -22,10 +22,12 @@ public class activity_ranking extends AppCompatActivity {
     ranking_adapter Ranking_adapter;
     ListView lv_Ranking;
     Button btnBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
+
         AnhXa();
 
         btnBack.setOnClickListener(new View.OnClickListener() {
