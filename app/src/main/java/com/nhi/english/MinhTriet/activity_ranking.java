@@ -1,12 +1,16 @@
 package com.nhi.english.MinhTriet;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.nhi.english.PhatLe.Activity_HomeMenu;
 import com.nhi.english.R;
 
 import java.util.ArrayList;
@@ -17,11 +21,21 @@ public class activity_ranking extends AppCompatActivity {
     ArrayList<ranking> Ranking = new ArrayList<>();;
     ranking_adapter Ranking_adapter;
     ListView lv_Ranking;
+    Button btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
+
+        btn = (Button) findViewById(R.id.BtnBack);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                backActivity_menu();
+            }
+        });
+
         AnhXa();
         sharePreferences = getSharedPreferences("HighScore", MODE_PRIVATE);
         Diem1 = sharePreferences.getInt("Diem1", 0);
@@ -56,6 +70,11 @@ public class activity_ranking extends AppCompatActivity {
         Log.e("ranking",""+Ranking);
         Ranking_adapter = new ranking_adapter(Ranking, activity_ranking.this, R.layout.only_rank);
         lv_Ranking.setAdapter(Ranking_adapter);
+    }
+
+    public void backActivity_menu() {
+        Intent intent = new Intent(this, Activity_HomeMenu.class);
+        startActivity(intent);
     }
 
     void AnhXa() {

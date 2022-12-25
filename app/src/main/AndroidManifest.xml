@@ -32,11 +32,16 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".Revise_PhuongDong.Revise" />
-        <activity android:name=".Revise_PhuongDong.ReviseSpeaking" />
-        <activity android:name=".Revise_PhuongDong.Reading" />
-        <activity android:name=".Revise_PhuongDong.ReferenceClassListen" />
-        <activity android:name=".Revise_PhuongDong.Result" />
+<!--        <activity android:name=".Revise_PhuongDong.Revise"-->
+<!--            android:allowEmbedded="false"/>-->
+<!--        <activity android:name=".Revise_PhuongDong.ReviseSpeaking"-->
+<!--            android:allowEmbedded="false"/>-->
+<!--        <activity android:name=".Revise_PhuongDong.Reading"-->
+<!--            android:allowEmbedded="false"/>-->
+<!--        <activity android:name=".Revise_PhuongDong.ReferenceClassListen"-->
+<!--            android:allowEmbedded="false"/>-->
+<!--        <activity android:name=".Revise_PhuongDong.Result"-->
+<!--           android:allowEmbedded="false"/>-->
         <activity android:name=".PhatLe.activity_ketqua" />
         <activity android:name=".MinhTriet.Listening" />
         <activity android:name=".PhatLe.Activity_Quiz" />
