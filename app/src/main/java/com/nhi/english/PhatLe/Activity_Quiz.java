@@ -109,24 +109,6 @@ public class Activity_Quiz extends AppCompatActivity {
         });
     }
 
-
-
-
-    void LoadHighScore(){
-        SharedPreferences sharedPreferences = getSharedPreferences("MyData",
-                Context.MODE_PRIVATE);
-        if (sharedPreferences !=null){
-            HighScore = sharedPreferences.getInt("H",0);
-        }
-    }
-    void SaveHighScore(){
-        SharedPreferences sharedPreferences = getSharedPreferences("MyData", Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("H",HighScore);
-        editor.apply();
-    }
-
-
     int Chon(int vitri)
     {
         int Z = 0;
@@ -160,10 +142,12 @@ public class Activity_Quiz extends AppCompatActivity {
                 Log.e("2","2");
                 if(countdown>9)
                 {
+                    txt.setTextColor(getResources().getColor(R.color.blue));
                     txt.setText("00:"+String.valueOf(countdown));
                 }
                 else
                 {
+                    txt.setTextColor(getResources().getColor(R.color.red));
                     txt.setText("00:0"+String.valueOf(countdown));
                 }
                 countdown--;

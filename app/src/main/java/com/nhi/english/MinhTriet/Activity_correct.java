@@ -79,6 +79,7 @@ public class Activity_correct extends AppCompatActivity {
         Log.e("check4",""+Diem4);
         Diem5 = sharePreferences.getInt("Diem5", 0);
         Log.e("check5",""+Diem5);
+
         VN_Question =(TextView) findViewById(R.id.txtVN_Question);
         EN_Question =(TextView) findViewById(R.id.txtEN_Question);
         Answer = (EditText) findViewById(R.id.InputAnswer);
@@ -87,6 +88,8 @@ public class Activity_correct extends AppCompatActivity {
         Time = (TextView) findViewById(R.id.txttime_correctword);
         Correct_Answer = (TextView) findViewById(R.id.txt_correct_answer);
         Star = (TextView) findViewById(R.id.txtstar);
+
+
         ReadData();
         Collections.shuffle(L1);
         Collections.shuffle(L2);
