@@ -218,7 +218,7 @@ public class Activity_Quiz extends AppCompatActivity {
         B.setText(L.get(i).AnswerB);
         C.setText(L.get(i).AnswerC);
         D.setText(L.get(i).AnswerD);
-        Ketqua.setText("Điểm : "+String.valueOf(kq));
+        Ketqua.setText("Correct Answer : "+String.valueOf(kq));
         RG.clearCheck();
     }
     void ReadData() {
