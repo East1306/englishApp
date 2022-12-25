@@ -39,11 +39,11 @@
         <activity android:name=".Revise_PhuongDong.Result" />
         <activity android:name=".PhatLe.activity_ketqua" />
         <activity android:name=".MinhTriet.Listening" />
-        <activity android:name=".PhatLe.Activity_highscores" />
         <activity android:name=".PhatLe.Activity_Quiz" />
         <activity android:name=".MinhTriet.Activity_correct" />
-        <activity android:name=".MinhTriet.activity_corect_false" />
+        <activity android:name=".MinhTriet.activity_correct_play_again" />
         <activity android:name=".MinhTriet.MainActivity" />
+        <activity android:name=".MinhTriet.activity_ranking" />
     </application>
 
 </manifest>

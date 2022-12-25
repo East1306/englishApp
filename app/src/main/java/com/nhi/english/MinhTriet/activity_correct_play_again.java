@@ -1,7 +1,6 @@
 package com.nhi.english.MinhTriet;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.nhi.english.PhatLe.Activity_HomeMenu;
 import com.nhi.english.R;
 
-public class activity_corect_false extends AppCompatActivity {
+public class activity_correct_play_again extends AppCompatActivity {
     Button BT;
     TextView Text;
     @SuppressLint("MissingInflatedId")
@@ -27,7 +26,7 @@ public class activity_corect_false extends AppCompatActivity {
         BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_corect_false.this, Activity_HomeMenu.class);
+                Intent intent = new Intent(activity_correct_play_again.this, Activity_HomeMenu.class);
                 startActivity(intent);
             }
         });

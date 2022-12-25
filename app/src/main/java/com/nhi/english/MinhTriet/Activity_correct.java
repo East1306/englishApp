@@ -2,12 +2,14 @@ package com.nhi.english.MinhTriet;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,12 +45,14 @@ class Correct {
     public String Q1;
 }
 public class Activity_correct extends AppCompatActivity {
-
+    ArrayList<ranking> Ranking = new ArrayList<>();
+    int Diem1, Star1, Time1, Diem2, Star2, Time2, Diem3, Star3, Time3, Diem4, Star4, Time4, Diem5, Star5, Time5,DiemCheck,time=0,StarCheck,TimeCheck;
+    SharedPreferences sharePreferences;
     ArrayList<Correct> L1 = new ArrayList();
     ArrayList<Correct> L2 = new ArrayList();
     TextView VN_Question, EN_Question ,Time, Correct_Answer, Star;
     EditText Answer;
-    Button btnAnswer,btnSkip;
+    ImageView btnAnswer, btnSkip;
     CountDownTimer countDownTimer;
     boolean easy = true;
     int pos = 0;
@@ -63,11 +67,23 @@ public class Activity_correct extends AppCompatActivity {
 
         super.onCreate(saveInstanceState);
         setContentView(R.layout.layout_correctword);
+        sharePreferences = getSharedPreferences("HighScore", MODE_PRIVATE);
+
+        Diem1 = sharePreferences.getInt("Diem1", 0);
+        Log.e("check1",""+Diem1);
+        Diem2 = sharePreferences.getInt("Diem2", 0);
+        Log.e("check2",""+Diem2);
+        Diem3 = sharePreferences.getInt("Diem3", 0);
+        Log.e("check3",""+Diem3);
+        Diem4 = sharePreferences.getInt("Diem4", 0);
+        Log.e("check4",""+Diem4);
+        Diem5 = sharePreferences.getInt("Diem5", 0);
+        Log.e("check5",""+Diem5);
         VN_Question =(TextView) findViewById(R.id.txtVN_Question);
         EN_Question =(TextView) findViewById(R.id.txtEN_Question);
         Answer = (EditText) findViewById(R.id.InputAnswer);
-        btnAnswer =(Button) findViewById(R.id.btnAnswer);
-        btnSkip =(Button) findViewById(R.id.btnSkip);
+        btnAnswer =(ImageView) findViewById(R.id.btnAnswer);
+        btnSkip =(ImageView) findViewById(R.id.btnSkip);
         Time = (TextView) findViewById(R.id.txttime_correctword);
         Correct_Answer = (TextView) findViewById(R.id.txt_correct_answer);
         Star = (TextView) findViewById(R.id.txtstar);
@@ -101,7 +117,7 @@ public class Activity_correct extends AppCompatActivity {
                         slt = 0;
                     }
                     if(ns < 0){
-                        Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
+                        Intent intent = new Intent(Activity_correct.this, activity_correct_play_again.class);
                         startActivity(intent);
                         NextPage();
                     }
@@ -120,7 +136,7 @@ public class Activity_correct extends AppCompatActivity {
                     slt = 0;
                 }
                 if(ns < 0){
-                    Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
+                    Intent intent = new Intent(Activity_correct.this, activity_correct_play_again.class);
                     startActivity(intent);
                 }
                 NextPage();
@@ -144,7 +160,9 @@ public class Activity_correct extends AppCompatActivity {
         countDownTimer = new CountDownTimer(31000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                Log.e("1","1");
+                int count=0;
+                count++;
+                time+=count;
                 if(countdown>9)
                 {
                     Time.setText("00:"+String.valueOf(countdown));
@@ -162,8 +180,9 @@ public class Activity_correct extends AppCompatActivity {
                 StartCountDown();
                 pos++;
                 easy = true;
-                if (pos >= 10) {
-                    Intent intent = new Intent(Activity_correct.this, activity_ketqua.class);
+                if (pos >= 5) {
+                    Load(kq,ns,time);
+                    Intent intent = new Intent(Activity_correct.this, activity_ranking.class);
                     Bundle bundle = new Bundle();
                     bundle.putInt("KQ",kq);
                     bundle.putInt("Socau",pos);
@@ -178,7 +197,7 @@ public class Activity_correct extends AppCompatActivity {
                         slt = 0;
                     }
                     if(ns < 0){
-                        Intent intent = new Intent(Activity_correct.this,activity_corect_false.class);
+                        Intent intent = new Intent(Activity_correct.this, activity_correct_play_again.class);
                         startActivity(intent);
                     }
                     NextPage();
@@ -190,9 +209,10 @@ public class Activity_correct extends AppCompatActivity {
     {
         countdown=30;
         pos++;
-        if (pos >= 10) {
-            countDownTimer.cancel();;
-            Intent intent = new Intent(Activity_correct.this,activity_ketqua.class);
+        if (pos >= 5) {
+            countDownTimer.cancel();
+            Load(kq,ns,time);
+            Intent intent = new Intent(Activity_correct.this,activity_ranking.class);
             Bundle bundle = new Bundle();
             bundle.putInt("KQ",kq);
             bundle.putInt("Socau",pos);
@@ -285,5 +305,104 @@ public class Activity_correct extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+    void Load(int kq,int ngoisao,int time) {
+        SharedPreferences.Editor editor;
+        editor = sharePreferences.edit();
+
+        if (Diem1 == 0) {
+            Log.e("1","!");
+            editor.putInt("Diem1", kq);
+            editor.putInt("Star1", ngoisao);
+            editor.putInt("Time1", time);
+            Log.e("Diem1",""+kq);
+            Log.e("Star1",""+ngoisao);
+            Log.e("Time1",""+time);
+        } else if (Diem2 == 0) {
+            Log.e("2","!");
+            editor.putInt("Diem2", kq);
+            editor.putInt("Star2", ngoisao);
+            editor.putInt("Time2", time);
+            Log.e("Diem2",""+kq);
+            Log.e("Star2",""+ngoisao);
+            Log.e("Time2",""+time);
+        } else if (Diem3 == 0) {
+            Log.e("3","!");
+            editor.putInt("Diem3", kq);
+            editor.putInt("Star3", ngoisao);
+            editor.putInt("Time3", time);
+            Log.e("Diem3",""+kq);
+            Log.e("Star3",""+ngoisao);
+            Log.e("Time3",""+time);
+        } else if (Diem4 == 0) {
+            Log.e("4","!");
+            editor.putInt("Diem4", kq);
+            editor.putInt("Star4", ngoisao);
+            editor.putInt("Time4", time);
+            Log.e("Diem4",""+kq);
+            Log.e("Star4",""+ngoisao);
+            Log.e("Time4",""+time);
+        } else if (Diem5 == 0) {
+            Log.e("5","!");
+            editor.putInt("Diem5", kq);
+            editor.putInt("Star5", ngoisao);
+            editor.putInt("Time5", time);
+            Log.e("Diem5",""+kq);
+            Log.e("Star5",""+ngoisao);
+            Log.e("Time5",""+time);
+        }else {
+            Log.e("6","!");
+            editor.putInt("DiemCheck", kq);
+            editor.putInt("StarCheck", ngoisao);
+            editor.putInt("TimeCheck", time);
+            Log.e("DiemCheck",""+kq);
+            Log.e("StarCheck",""+ngoisao);
+            Log.e("TimeCheck",""+time);
+            DiemCheck = sharePreferences.getInt("DiemCheck", 0);
+            StarCheck = sharePreferences.getInt("StarCheck", 0);
+            TimeCheck = sharePreferences.getInt("TimeCheck", 0);
+            Star1 = sharePreferences.getInt("Star1", 0);
+            Time1 = sharePreferences.getInt("Time1", 0);
+            Star2 = sharePreferences.getInt("Star2", 0);
+            Time2 = sharePreferences.getInt("Time2", 0);
+            Star3 = sharePreferences.getInt("Star3", 0);
+            Time3 = sharePreferences.getInt("Time3", 0);
+            Star4 = sharePreferences.getInt("Star4", 0);
+            Time4 = sharePreferences.getInt("Time4", 0);
+            Star5 = sharePreferences.getInt("Star5", 0);
+            Time5 = sharePreferences.getInt("Time5", 0);
+            Ranking.add(new ranking(Diem1, Star1, Time1));//0
+            Ranking.add(new ranking(Diem2, Star2, Time2));//1
+            Ranking.add(new ranking(Diem3, Star3, Time3));//2
+            Ranking.add(new ranking(Diem4, Star4, Time4));//3
+            Ranking.add(new ranking(Diem5, Star5, Time5));//4
+            Ranking.add(new ranking(DiemCheck, StarCheck, TimeCheck));//5
+            Collections.sort(Ranking);
+            for (int i = Ranking.size() - 1; i > 5; i--) {
+                Ranking.remove(i);
+            }
+
+            editor.putInt("Diem1", Ranking.get(0).getSoCau());
+            editor.putInt("Star1", Ranking.get(0).getCorrect_Star());
+            editor.putInt("Time1", Ranking.get(0).getEar_Finish_Time());
+            editor.putInt("Diem2", Ranking.get(1).getSoCau());
+            editor.putInt("Star2", Ranking.get(1).getCorrect_Star());
+            editor.putInt("Time2", Ranking.get(1).getEar_Finish_Time());
+            editor.putInt("Diem3", Ranking.get(2).getSoCau());
+            editor.putInt("Star3", Ranking.get(2).getCorrect_Star());
+            editor.putInt("Time3", Ranking.get(2).getEar_Finish_Time());
+            editor.putInt("Diem4", Ranking.get(3).getSoCau());
+            editor.putInt("Star4", Ranking.get(3).getCorrect_Star());
+            editor.putInt("Time4", Ranking.get(3).getEar_Finish_Time());
+            editor.putInt("Diem5", Ranking.get(4).getSoCau());
+            editor.putInt("Star5", Ranking.get(4).getCorrect_Star());
+            editor.putInt("Time5", Ranking.get(4).getEar_Finish_Time());
+//            for(int i = 0; i < 5; i++){
+//                editor.putInt("Diem"+i, Ranking.get(i).getSoCau());
+//                editor.putInt("Star"+i, Ranking.get(i).getCorrect_Star());
+//                editor.putInt("Time"+i, Ranking.get(i).getEar_Finish_Time());
+//            }
+        }
+        editor.commit();
     }
 }

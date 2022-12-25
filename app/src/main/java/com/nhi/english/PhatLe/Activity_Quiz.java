@@ -52,7 +52,7 @@ public class Activity_Quiz extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.layout_gramma_vocab);
+        setContentView(R.layout.layout_quiz);
         L = new ArrayList<>();
         txt = findViewById(R.id.txttime);
         Cauhoi = (TextView) findViewById(R.id.TxtCauhoi);

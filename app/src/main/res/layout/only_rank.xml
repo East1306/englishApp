@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp">
+
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.75"
+                android:background="@drawable/border_radius_listitem"
+                app:tint="#77000000" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txt_Top"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/icon_award"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="#0A5078"
+            android:textSize="36dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp">
+
+
+            <ImageView
+                android:layout_marginLeft="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/star"/>
+            <TextView
+                android:id="@+id/txt_Star"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1"
+                android:textStyle="bold"
+                android:textColor="#8A817C"
+                android:textSize="26dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="210dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="95dp"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:paddingTop="25dp"
+                android:id="@+id/txt_Diem"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:text="Số câu: 9"
+                android:fontFamily="@font/ravenpro_medium"
+                android:textColor="#8A817C"
+                android:textStyle="bold"
+                android:textSize="24dp" />
+
+            <TextView
+                android:paddingBottom="15dp"
+                android:id="@+id/txt_Time"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Thời gian : 5s"
+                android:textSize="24dp"
+                android:textStyle="bold"
+                android:fontFamily="@font/ravenpro_medium"
+                ></TextView>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

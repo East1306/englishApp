@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.nhi.english.MinhTriet.Activity_correct;
 import com.nhi.english.MinhTriet.Listening;
+import com.nhi.english.MinhTriet.activity_ranking;
 import com.nhi.english.R;
 import com.nhi.english.Revise_PhuongDong.Revise;
 
@@ -64,7 +65,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
         img_highscore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Activity_HomeMenu.this, Activity_highscores.class);
+                Intent intent = new Intent(Activity_HomeMenu.this, activity_ranking.class);
                 startActivity(intent);
             }
         });
