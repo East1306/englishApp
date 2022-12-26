@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.nhi.english.PhatLe.Activity_HomeMenu;
 import com.nhi.english.R;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ public class activity_ranking extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_ranking.this, Activity_HomeMenu.class);
+                Intent intent = new Intent(activity_ranking.this, activity_correct_option.class);
                 startActivity(intent);
             }
         });
@@ -73,7 +72,7 @@ public class activity_ranking extends AppCompatActivity {
     }
 
     void AnhXa() {
-        btnBack = (Button) findViewById(R.id.BtnBack);
-        lv_Ranking = (ListView) findViewById(R.id.Lv_HighScore);
+        btnBack = findViewById(R.id.BtnBack);
+        lv_Ranking = findViewById(R.id.Lv_HighScore);
     }
 }

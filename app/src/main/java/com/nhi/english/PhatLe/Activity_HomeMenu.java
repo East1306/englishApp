@@ -7,11 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.nhi.english.MinhTriet.Activity_correct;
 import com.nhi.english.MinhTriet.Listening;
 import com.nhi.english.MinhTriet.activity_ranking;
 import com.nhi.english.R;
 import com.nhi.english.Revise_PhuongDong.Revise;
+import com.nhi.english.MinhTriet.activity_correct_option;
 
 public class Activity_HomeMenu extends AppCompatActivity {
     ImageView imgbtnQuiz;
@@ -24,16 +24,16 @@ public class Activity_HomeMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_home_menu);
-        imgbtnQuiz = (ImageView) findViewById(R.id.btn_quiz);
+        imgbtnQuiz = (ImageView) findViewById(R.id.btn_Quiz);
         imgbtnCW = (ImageView) findViewById(R.id.btn_correctword);
         img_revise = (ImageView) findViewById(R.id.btn_revision);
         img_listen = (ImageView) findViewById(R.id.btn_listen);
-        img_highscore = (ImageView) findViewById(R.id.btn_highscore);
+//        img_highscore = (ImageView) findViewById(R.id.btn_highscore);
 
         imgbtnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Activity_HomeMenu.this, Numofquestion.class);
+                Intent intent = new Intent(Activity_HomeMenu.this, activity_qz_option.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
         imgbtnCW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Activity_HomeMenu.this, Activity_correct.class);
+                Intent intent = new Intent(Activity_HomeMenu.this, activity_correct_option.class);
                 startActivity(intent);
             }
         });
@@ -62,12 +62,12 @@ public class Activity_HomeMenu extends AppCompatActivity {
             }
         });
 
-        img_highscore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Activity_HomeMenu.this, activity_ranking.class);
-                startActivity(intent);
-            }
-        });
+//        img_highscore.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Activity_HomeMenu.this, activity_ranking.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 }

@@ -16,16 +16,8 @@ public class ranking implements Comparable<ranking> {
         return Ear_Finish_Time;
     }
 
-    public void setEar_Finish_Time(int ear_Finish_Time) {
-        Ear_Finish_Time = ear_Finish_Time;
-    }
-
     public int getSoCau() {
         return SoCau;
-    }
-
-    public void setSoCau(int soCau) {
-        SoCau = soCau;
     }
 
     public int getCorrect_Star() {
@@ -33,10 +25,6 @@ public class ranking implements Comparable<ranking> {
             return Correct_Star = 0;
         }
         return Correct_Star;
-    }
-
-    public void setCorrect_Star(int correct_Star) {
-        Correct_Star = correct_Star;
     }
 
     @Override

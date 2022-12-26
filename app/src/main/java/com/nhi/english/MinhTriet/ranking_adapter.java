@@ -1,5 +1,6 @@
 package com.nhi.english.MinhTriet;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,6 +42,7 @@ public class ranking_adapter extends BaseAdapter {
         TextView TvTop, TvSoCau, TvSao, TvTime;
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
@@ -49,10 +51,10 @@ public class ranking_adapter extends BaseAdapter {
             holder = new ViewHolder();
             LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             view = inflater.inflate(layout, null);
-            holder.TvTop = (TextView) view.findViewById(R.id.txt_Top);
-            holder.TvSoCau = (TextView) view.findViewById(R.id.txt_Diem);
-            holder.TvSao = (TextView) view.findViewById(R.id.txt_Star);
-            holder.TvTime = (TextView) view.findViewById(R.id.txt_Time);
+            holder.TvTop = view.findViewById(R.id.txt_Top);
+            holder.TvSoCau = view.findViewById(R.id.txt_Diem);
+            holder.TvSao = view.findViewById(R.id.txt_Star);
+            holder.TvTime = view.findViewById(R.id.txt_Time);
             view.setTag(holder);
         } else {
             holder = (ViewHolder) view.getTag();

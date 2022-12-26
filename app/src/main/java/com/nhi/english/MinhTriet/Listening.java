@@ -18,7 +18,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -72,6 +74,17 @@ public class Listening extends AppCompatActivity {
             }
         });
     }
+
+    private String mixWords(String word){
+
+        List<String> words = Arrays.asList(word.split(" "));
+        String mixed = "";
+        for(String i : words){
+            mixed = mixed + " " + i;
+        }
+        return mixed;
+    }
+
 
     public void play(View v){
 
