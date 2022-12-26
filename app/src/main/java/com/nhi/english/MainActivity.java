@@ -50,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
         signInButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                switch (v.getId()) {
-                    case R.id.sign_in_button:
-                        signIn();
-                        break;
-                    // ...
-                }
+                signIn();
+//                switch (v.getId()) {
+//                    case R.id.sign_in_button:
+//                        signIn();
+//                        break;
+//                    // ...
+//                }
             }
 
         });
@@ -95,14 +96,19 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
-
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            completedTask.getResult(ApiException.class);
             Toast.makeText(this, "Sign-in-success", Toast.LENGTH_SHORT).show();
+            navigateToActivity_HomeMenu();
         } catch (ApiException e) {
             Log.w( "Error","signInResult:failed code=" + e.getStatusCode());
         }
     }
 
+    void navigateToActivity_HomeMenu(){
+        finish();
+        Intent intent = new Intent(this, Activity_HomeMenu.class);
+        startActivity(intent);
+    }
 //    private void SignIn() {
 //        Intent intent = gsc.getSignInIntent();
 //        startActivityForResult(intent, 100);

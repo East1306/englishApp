@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package = "com.nhi.english">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,7 +19,7 @@
         android:theme="@style/Theme.English"
         tools:targetApi="31">
         <activity
-            android:name=".Activity_HomeMenu"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,41 +39,15 @@
         <activity android:name=".Grammar" />
         <activity android:name=".Revise_PhuongDong.Revise" />
         <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
-<<<<<<< HEAD
         <activity android:name=".Revise_PhuongDong.Reading"/>
         <activity android:name=".Revise_PhuongDong.ReferenceClassListen"/>
-=======
-        <activity android:name=".Revise_PhuongDong.ReviseReading"/>
-        <activity android:name=".Revise_PhuongDong.ReviseListen"/>
->>>>>>> fba727eed86c4f003339b33e8a2f32488466def5
         <activity android:name=".Revise_PhuongDong.Result"/>
         <activity android:name=".U2_Vocabulary"/>
         <activity android:name=".U3_Vocabulary"/>
         <activity android:name=".U4_Vocabulary"/>
-        <activity android:name=".U5_Vocabulary"/>
-        <activity android:name=".U6_Vocabulary"/>
-        <activity android:name=".U7_Vocabulary"/>
-        <activity android:name=".U8_Vocabulary"/>
-        <activity android:name=".U9_Vocabulary"/>
-        <activity android:name=".U10_Vocabulary"/>
-        <activity android:name=".U11_Vocabulary"/>
-        <activity android:name=".U12_Vocabulary"/>
-        <activity android:name=".U13_Vocabulary"/>
-        <activity android:name=".U14_Vocabulary"/>
-        <activity android:name=".U15_Vocabulary"/>
-<<<<<<< HEAD
-
-=======
->>>>>>> fba727eed86c4f003339b33e8a2f32488466def5
         <activity android:name=".U2_Grammar"/>
         <activity android:name=".U3_Grammar"/>
         <activity android:name=".U4_Grammar"/>
-        <activity android:name=".U5_Grammar"/>
-        <activity android:name=".U6_Grammar"/>
-        <activity android:name=".U7_Grammar"/>
-        <activity android:name=".U8_Grammar"/>
-        <activity android:name=".U9_Grammar"/>
-        <activity android:name=".U10_Grammar"/>
         <activity android:name=".activity_ketqua"/>
         <activity android:name=".Listening"/>
         <activity android:name=".Activity_highscores"/>

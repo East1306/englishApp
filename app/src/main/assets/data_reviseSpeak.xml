@@ -1,1 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<Question>
+    <Item>
+        <Content>1. How to fix the wet mobilephone using rice?
+2. How to amplify the speakers of the mobilephone?</Content>
+    </Item>
+    <Item>
+        <Content>1. Which way of spending holiday time do you prefer? Why?
+2. How important is holiday time to people?</Content>
+    </Item>
+    <Item>
+        <Content>1. Do you think people should do sports?Why?
+2. What kinds of sport or exercise do you like doing and why?</Content>
+    </Item>
+    <Item>
+        <Content>1. Please tell me about your dream job.
+2. What are some jobs that you think would be fun?
+3. What salary  do you expect to get paid?</Content>
+    </Item>
+</Question>

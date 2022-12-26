@@ -62,6 +62,8 @@ public class Revise extends AppCompatActivity {
 //    Listening listen = new Listening();
     String idSession;
 
+    int idQuestionSpeak = 0;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -95,6 +97,18 @@ public class Revise extends AppCompatActivity {
             listAnswer = packageFormCaller.getParcelableArrayList("Answer");
             idSession = packageFormCaller.getString("Sound");
             result = Integer.parseInt(packageFormCaller.getString("Result"));
+            idQuestionSpeak = packageFormCaller.getInt("IdQuestion speak");
+            // gán mảng cho lisListen để phục vụ cho dòng code 278
+            for (Question qu: listQuestion){
+                if(qu.style.equals("4")){
+                    listListen.add(qu);
+                }
+            }
+            for (Question qu: listQuestion){
+                if(qu.style.equals("2")){
+                    listGram.add(qu);
+                }
+            }
         }catch(Exception ex){
             Initalize();
         }
@@ -192,6 +206,7 @@ public class Revise extends AppCompatActivity {
                     bundle.putParcelableArrayList("Answer", listAnswer);
                     bundle.putString("Sound", idSession);
                     bundle.putString("Result", String.valueOf(result));
+                    bundle.putInt("IdQuestion speak", idQuestionSpeak);
                     intents.putExtra("Revise", bundle);
 //                    intents.putExtra("Style", pos);
                     startActivity(intents);
