@@ -407,11 +407,7 @@ public class Activity_correct extends AppCompatActivity {
             editor.putInt("Diem5", Ranking.get(4).getSoCau());
             editor.putInt("Star5", Ranking.get(4).getCorrect_Star());
             editor.putInt("Time5", Ranking.get(4).getEar_Finish_Time());
-//            for(int i = 0; i < 5; i++){
-//                editor.putInt("Diem"+i, Ranking.get(i).getSoCau());
-//                editor.putInt("Star"+i, Ranking.get(i).getCorrect_Star());
-//                editor.putInt("Time"+i, Ranking.get(i).getEar_Finish_Time());
-//            }
+
         }
         editor.commit();
     }

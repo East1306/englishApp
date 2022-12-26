@@ -36,7 +36,6 @@ class QuestionNare {
     public String AnswerA, AnswerB, AnswerC, AnswerD, Answer;
 }
 public class Activity_Quiz extends AppCompatActivity {
-    String TAG = "Main";
     TextView Cauhoi,Ketqua,txt;
     RadioGroup RG;
     Button BT;
@@ -196,7 +195,7 @@ public class Activity_Quiz extends AppCompatActivity {
     }
 
     void Display(int i){
-        Log.i(TAG, "Started Service");
+
         Cauhoi.setText(L.get(i).Q);
         A.setText(L.get(i).AnswerA);
         B.setText(L.get(i).AnswerB);

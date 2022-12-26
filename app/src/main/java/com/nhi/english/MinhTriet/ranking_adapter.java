@@ -56,16 +56,14 @@ public class ranking_adapter extends BaseAdapter {
             holder.TvSao = view.findViewById(R.id.txt_Star);
             holder.TvTime = view.findViewById(R.id.txt_Time);
             view.setTag(holder);
-        } else {
+        }else {
             holder = (ViewHolder) view.getTag();
         }
         ranking Ranking = rankingList.get(i);
         holder.TvTop.setText(String.valueOf(i+1));
         holder.TvSoCau.setText("Số câu : " + String.valueOf(Ranking.getSoCau()));
+        holder.TvTime.setText(""+ String.valueOf(Ranking.getEar_Finish_Time()) + "s");
         holder.TvSao.setText(""+String.valueOf(Ranking.getCorrect_Star()));
-        holder.TvTime.setText(String.valueOf(Ranking.getEar_Finish_Time()) + "s");
-
-
         return view;
     }
 }
