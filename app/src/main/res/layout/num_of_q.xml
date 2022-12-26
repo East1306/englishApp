@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bluegradient"
     android:orientation="vertical"
-    tools:context=".MinhTriet.MainActivity">
+    tools:context=".Revise_PhuongDong.MainActivity">
 
     <Button
         android:id="@+id/btn_goback_NumOfQues"

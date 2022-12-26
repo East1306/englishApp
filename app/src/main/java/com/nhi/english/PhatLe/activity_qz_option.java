@@ -59,7 +59,6 @@ public class activity_qz_option extends AppCompatActivity {
 
 
     public void backActivity_home_menu() {
-        Intent intent = new Intent(activity_qz_option.this, Activity_HomeMenu.class);
-        startActivity(intent);
+        finish();
     }
 }

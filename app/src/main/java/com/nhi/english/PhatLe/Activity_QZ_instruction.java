@@ -23,12 +23,9 @@ public class Activity_QZ_instruction extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                backActivity_correct_menu();
+                finish();
             }
         });
 
     }
-
-    public void backActivity_correct_menu() { Intent intent = new Intent(this, Activity_HomeMenu.class);
-        startActivity(intent);}
 }

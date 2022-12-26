@@ -1,4 +1,4 @@
-package com.nhi.english.MinhTriet;
+package com.nhi.english.Revise_PhuongDong;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

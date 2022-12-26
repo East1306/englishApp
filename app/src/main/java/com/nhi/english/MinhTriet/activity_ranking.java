@@ -32,8 +32,7 @@ public class activity_ranking extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_ranking.this, activity_correct_option.class);
-                startActivity(intent);
+                finish();
             }
         });
         sharePreferences = getSharedPreferences("HighScore", MODE_PRIVATE);

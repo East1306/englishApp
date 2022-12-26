@@ -32,6 +32,7 @@ public class Activity_CW_instruction extends AppCompatActivity {
 
     }
 
-    public void backActivity_correct_menu() { Intent intent = new Intent(this, Activity_HomeMenu.class);
-        startActivity(intent);}
+    public void backActivity_correct_menu() {
+        finish();
     }
+}
