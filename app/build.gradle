@@ -90,6 +90,8 @@ dependencies {
     // Declare the dependency for the Cloud Firestore library
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-firestore'
+    //Sign in google, bắt buộc khai báo dịch vụ google Play
+    implementation 'com.google.android.gms:play-services-auth:20.4.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView google;
     SignInButton signInButton;
     GoogleSignInOptions gso;
-    GoogleSignInClient mGoogleSignInClient;
+//    GoogleSignInClient mGoogleSignInClient;
     GoogleSignInClient gsc;
     static final int RC_SIGN_IN = 0;
 
@@ -46,11 +46,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
+
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-       gsc = GoogleSignIn.getClient(this, gso);
+//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        gsc = GoogleSignIn.getClient(this, gso);
         signInButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -81,8 +82,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
+        Intent signInIntent = gsc.getSignInIntent();
+//        startActivityForResult(signInIntent, RC_SIGN_IN);
+        startActivityForResult(signInIntent, 1000);
     }
 
     @Override
@@ -90,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == 1000) {
             // The Task returned from this call is always completed, no need to attach
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -106,11 +108,12 @@ public class MainActivity extends AppCompatActivity {
         } catch (ApiException e) {
             Log.w( "Error","signInResult:failed code=" + e.getStatusCode());
         }
+
     }
 
     void navigateToActivity_HomeMenu(){
         finish();
-        Intent intent = new Intent(this, Activity_HomeMenu.class);
+        Intent intent = new Intent(MainActivity.this, Activity_HomeMenu.class);
         startActivity(intent);
     }
 //    private void SignIn() {

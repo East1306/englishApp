@@ -27,8 +27,7 @@
 <!--                android:name="android.app.lib_name"-->
 <!--                android:value="" />-->
 <!--        </activity>-->
-        <activity
-            android:name=".PhatLe.Activity_HomeMenu"
+        <activity android:name=".Revise_PhuongDong.MainActivity"
             android:exported="true">
 
             <intent-filter>
@@ -49,6 +48,8 @@
         <activity android:name=".Revise_PhuongDong.Listening"/>
         <activity android:name=".Revise_PhuongDong.Result"/>
 
+
+        <activity android:name=".PhatLe.Activity_HomeMenu"/>
         <activity android:name=".PhatLe.activity_ketqua" />
         <activity android:name=".PhatLe.Numofquestion" />
         <activity android:name=".PhatLe.Activity_Quiz" />
