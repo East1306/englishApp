@@ -26,7 +26,7 @@ public class activity_correct_play_again extends AppCompatActivity {
         BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(activity_correct_play_again.this, Activity_HomeMenu.class);
+                Intent intent = new Intent(activity_correct_play_again.this, activity_correct_option.class);
                 startActivity(intent);
             }
         });

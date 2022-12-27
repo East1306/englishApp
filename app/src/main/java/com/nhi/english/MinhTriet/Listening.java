@@ -75,17 +75,6 @@ public class Listening extends AppCompatActivity {
         });
     }
 
-    private String mixWords(String word){
-
-        List<String> words = Arrays.asList(word.split(" "));
-        String mixed = "";
-        for(String i : words){
-            mixed = mixed + " " + i;
-        }
-        return mixed;
-    }
-
-
     public void play(View v){
 
         if (player == null) {

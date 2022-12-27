@@ -32,7 +32,9 @@ public class activity_ranking extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+
+                Intent intent = new Intent(activity_ranking.this, activity_correct_option.class);
+                startActivity(intent);
             }
         });
         sharePreferences = getSharedPreferences("HighScore", MODE_PRIVATE);
@@ -60,8 +62,7 @@ public class activity_ranking extends AppCompatActivity {
             Ranking.add(new ranking(Diem3, Star3, Time3));
         }if (Diem4 != 0) {
             Ranking.add(new ranking(Diem4, Star4, Time4));
-        }
-        if (Diem5 != 0) {
+        }if (Diem5 != 0) {
             Ranking.add(new ranking(Diem5, Star5, Time5));
         }
         Log.e("size",""+Ranking.size());
