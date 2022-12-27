@@ -11,13 +11,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresPermission;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.nhi.english.R;
+import com.nhi.english.Revise_PhuongDong.Activities.ReviseSpeaking;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package = "com.nhi.english">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -18,41 +19,45 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.English"
         tools:targetApi="31">
+<!--        <activity-->
+
+<!--            android:name=".PhatLe.Activity_QZ_instruction"-->
+<!--            android:exported="false">-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
         <activity
-            android:name=".MainActivity"
+            android:name=".PhatLe.Activity_HomeMenu"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".Numofquestion"
-            android:exported="false">
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-
-        <activity android:name=".Vocabulary" />
-        <activity android:name=".Grammar" />
+        <activity android:name=".MinhTriet.activity_correct_option" />
         <activity android:name=".Revise_PhuongDong.Revise" />
-        <activity android:name=".Revise_PhuongDong.ReviseSpeaking"/>
+        <activity android:name=".Revise_PhuongDong.Activities.ReviseSpeaking"/>
+        <activity android:name=".Revise_PhuongDong.Services.RecordingService"/>
         <activity android:name=".Revise_PhuongDong.Reading"/>
-        <activity android:name=".Revise_PhuongDong.ReferenceClassListen"/>
+        <activity android:name=".Revise_PhuongDong.Listening"/>
         <activity android:name=".Revise_PhuongDong.Result"/>
-        <activity android:name=".U2_Vocabulary"/>
-        <activity android:name=".U3_Vocabulary"/>
-        <activity android:name=".U4_Vocabulary"/>
-        <activity android:name=".U2_Grammar"/>
-        <activity android:name=".U3_Grammar"/>
-        <activity android:name=".U4_Grammar"/>
-        <activity android:name=".activity_ketqua"/>
-        <activity android:name=".Listening"/>
-        <activity android:name=".Activity_highscores"/>
-        <activity android:name=".Activity_Quiz"/>
-        <activity android:name=".Activity_correct"/>
+
+        <activity android:name=".PhatLe.activity_ketqua" />
+        <activity android:name=".PhatLe.Numofquestion" />
+        <activity android:name=".PhatLe.Activity_Quiz" />
+        <activity android:name=".MinhTriet.Activity_correct" />
+        <activity android:name=".MinhTriet.activity_correct_play_again" />
+        <activity android:name=".MinhTriet.activity_ranking" />
+        <activity android:name=".MinhTriet.Activity_CW_instruction" />
+        <activity android:name=".MinhTriet.Listening" />
+        <activity android:name=".PhatLe.activity_qz_option" />
     </application>
 
 </manifest>

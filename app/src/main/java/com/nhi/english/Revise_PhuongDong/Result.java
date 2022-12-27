@@ -10,9 +10,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.nhi.english.Activity_HomeMenu;
+
+import com.nhi.english.PhatLe.Activity_HomeMenu;
+
 import com.nhi.english.R;
 import com.nhi.english.data;
 
@@ -35,7 +35,7 @@ public class Result extends AppCompatActivity {
         result.setText("Correct: " +
                         intent.getStringExtra("Result") + "/" +
                         intent.getStringExtra("Total sentense"));
-        d.AddResult(intent.getStringExtra("Result"), "130602");
+        d.Addata();
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

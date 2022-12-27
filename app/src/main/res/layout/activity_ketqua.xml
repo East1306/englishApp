@@ -2,31 +2,63 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DBF3FA"
     android:orientation="vertical">
+
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kết quả bài làm"
-        android:textSize="30dp"
-        android:padding="30dp"
-        android:textAlignment="center"
-        />
-    <TextView
-        android:id="@+id/TxtKQ"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="30dp"
-        android:padding="30dp"
-        android:textAlignment="center"
-        />
-    <Button
-        android:id="@+id/BtnBack"
+        android:layout_gravity="center"
+        android:textColor="#1C66AD"
+        android:fontFamily="@font/roboto_black"
+        android:textSize="42dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center|top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Result"/>
+    <TextView
         android:layout_gravity="center"
-        android:text="Trở về"
-        android:textSize="30dp"
-        android:layout_marginTop="30dp"
-        />
+        android:textColor="#7C746D"
+        android:fontFamily="@font/roboto_black"
+        android:textSize="32dp"
+        android:layout_marginTop="60dp"
+        android:gravity="center|top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your score:"
+        android:textStyle="italic"/>
+
+
+
+    <TextView
+        android:id="@+id/TxtKQ"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text=""
+        android:textSize="26dp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_layout_score_text"/>
+
+
+    <ImageView
+        android:layout_marginTop="10dp"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:background="@drawable/congratulation_human"/>
+    <Button
+        android:id="@+id/btn_quiz_backMenu"
+        android:layout_marginTop="40dp"
+        android:layout_width="230dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#1C66AD"
+        android:text="Back to menu"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:textSize="22dp" />
+
 </LinearLayout>

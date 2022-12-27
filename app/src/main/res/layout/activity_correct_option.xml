@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBF3FA"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewCorrect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/ravenpro_medium"
+        android:text="CORRECT WORD"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#0A5078"
+        android:textSize="38sp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:background="@drawable/writing"/>
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="75dp">
+
+        <Button
+            android:id="@+id/txt_playCW"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_bg_border_quiz_correct"
+            android:text="Start"
+            android:textColor="#1C66AD"
+            android:textAllCaps="false"
+            android:textSize="26dp" />
+
+        <Button
+            android:id="@+id/txt_rankingCW"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/txt_playCW"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_bg_border_quiz_correct"
+            android:text="Ranking"
+            android:textColor="#1C66AD"
+            android:textAllCaps="false"
+            android:textSize="26dp" />
+
+        <Button
+            android:id="@+id/txt_instructionCW"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_below="@+id/txt_rankingCW"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/custom_bg_border_quiz_correct"
+            android:text="Instruction"
+            android:textColor="#1C66AD"
+            android:textAllCaps="false"
+            android:textSize="26dp" />
+
+        <Button
+            android:id="@+id/txt_backCW"
+            android:layout_width="200dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/txt_instructionCW"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/custom_bg_border_quiz_correct"
+            android:text="Back"
+            android:textAllCaps="false"
+            android:textColor="#1C66AD"
+            android:textSize="26dp" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>

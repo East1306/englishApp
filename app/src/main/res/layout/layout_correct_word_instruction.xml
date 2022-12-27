@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DBF3FA"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/ravenpro_medium"
+        android:text="INSTRUCTIONS"
+        android:textColor="#1C66AD"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+
+
+    <ImageView
+        android:id="@+id/img_correctInstruction"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_gravity="center"
+        android:src="@drawable/correct_instruction"/>
+
+    <Button
+        android:id="@+id/btn_QuizBack_Instruc"
+        android:layout_marginTop="35dp"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_below="@+id/img_correctInstruction"
+        android:background="#1C66AD"
+        android:text="Back"
+        android:textColor="#ffffff"
+        android:textSize="24dp" />
+
+</LinearLayout>
