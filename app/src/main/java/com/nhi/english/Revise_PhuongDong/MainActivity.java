@@ -20,6 +20,7 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseApp;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.nhi.english.PhatLe.Activity_HomeMenu;
 import com.nhi.english.R;
 
 import java.util.HashMap;
@@ -29,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView google;
     SignInButton signInButton;
-    GoogleSignInClient mGoogleSignInClient;
+    GoogleSignInOptions gso;
+//    GoogleSignInClient mGoogleSignInClient;
+    GoogleSignInClient gsc;
     static final int RC_SIGN_IN = 0;
 
     FirebaseFirestore firestore;
@@ -43,20 +46,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         signInButton = (SignInButton) findViewById(R.id.sign_in_button);
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-
+//        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        gsc = GoogleSignIn.getClient(this, gso);
         signInButton.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                switch (v.getId()) {
-                    case R.id.sign_in_button:
-                        signIn();
-                        break;
-                    // ...
-                }
+                signIn();
+//                switch (v.getId()) {
+//                    case R.id.sign_in_button:
+//                        signIn();
+//                        break;
+//                    // ...
+//                }
             }
 
         });
@@ -77,8 +82,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
+        Intent signInIntent = gsc.getSignInIntent();
+//        startActivityForResult(signInIntent, RC_SIGN_IN);
+        startActivityForResult(signInIntent, 1000);
     }
 
     @Override
@@ -86,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == 1000) {
             // The Task returned from this call is always completed, no need to attach
             // a listener.
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
@@ -96,24 +102,43 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
-
-            GoogleSignInAccount account = completedTask.getResult(ApiException.class);
+            completedTask.getResult(ApiException.class);
             Toast.makeText(this, "Sign-in-success", Toast.LENGTH_SHORT).show();
+            navigateToActivity_HomeMenu();
         } catch (ApiException e) {
             Log.w( "Error","signInResult:failed code=" + e.getStatusCode());
         }
+
     }
 
+    void navigateToActivity_HomeMenu(){
+        finish();
+        Intent intent = new Intent(MainActivity.this, Activity_HomeMenu.class);
+        startActivity(intent);
+    }
 //    private void SignIn() {
 //        Intent intent = gsc.getSignInIntent();
-//        startActivityForResult(intent, 100);
+//        startActivityForResult(intent, 1000);
 //    }
 //
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
-//        if (request Code ==100){
-//            Task<GoogleSignInACcount> task = GoogleSignIN. getSigned
+//        if (requestCode == 1000){
+//            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+//            try {
+//                task.getResult(ApiException.class);
+//                Toast.makeText(this, "Sign-in-success", Toast.LENGTH_SHORT).show();
+//                navigateToActivity_HomeMenu();
+//            } catch (ApiException e) {
+//                Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+//                Log.w( "Error","signInResult:failed code=" + e.getStatusCode());
+//            }
 //        }
+//    }
+//    void navigateToActivity_HomeMenu(){
+//        finish();
+//        Intent intent = new Intent(this, Activity_HomeMenu.class);
+//        startActivity(intent);
 //    }
 }

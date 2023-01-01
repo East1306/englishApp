@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient"
     android:orientation="vertical"
-    tools:context=".Revise_PhuongDong.ReviseSpeaking">
+    tools:context=".Revise_PhuongDong.Activities.ReviseSpeaking">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,91 +39,87 @@
         android:textSize="25dp"
         android:textColor="@color/black"
         android:layout_marginTop="50dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
         >
     </TextView>
-    <LinearLayout
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_keyboard_record_24"
+        >
+    </Button>
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="horizontal"
-        >
-        <ImageView
-            android:id="@+id/image1"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="10dp"
-            android:layout_gravity="center"
-            >
-        </ImageView>
-        <ImageView
-            android:id="@+id/image2"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="30dp"
-            android:layout_gravity="center"
-            >
-        </ImageView>
-    </LinearLayout>
-    <Button
-        android:id="@+id/buttonRecord"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
+        android:id="@+id/recording_status_txt"
         android:text="Record"
-        android:backgroundTint="@color/buttonColor"
-        android:padding="20dp"
-        android:textSize="25dp"
         android:textStyle="bold"
-        android:textColor="@color/green"
+        android:textSize="12dp"
+        android:textColor="@color/red"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:onClick="btnRecord"
+        android:layout_marginBottom="70dp"
         >
-    </Button>
+    </TextView>
+<!--    <RelativeLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        >-->
+<!--        <com.melnykov.fab.FloatingActionButton-->
+<!--            android:id="@+id/btnRecord"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:fab_colorNormal="@color/blue"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:src="@drawable/ic_keyboard_record_24"-->
+<!--            android:layout_alignParentTop="@id/recordProgressBar"-->
+<!--            />-->
+<!--        <Chronometer-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/chronometer"-->
+<!--            android:textSize="60dp"-->
+<!--            android:fontFamily="sans-serif-light"-->
+<!--            android:layout_alignBottom="@id/recordProgressBar"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginBottom="64dp"-->
 
-    <Button
-        android:id="@+id/buttonStop"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="stop"
-        android:backgroundTint="@color/buttonColor"
-        android:padding="20dp"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:textColor="@color/green"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:onClick="btnStop"
-        >
-    </Button>
+<!--            />-->
+<!--        <ProgressBar-->
+<!--            android:id="@+id/recordProgressBar"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            style="?android:attr/progressBarStyleHorizontal"-->
+<!--            android:indeterminate="false"-->
+<!--            android:max="100"-->
+<!--            android:progress="0"-->
+<!--            android:layout_marginTop="70dp"-->
+<!--            android:layout_marginBottom="6dp"-->
+<!--            android:background="@drawable/record_progress_bar"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            />-->
 
-    <Button
-        android:id="@+id/buttonPlay"
-        android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:text="play"
-        android:backgroundTint="@color/buttonColor"
-        android:padding="20dp"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:textColor="@color/green"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:onClick="btnPlay"
-        >
-    </Button>
-
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/recording_status_txt"-->
+<!--            android:text="Record"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="12dp"-->
+<!--            android:textColor="@color/red"-->
+<!--            android:fontFamily="sans-serif-condensed"-->
+<!--            android:layout_below="@+id/recordProgressBar"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            />-->
+<!--    </RelativeLayout>-->
     <Button
         android:id="@+id/buttonSubmit"
         android:layout_width="match_parent"
@@ -132,9 +129,8 @@
         android:padding="20dp"
         android:textSize="25dp"
         android:textStyle="bold"
-        android:textColor="@color/red"
+        android:textColor="@color/green"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         >

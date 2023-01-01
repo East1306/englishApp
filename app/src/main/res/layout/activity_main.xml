@@ -80,11 +80,10 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textSize="24sp"
                         />
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="280dp"
-                        android:layout_marginLeft="70dp"
-                        android:src="@drawable/google" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="280dp"-->
+<!--                        android:src="@drawable/google" />-->
 
             </RelativeLayout>
 

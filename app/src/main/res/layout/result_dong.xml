@@ -34,9 +34,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/white"
+        android:background="@color/blue"
         android:layout_marginTop="30dp"
         android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/green"
         android:text="Finish">
     </Button>
 </LinearLayout>
