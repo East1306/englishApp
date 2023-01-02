@@ -65,5 +65,17 @@ public class Activity_HomeMenu extends AppCompatActivity {
             }
         });
     }
+<<<<<<< HEAD
 
 }
+=======
+}
+
+//        img_highscore.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(Activity_HomeMenu.this, activity_ranking.class);
+//                startActivity(intent);
+//            }
+//        });
+>>>>>>> dc596bdff45b68214aed6fc031555ca2acdbbae4

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -15,7 +14,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.nhi.english.PhatLe.activity_ketqua;
 import com.nhi.english.R;
 
 import org.w3c.dom.Document;
