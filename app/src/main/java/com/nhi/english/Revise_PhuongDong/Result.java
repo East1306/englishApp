@@ -35,7 +35,6 @@ public class Result extends AppCompatActivity {
         result.setText("Correct: " +
                         intent.getStringExtra("Result") + "/" +
                         intent.getStringExtra("Total sentense"));
-        d.Addata();
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -30,6 +30,7 @@
 //
 ////    @BindView(R.id.chronometer) Chronometer chronometer;
 //    @BindView(R.id.recording_status_txt) TextView recordingStatusTxt;
+//    @BindView(R.id.chronometer) Chronometer chronometer;
 //    @BindView(R.id.btnRecord) FloatingActionButton recordBtn;
 //
 //    private boolean mStartRecording = true;
@@ -73,8 +74,8 @@
 //                folder.mkdir();
 //            }
 //
-////            chronometer.setBase(SystemClock.elapsedRealtime());
-////            chronometer.start();
+//            chronometer.setBase(SystemClock.elapsedRealtime());
+//            chronometer.start();
 //
 //            getActivity().startService(intent);
 //            getActivity().getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);

@@ -27,7 +27,7 @@
 <!--                android:name="android.app.lib_name"-->
 <!--                android:value="" />-->
 <!--        </activity>-->
-        <activity android:name=".Revise_PhuongDong.MainActivity"
+        <activity android:name=".MainActivity"
             android:exported="true">
 
             <intent-filter>

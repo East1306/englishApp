@@ -2,8 +2,10 @@ package com.nhi.english.Revise_PhuongDong.Activities;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.ContextWrapper;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
@@ -51,8 +53,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+//import butterknife.BindView;
+//import butterknife.ButterKnife;
 
 
 public class ReviseSpeaking extends AppCompatActivity {
@@ -82,6 +84,8 @@ public class ReviseSpeaking extends AppCompatActivity {
     private ArrayList<String> list_question = new ArrayList<>();
     int valueRandom;
 
+    final AlertDialog.Builder adb = new AlertDialog.Builder(this);
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -93,7 +97,7 @@ public class ReviseSpeaking extends AppCompatActivity {
         submit = (Button) findViewById(R.id.buttonSubmit);
         back = (ImageButton) findViewById(R.id.ic_back);
         content = findViewById(R.id.contentSpeaking);
-        voice = findViewById(R.id.btnRecord);
+//        voice = findViewById(R.id.btnRecord);
         Intent callerIntent = getIntent();
         //Lấy Bundle dựa vào Revise
         Bundle packageFormCaller= callerIntent.getBundleExtra("Revise");
@@ -150,25 +154,6 @@ public class ReviseSpeaking extends AppCompatActivity {
             }
         });
 
-//        record.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                try {
-//                    mediaRecorder = new MediaRecorder();
-//                    mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-//                    mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
-//                    mediaRecorder.setOutputFile(getFilePath());
-//                    mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
-//                    mediaRecorder.prepare();
-//                    mediaRecorder.start();
-//
-//                    Toast.makeText(ReviseSpeaking.this, "Recording is started", Toast.LENGTH_SHORT).show();
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        });
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -188,6 +173,18 @@ public class ReviseSpeaking extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                adb.setTitle("Confirm?");
+                adb.setMessage("Plese Confirm");
+                adb.setNegativeButton("Cancel", null);
+                adb.setPositiveButton("Ok", new AlertDialog.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int arg1) {
+                        // TODO Auto-generated method stub
+                        Toast.makeText(ReviseSpeaking.this,"Your Click OK. " ,
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+                adb.show();
+
                 Intent intent = new Intent(ReviseSpeaking.this, Result.class);
                 intent.putExtra("Result", result);
                 intent.putExtra("Total sentense", String.valueOf(listQuestion.size()));
@@ -269,3 +266,22 @@ public class ReviseSpeaking extends AppCompatActivity {
     }
 }
 
+
+//        record.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                try {
+//                    mediaRecorder = new MediaRecorder();
+//                    mediaRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
+//                    mediaRecorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+//                    mediaRecorder.setOutputFile(getFilePath());
+//                    mediaRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+//                    mediaRecorder.prepare();
+//                    mediaRecorder.start();
+//
+//                    Toast.makeText(ReviseSpeaking.this, "Recording is started", Toast.LENGTH_SHORT).show();
+//                } catch (Exception e) {
+//                    e.printStackTrace();
+//                }
+//            }
+//        });

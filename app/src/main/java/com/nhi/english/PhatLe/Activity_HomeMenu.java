@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.nhi.english.MinhTriet.Listening;
-import com.nhi.english.MinhTriet.activity_ranking;
 import com.nhi.english.R;
 import com.nhi.english.Revise_PhuongDong.Revise;
 import com.nhi.english.MinhTriet.activity_correct_option;
@@ -61,6 +60,8 @@ public class Activity_HomeMenu extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+}
 
 //        img_highscore.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -69,5 +70,3 @@ public class Activity_HomeMenu extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
-    }
-}

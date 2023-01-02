@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.nhi.english.MinhTriet.activity_ranking;
 import com.nhi.english.R;
 
 public class activity_qz_option extends AppCompatActivity {
