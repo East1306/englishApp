@@ -10,10 +10,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
-
-import com.google.android.gms.auth.api.identity.BeginSignInRequest;
-import com.google.android.gms.auth.api.identity.SignInCredential;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -22,22 +20,13 @@ import  com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.GoogleAuthProvider;
-//
 import com.nhi.english.PhatLe.Activity_HomeMenu;
 
-import org.w3c.dom.Document;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 0;
     SignInButton signInButton;
+    Button signOut;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
 
@@ -48,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
         signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
+
+        signOut = findViewById(R.id.sign_out_button);
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
@@ -60,6 +51,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signOut();
+            }
+        });
 
     }
 
@@ -77,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateUI(GoogleSignInAccount account) {
         if(account != null){
-            Toast.makeText(this, "Succeeded", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Succeeded " + account.getGivenName(), Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "Something went gone", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -105,5 +102,14 @@ public class MainActivity extends AppCompatActivity {
             Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
             updateUI(null);
         }
+    }
+
+    private void signOut() {
+        gsc.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                Toast.makeText(getApplicationContext(),"Logged Out",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

@@ -66,21 +66,34 @@
             <RelativeLayout
                 android:id="@+id/btnLogin"
                 android:layout_width="334dp"
-                android:layout_height="49dp"
+                android:layout_height="98dp"
                 android:layout_centerInParent="true"
                 android:layout_gravity="center"
                 android:layout_marginTop="230dp">
                     <com.google.android.gms.common.SignInButton
                         android:id="@+id/sign_in_button"
                         android:layout_width="334dp"
-                        android:layout_height="match_parent"
+                        android:layout_height="46dp"
                         android:background="#2949A6"
                         android:gravity="center"
                         android:text="Sign in with Google"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textSize="24sp"
                         />
-<!--                    <ImageView-->
+                <Button
+                    android:id="@+id/sign_out_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="46dp"
+                    android:layout_below="@+id/sign_in_button"
+                    android:layout_marginTop="10dp"
+                    android:textAppearance="@style/CardView"
+                    android:textSize="12dp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Sign out"
+                    />
+
+                <!--                    <ImageView-->
 <!--                        android:layout_width="40dp"-->
 <!--                        android:layout_height="280dp"-->
 <!--                        android:src="@drawable/google" />-->
