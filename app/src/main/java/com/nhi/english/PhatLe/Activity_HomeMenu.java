@@ -65,10 +65,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
             }
         });
     }
-<<<<<<< HEAD
 
-}
-=======
 }
 
 //        img_highscore.setOnClickListener(new View.OnClickListener() {
@@ -78,4 +75,4 @@ public class Activity_HomeMenu extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
->>>>>>> dc596bdff45b68214aed6fc031555ca2acdbbae4
+

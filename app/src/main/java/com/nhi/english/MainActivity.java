@@ -52,15 +52,12 @@ public class MainActivity extends AppCompatActivity {
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
 
-
         signInButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signIn();
             }
         });
-
-
     }
 
     public void onStart() {
@@ -79,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
         if(account != null){
             Toast.makeText(this, "Succeeded", Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(this, "Something went gone", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -52,10 +52,9 @@ public class activity_qz_option extends AppCompatActivity {
         startActivity(intent);
     }
 
-
-    public void openActivity_quiz_instruciton(){  Intent intent = new Intent(activity_qz_option.this, Activity_QZ_instruction.class);
+    public void openActivity_quiz_instruciton(){
+        Intent intent = new Intent(activity_qz_option.this, Activity_QZ_instruction.class);
         startActivity(intent);}
-
 
     public void backActivity_home_menu() {
         finish();
