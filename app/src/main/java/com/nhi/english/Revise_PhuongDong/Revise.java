@@ -15,6 +15,8 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.nhi.english.R;
 import com.nhi.english.Revise_PhuongDong.Activities.ReviseSpeaking;
 
@@ -64,11 +66,17 @@ public class Revise extends AppCompatActivity {
     int idQuestionSpeak = 0;
 
 
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference myRef = database.getReference("message");
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary);
+
+        Log.d("Connect", "REALTIME DATABASE ___________________________");
+        myRef.setValue("Hello, World!");
 
         title_ = (TextView) findViewById(R.id.title_);
 

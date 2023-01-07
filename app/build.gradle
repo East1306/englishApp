@@ -84,6 +84,10 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-auth:20.4.0' //one-tap sign in/ up
 
+    //Realtime Database
+    implementation platform('com.google.firebase:firebase-bom:31.1.1')
+    implementation 'com.google.firebase:firebase-database'
+
 }
 
 apply plugin: 'com.google.gms.google-services'
