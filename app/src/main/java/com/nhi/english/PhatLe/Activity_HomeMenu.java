@@ -32,7 +32,6 @@ public class Activity_HomeMenu extends AppCompatActivity {
         imgbtnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent intent = new Intent(Activity_HomeMenu.this, activity_qz_option.class);
                 startActivity(intent);
             }
