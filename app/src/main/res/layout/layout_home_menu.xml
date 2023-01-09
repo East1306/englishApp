@@ -17,44 +17,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             >
             <LinearLayout
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:padding="20dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/custom_circle"
+                android:background="@drawable/boy"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text=""
-                    android:textColor="#2f498c"
-                    android:textSize="24sp"
-                    android:textStyle="bold"/>
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="50dp"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:padding="20dp"
-                android:layout_marginEnd="5dp"
-                android:background="@drawable/custom_circle"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/star"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text=""
-                    android:textColor="#2f498c"
-                    android:textSize="24sp"
-                    android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -65,9 +46,8 @@
             android:layout_marginStart="5dp"
             >
             <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="50dp"
-                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
                 android:padding="20dp"
                 android:background="@drawable/custom_bg_border_quiz_correct"
                 >
@@ -82,26 +62,22 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="200dp"
-                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
                 android:padding="20dp"
-                android:layout_marginEnd="5dp"
+                android:layout_marginTop="8dp"
                 android:background="@drawable/custom_bg_border_quiz_correct"
                 >
-
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text=""
+                    android:text="Điểm số"
                     android:textColor="#2f498c"
                     android:textSize="24sp"
                     android:textStyle="bold"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
-
 
 <!--    <LinearLayout-->
 <!--        android:layout_marginTop="10dp"-->
