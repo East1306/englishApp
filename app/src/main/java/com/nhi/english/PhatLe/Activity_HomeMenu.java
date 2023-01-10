@@ -3,10 +3,15 @@ package com.nhi.english.PhatLe;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -20,6 +25,7 @@ import com.google.android.gms.tasks.Task;
 import com.nhi.english.MainActivity;
 import com.nhi.english.MinhTriet.Listening;
 import com.nhi.english.R;
+import com.nhi.english.R2;
 import com.nhi.english.Revise_PhuongDong.Revise;
 import com.nhi.english.MinhTriet.activity_correct_option;
 
@@ -35,6 +41,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
 
+    Animation aiAnimation;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,15 +63,23 @@ public class Activity_HomeMenu extends AppCompatActivity {
         imgbtnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                aiAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.rotate);
+
+                imgbtnQuiz.startAnimation(aiAnimation);
                 Intent intent = new Intent(Activity_HomeMenu.this, activity_qz_option.class);
                 startActivity(intent);
+
             }
         });
 
         imgbtnCW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                aiAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.slide);
 
+                imgbtnCW.startAnimation(aiAnimation);
                 Intent intent = new Intent(Activity_HomeMenu.this, activity_correct_option.class);
                 startActivity(intent);
             }
@@ -73,7 +88,10 @@ public class Activity_HomeMenu extends AppCompatActivity {
         img_listen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                aiAnimation = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.rotate_ring);
 
+                img_listen.startAnimation(aiAnimation);
                 Intent intent = new Intent(Activity_HomeMenu.this, Listening.class);
                 startActivity(intent);
             }
@@ -82,9 +100,21 @@ public class Activity_HomeMenu extends AppCompatActivity {
         img_revise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                RotateAnimation anim = new RotateAnimation(0f, 350f
+                                                                , 15f, 15f);
+                anim.setInterpolator(new LinearInterpolator());
+                anim.setRepeatCount(Animation.INFINITE);
+                anim.setDuration(1500);
 
-                Intent intent = new Intent(Activity_HomeMenu.this, Revise.class);
-                startActivity(intent);
+// Start animating the image;
+                img_revise.startAnimation(anim);
+
+                if(anim.getDuration() == 1500){
+                    Intent intent = new Intent(Activity_HomeMenu.this, Revise.class);
+                    startActivity(intent);
+                }
+
+
             }
         });
 
