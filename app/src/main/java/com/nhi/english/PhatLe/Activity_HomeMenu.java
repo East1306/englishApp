@@ -25,7 +25,7 @@ import com.google.android.gms.tasks.Task;
 import com.nhi.english.MainActivity;
 import com.nhi.english.MinhTriet.Listening;
 import com.nhi.english.R;
-import com.nhi.english.R2;
+
 import com.nhi.english.Revise_PhuongDong.Revise;
 import com.nhi.english.MinhTriet.activity_correct_option;
 
