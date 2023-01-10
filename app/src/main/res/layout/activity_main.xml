@@ -80,23 +80,6 @@
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textSize="24sp"
                         />
-                <Button
-                    android:id="@+id/sign_out_button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="46dp"
-                    android:layout_below="@+id/sign_in_button"
-                    android:layout_marginTop="10dp"
-                    android:textAppearance="@style/CardView"
-                    android:textSize="12dp"
-                    android:layout_centerHorizontal="true"
-                    android:gravity="center"
-                    android:text="Sign out"
-                    />
-
-                <!--                    <ImageView-->
-<!--                        android:layout_width="40dp"-->
-<!--                        android:layout_height="280dp"-->
-<!--                        android:src="@drawable/google" />-->
 
             </RelativeLayout>
 

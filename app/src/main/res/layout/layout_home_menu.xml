@@ -6,8 +6,16 @@
     android:background="@drawable/gradient"
     android:orientation="vertical">
 
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/logout"
+        />
     <LinearLayout
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="2dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,23 +32,26 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/boy"
+                android:background="@drawable/student"
                 android:gravity="center"
                 android:padding="20dp"></LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="113dp"
                 android:layout_height="66dp"
-                android:padding="20dp"
                 android:background="@drawable/custom_bg_border_quiz_correct"
-                >
+                android:padding="20dp">
+
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center"
                     android:text="Text"
                     android:textColor="#2f498c"
-                    android:textSize="23sp"
-                    android:textStyle="bold"/>
+                    android:textSize="23dp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
 
@@ -63,19 +74,19 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="107dp"
                 android:layout_height="65dp"
-                android:padding="20dp"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/custom_bg_border_quiz_correct"
-                >
+                android:padding="20dp">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Điểm số"
                     android:textColor="#2f498c"
                     android:textSize="23sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

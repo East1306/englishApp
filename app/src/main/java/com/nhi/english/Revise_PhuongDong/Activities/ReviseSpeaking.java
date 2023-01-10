@@ -54,9 +54,6 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-//import butterknife.BindView;
-//import butterknife.ButterKnife;
-
 
 public class ReviseSpeaking extends AppCompatActivity {
     private static int MICROPHONE_PERMISSION_CODE = 200;
