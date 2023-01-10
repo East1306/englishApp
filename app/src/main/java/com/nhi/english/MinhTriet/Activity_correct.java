@@ -400,25 +400,24 @@ public class Activity_correct extends AppCompatActivity {
             Ranking.add(new ranking(Diem5, Star5, Time5));//4
             Ranking.add(new ranking(DiemCheck, StarCheck, TimeCheck));//5
             Collections.sort(Ranking);
-            for (int i = Ranking.size() - 1; i > 5; i--) {
+            for (int i = Ranking.size() - 1; i > 4; i--) {
                 Ranking.remove(i);
             }
-
-            editor.putInt("Diem1", Ranking.get(0).getSoCau());
-            editor.putInt("Star1", Ranking.get(0).getCorrect_Star());
-            editor.putInt("Time1", Ranking.get(0).getEar_Finish_Time());
-            editor.putInt("Diem2", Ranking.get(1).getSoCau());
-            editor.putInt("Star2", Ranking.get(1).getCorrect_Star());
-            editor.putInt("Time2", Ranking.get(1).getEar_Finish_Time());
+            editor.putInt("Diem1", Ranking.get(4).getSoCau());
+            editor.putInt("Star1", Ranking.get(4).getCorrect_Star());
+            editor.putInt("Time1", Ranking.get(4).getEar_Finish_Time());
+            editor.putInt("Diem2", Ranking.get(3).getSoCau());
+            editor.putInt("Star2", Ranking.get(3).getCorrect_Star());
+            editor.putInt("Time2", Ranking.get(3).getEar_Finish_Time());
             editor.putInt("Diem3", Ranking.get(2).getSoCau());
             editor.putInt("Star3", Ranking.get(2).getCorrect_Star());
             editor.putInt("Time3", Ranking.get(2).getEar_Finish_Time());
-            editor.putInt("Diem4", Ranking.get(3).getSoCau());
-            editor.putInt("Star4", Ranking.get(3).getCorrect_Star());
-            editor.putInt("Time4", Ranking.get(3).getEar_Finish_Time());
-            editor.putInt("Diem5", Ranking.get(4).getSoCau());
-            editor.putInt("Star5", Ranking.get(4).getCorrect_Star());
-            editor.putInt("Time5", Ranking.get(4).getEar_Finish_Time());
+            editor.putInt("Diem4", Ranking.get(1).getSoCau());
+            editor.putInt("Star4", Ranking.get(1).getCorrect_Star());
+            editor.putInt("Time4", Ranking.get(1).getEar_Finish_Time());
+            editor.putInt("Diem5", Ranking.get(0).getSoCau());
+            editor.putInt("Star5", Ranking.get(0).getCorrect_Star());
+            editor.putInt("Time5", Ranking.get(0).getEar_Finish_Time());
 
         }
         editor.commit();
