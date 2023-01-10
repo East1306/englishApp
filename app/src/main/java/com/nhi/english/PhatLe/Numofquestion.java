@@ -48,7 +48,7 @@ public class Numofquestion extends AppCompatActivity {
     }
 
     public void gobackHomeMenuActivity() {
-        Intent intent = new Intent(this, Activity_HomeMenu.class);
+        Intent intent = new Intent(this, activity_qz_option.class);
         startActivity(intent);
     }
 

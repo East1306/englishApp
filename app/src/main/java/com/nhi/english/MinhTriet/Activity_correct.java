@@ -3,8 +3,10 @@ package com.nhi.english.MinhTriet;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -44,6 +46,7 @@ class Correct {
 }
 public class Activity_correct extends AppCompatActivity {
     ArrayList<ranking> Ranking = new ArrayList<>();
+    MediaPlayer player;
     int Diem1, Star1, Time1, Diem2, Star2, Time2, Diem3, Star3, Time3, Diem4, Star4, Time4, Diem5, Star5, Time5,DiemCheck,time=0,StarCheck,TimeCheck;
     SharedPreferences sharePreferences;
     ArrayList<Correct> L1 = new ArrayList();
@@ -89,6 +92,7 @@ public class Activity_correct extends AppCompatActivity {
         btnAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Answer_sound();
                 if(L1.get(pos).Q.equalsIgnoreCase(Answer.getText().toString()) || L2.get(pos).Q.equalsIgnoreCase(Answer.getText().toString())){
                     Toast.makeText(Activity_correct.this, "You are correct <3",Toast.LENGTH_SHORT).show();
                     easy = false;
@@ -121,6 +125,7 @@ public class Activity_correct extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Skip_sound();
                 dlt = 0;
                 slt++;
                 easy = true;
@@ -135,6 +140,15 @@ public class Activity_correct extends AppCompatActivity {
                 NextPage();
             }
         });
+    }
+
+    public void Skip_sound(){
+        player = MediaPlayer.create(this, R.raw.skip_sound);
+        player.start();
+    }
+    public void Answer_sound(){
+        player = MediaPlayer.create(this, R.raw.answer_sound);
+        player.start();
     }
 
     void AnhXa(){

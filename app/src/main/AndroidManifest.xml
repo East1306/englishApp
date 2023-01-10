@@ -20,15 +20,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.English"
         tools:targetApi="31">
-<!--        <activity-->
 
-<!--            android:name=".PhatLe.Activity_QZ_instruction"-->
-<!--            android:exported="false">-->
-<!--            <meta-data-->
-<!--                android:name="android.app.lib_name"-->
-<!--                android:value="" />-->
-<!--        </activity>-->
-        <activity android:name=".MainActivity"
+        <activity android:name=".PhatLe.Activity_HomeMenu"
             android:exported="true">
 
             <intent-filter>
@@ -48,9 +41,8 @@
         <activity android:name=".Revise_PhuongDong.Reading"/>
         <activity android:name=".Revise_PhuongDong.Listening"/>
         <activity android:name=".Revise_PhuongDong.Result"/>
-
-
-        <activity android:name=".PhatLe.Activity_HomeMenu"/>
+        <activity android:name=".PhatLe.Activity_QZ_instruction" />
+<!--        <activity android:name=".PhatLe.Activity_HomeMenu"/>-->
         <activity android:name=".PhatLe.activity_ketqua" />
         <activity android:name=".PhatLe.Numofquestion" />
         <activity android:name=".PhatLe.Activity_Quiz" />

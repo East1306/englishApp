@@ -3,6 +3,7 @@ package com.nhi.english.PhatLe;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.util.Log;
@@ -35,6 +36,7 @@ class QuestionNare {
     public String AnswerA, AnswerB, AnswerC, AnswerD, Answer;
 }
 public class Activity_Quiz extends AppCompatActivity {
+    MediaPlayer player;
     TextView Cauhoi,Ketqua,txt;
     RadioGroup RG;
     Button BT;
@@ -72,6 +74,7 @@ public class Activity_Quiz extends AppCompatActivity {
         BT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Answer_sound();
                 int idCheck = RG.getCheckedRadioButtonId();
                 switch (idCheck) {
                     case R.id.RdbA:
@@ -107,6 +110,10 @@ public class Activity_Quiz extends AppCompatActivity {
         });
     }
 
+    public void Answer_sound(){
+        player = MediaPlayer.create(this, R.raw.answer_sound);
+        player.start();
+    }
     int Chon(int vitri)
     {
         int Z = 0;

@@ -3,6 +3,7 @@ package com.nhi.english.PhatLe;
 import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,7 +18,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
     ImageView imgbtnCW;
     ImageView img_revise;
     ImageView img_listen;
-    ImageView img_highscore;
+    MediaPlayer player;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,6 @@ public class Activity_HomeMenu extends AppCompatActivity {
         imgbtnCW = (ImageView) findViewById(R.id.btn_correctword);
         img_revise = (ImageView) findViewById(R.id.btn_revision);
         img_listen = (ImageView) findViewById(R.id.btn_listen);
-//        img_highscore = (ImageView) findViewById(R.id.btn_highscore);
 
         imgbtnQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +40,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
         imgbtnCW.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(Activity_HomeMenu.this, activity_correct_option.class);
                 startActivity(intent);
             }
@@ -48,6 +49,7 @@ public class Activity_HomeMenu extends AppCompatActivity {
         img_listen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(Activity_HomeMenu.this, Listening.class);
                 startActivity(intent);
             }
@@ -56,11 +58,13 @@ public class Activity_HomeMenu extends AppCompatActivity {
         img_revise.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(Activity_HomeMenu.this, Revise.class);
                 startActivity(intent);
             }
         });
     }
+
 }
 
 //        img_highscore.setOnClickListener(new View.OnClickListener() {
@@ -70,3 +74,4 @@ public class Activity_HomeMenu extends AppCompatActivity {
 //                startActivity(intent);
 //            }
 //        });
+

@@ -2,6 +2,7 @@ package com.nhi.english.MinhTriet;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,9 +16,11 @@ import com.nhi.english.R;
 public class activity_correct_play_again extends AppCompatActivity {
     Button BT;
     TextView Text;
+    MediaPlayer player;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        Crying_sound();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_play_again);
         Text = (TextView) findViewById(R.id.Txtfalse);
@@ -29,5 +32,9 @@ public class activity_correct_play_again extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+    public void Crying_sound(){
+        player = MediaPlayer.create(this, R.raw.crying_sound);
+        player.start();
     }
 }

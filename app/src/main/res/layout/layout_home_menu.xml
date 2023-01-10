@@ -6,223 +6,101 @@
     android:background="@drawable/gradient"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/txttitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="30dp"
-        android:text="Let's play"
-        android:textColor="#2f498c"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+        >
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            >
 
-<!--        <GridLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="488dp"-->
-<!--            android:layout_weight="8"-->
-<!--            android:alignmentMode="alignMargins"-->
-<!--            android:columnCount="2"-->
-<!--            android:columnOrderPreserved="false"-->
-<!--            android:padding="25dp"-->
-<!--            android:rowCount="2">-->
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/boy"
+                android:gravity="center"
+                android:padding="20dp"></LinearLayout>
 
-<!--            <androidx.cardview.widget.CardView-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp"
+                android:padding="20dp"
+                android:background="@drawable/custom_bg_border_quiz_correct"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Text"
+                    android:textColor="#2f498c"
+                    android:textSize="23sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
 
-<!--                android:id="@+id/card1"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_row="0"-->
-<!--                android:layout_rowWeight="1"-->
-<!--                android:layout_column="0"-->
-<!--                android:layout_columnWeight="1"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                app:cardCornerRadius="9dp"-->
-<!--                app:cardElevation="9dp">-->
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                    android:layout_margin="16dp"-->
-<!--                    android:orientation="vertical">-->
+        </LinearLayout>
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/btn_quiz"-->
-<!--                        android:layout_width="110dp"-->
-<!--                        android:layout_height="130dp"-->
-<!--                        android:layout_gravity="center_horizontal"-->
-<!--                        android:src="@drawable/quiz_icon" />-->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            >
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:padding="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/star"
+                android:orientation="vertical">
+            </LinearLayout>
 
-<!--                    <TextView-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:text="Quiz"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:textColor="#2F498C"-->
-<!--                        android:textSize="30sp" />-->
-<!--                </LinearLayout>-->
-<!--            </androidx.cardview.widget.CardView>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:padding="20dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_bg_border_quiz_correct"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Điểm số"
+                    android:textColor="#2f498c"
+                    android:textSize="23sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/card2"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_rowWeight="1"-->
-<!--                android:layout_columnWeight="1"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                app:cardCornerRadius="9dp"-->
-<!--                app:cardElevation="9dp"-->
-<!--                >-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                    android:layout_margin="16dp"-->
-<!--                    android:orientation="vertical">-->
 
-<!--                    <ImageView-->
-<!--                        android:id="@+id/btn_correctword"-->
-<!--                        android:layout_width="110dp"-->
-<!--                        android:layout_height="130dp"-->
-<!--                        android:layout_gravity="center_horizontal"-->
-<!--                        android:src="@drawable/writing" />-->
-
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="3dp"-->
-<!--                        android:text="Correct Word"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:textColor="#2F498C"-->
-<!--                        android:textSize="30sp" />-->
-<!--                </LinearLayout>-->
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/card3"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_rowWeight="1"-->
-<!--                android:layout_columnWeight="1"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                app:cardCornerRadius="9dp"-->
-<!--                app:cardElevation="9dp"-->
-<!--                >-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                    android:layout_margin="16dp"-->
-<!--                    android:orientation="vertical">-->
-
-<!--                    <ImageView-->
-<!--                        android:id="@+id/btn_listen"-->
-<!--                        android:layout_width="110dp"-->
-<!--                        android:layout_height="130dp"-->
-<!--                        android:layout_gravity="center_horizontal"-->
-<!--                        android:src="@drawable/interpreter" />-->
-
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="4dp"-->
-<!--                        android:text="Listen"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:textColor="#2F498C"-->
-<!--                        android:textSize="30dp" />-->
-<!--                </LinearLayout>-->
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--            <androidx.cardview.widget.CardView-->
-<!--                android:id="@+id/card4"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="0dp"-->
-<!--                android:layout_rowWeight="1"-->
-<!--                android:layout_columnWeight="1"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:layout_marginBottom="16dp"-->
-<!--                app:cardCornerRadius="9dp"-->
-<!--                app:cardElevation="9dp"-->
-<!--                >-->
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_gravity="center_horizontal|center_vertical"-->
-<!--                    android:layout_margin="16dp"-->
-<!--                    android:orientation="vertical">-->
-
-<!--                    <ImageView-->
-<!--                        android:id="@+id/btn_revision"-->
-<!--                        android:layout_width="110dp"-->
-<!--                        android:layout_height="130dp"-->
-<!--                        android:layout_gravity="center_horizontal"-->
-<!--                        android:src="@drawable/revision" />-->
-
-<!--                    <TextView-->
-<!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_marginLeft="12dp"-->
-<!--                        android:text="Revise"-->
-<!--                        android:textAlignment="center"-->
-<!--                        android:textColor="#2F498C"-->
-<!--                        android:textSize="30sp" />-->
-<!--                </LinearLayout>-->
-<!--            </androidx.cardview.widget.CardView>-->
-
-<!--&lt;!&ndash;            <androidx.cardview.widget.CardView&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_width="0dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_height="0dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_rowWeight="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_columnWeight="1"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_marginLeft="16dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_marginRight="16dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                android:layout_marginBottom="16dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                app:cardCornerRadius="9dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                app:cardElevation="9dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                >&ndash;&gt;-->
-
-<!--&lt;!&ndash;                <LinearLayout&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_width="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_gravity="center_horizontal|center_vertical"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:layout_margin="16dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                    android:orientation="vertical">&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:id="@+id/btn_highscore"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="110dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="130dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_gravity="center_horizontal"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:src="@drawable/trophy" />&ndash;&gt;-->
-
-<!--&lt;!&ndash;                    <TextView&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_width="match_parent"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:layout_marginLeft="12dp"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:text=""&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:textAlignment="center"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:textColor="#2F498C"&ndash;&gt;-->
-<!--&lt;!&ndash;                        android:textSize="24sp" />&ndash;&gt;-->
-<!--&lt;!&ndash;                </LinearLayout>&ndash;&gt;-->
-<!--&lt;!&ndash;            </androidx.cardview.widget.CardView>&ndash;&gt;-->
-<!--        </GridLayout>-->
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="Let's Play"
+            android:textSize="50dp"
+            android:gravity="center"
+            android:textColor="#2f498c"
+            android:textStyle="bold">
+        </TextView>
+    </LinearLayout>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <LinearLayout
             android:id="@+id/top"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
