@@ -125,6 +125,7 @@ public class Activity_correct extends AppCompatActivity {
         btnSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Skip_sound();
                 dlt = 0;
                 slt++;
                 easy = true;
@@ -141,6 +142,10 @@ public class Activity_correct extends AppCompatActivity {
         });
     }
 
+    public void Skip_sound(){
+        player = MediaPlayer.create(this, R.raw.skip_sound);
+        player.start();
+    }
     public void Answer_sound(){
         player = MediaPlayer.create(this, R.raw.answer_sound);
         player.start();
