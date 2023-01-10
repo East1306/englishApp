@@ -201,7 +201,7 @@ public class Activity_correct extends AppCompatActivity {
                 StartCountDown();
                 pos++;
                 easy = true;
-                if (pos >= 5) {
+                if (pos >= 10) {
                     Load(kq,ns,time);
                     Intent intent = new Intent(Activity_correct.this, activity_ranking.class);
                     Bundle bundle = new Bundle();
@@ -230,7 +230,7 @@ public class Activity_correct extends AppCompatActivity {
     {
         countdown=30;
         pos++;
-        if (pos >= 5) {
+        if (pos >= 10) {
             countDownTimer.cancel();
             Load(kq,ns,time);
             Intent intent = new Intent(Activity_correct.this,activity_ranking.class);

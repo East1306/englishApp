@@ -29,18 +29,34 @@ public class ranking implements Comparable<ranking> {
 
     @Override
     public int compareTo(ranking ranking) {
-        if (SoCau < ranking.SoCau) {
+//        for(int i = 0; i < 5; i++){
+//            if(Correct_Star > ranking.)
+//        }
+
+
+        if (Correct_Star < ranking.Correct_Star)
+        {
             return 1;
-        } else if (SoCau == ranking.SoCau) {
-            if(Correct_Star < ranking.Correct_Star)
+        }
+        else if (Correct_Star == ranking.Correct_Star)
+        {
+            if(SoCau < ranking.SoCau)
             {
                 return 1;
             }
-            else if(Correct_Star == ranking.Correct_Star)
+            else if(SoCau == ranking.SoCau)
             {
-                if (Ear_Finish_Time > ranking.Ear_Finish_Time) return 1;
-                else if (Ear_Finish_Time == ranking.Ear_Finish_Time) return 0;
-                else return -1;
+//                if (Ear_Finish_Time > ranking.Ear_Finish_Time)
+//                {
+//                    return 1;
+//                }
+//                else if (Ear_Finish_Time == ranking.Ear_Finish_Time)
+//                {
+//                    return 0;
+//                }
+//                else
+//                    return -1;
+                return 0;
             }
             else return -1;
         } else return -1;
