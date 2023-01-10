@@ -26,7 +26,6 @@ import com.nhi.english.PhatLe.Activity_HomeMenu;
 public class MainActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 0;
     SignInButton signInButton;
-    Button signOut;
     GoogleSignInOptions gso;
     GoogleSignInClient gsc;
 
@@ -38,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         signInButton = findViewById(R.id.sign_in_button);
         signInButton.setSize(SignInButton.SIZE_STANDARD);
 
-        signOut = findViewById(R.id.sign_out_button);
 
         gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         gsc = GoogleSignIn.getClient(this, gso);
@@ -49,15 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 signIn();
             }
         });
-
-
-        signOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                signOut();
-            }
-        });
-
 
     }
 
@@ -75,10 +64,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void updateUI(GoogleSignInAccount account) {
         if(account != null){
-            Toast.makeText(this, "Succeeded " + account.getGivenName(), Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Wish you study well", Toast.LENGTH_SHORT).show();
         }
+//        else{
+//            Toast.makeText(this, "Something went wrong", Toast.LENGTH_SHORT).show();
+//        }
     }
 
     public void onActivityResult (int requestCode, int resultCode, Intent data) {
@@ -94,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             GoogleSignInAccount account = task.getResult(ApiException.class);
             Intent intent = new Intent(this, Activity_HomeMenu.class);
+            intent.putExtra("User", account.getGivenName());
             startActivity(intent);
             // Signed in successfully, show authenticated UI.
             updateUI(account);
@@ -103,15 +94,5 @@ public class MainActivity extends AppCompatActivity {
             Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
             updateUI(null);
         }
-    }
-
-    private void signOut() {
-        gsc.signOut().addOnCompleteListener(this, new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                Toast.makeText(getApplicationContext(),"Logged Out",Toast.LENGTH_SHORT).show();
-            }
-
-        });
     }
 }
