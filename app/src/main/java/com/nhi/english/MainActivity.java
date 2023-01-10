@@ -110,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Void> task) {
                 Toast.makeText(getApplicationContext(),"Logged Out",Toast.LENGTH_SHORT).show();
             }
+
         });
     }
 }

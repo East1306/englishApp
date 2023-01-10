@@ -11,12 +11,25 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.nhi.english.R;
 import com.nhi.english.Revise_PhuongDong.Activities.ReviseSpeaking;
 
@@ -26,6 +39,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -66,8 +80,10 @@ public class Revise extends AppCompatActivity {
     int idQuestionSpeak = 0;
 
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef = database.getReference("message");
+//    FirebaseDatabase database = FirebaseDatabase.getInstance();
+//    DatabaseReference myRef = database.getReference();
+
+    DatabaseReference myRef;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -76,8 +92,10 @@ public class Revise extends AppCompatActivity {
         setContentView(R.layout.activity_vocabulary);
 
         Log.d("Connect", "REALTIME DATABASE ___________________________");
-        myRef.setValue("Hello, World!");
-
+        myRef = FirebaseDatabase
+                .getInstance()
+                .getReference();
+        myRef.setValue("Hello");
         title_ = (TextView) findViewById(R.id.title_);
 
         image = findViewById(R.id.imageView);
