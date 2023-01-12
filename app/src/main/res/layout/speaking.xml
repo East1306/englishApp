@@ -4,7 +4,6 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/gradient"
     android:orientation="vertical"
     tools:context=".Revise_PhuongDong.Activities.ReviseSpeaking">
@@ -65,11 +64,13 @@
 <!--        >-->
 <!--    </TextView>-->
     <RelativeLayout
+        android:id="@+id/fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         >
-<!--        <com.melnykov.fab.FloatingActionButton-->
+
+        <!--        <com.melnykov.fab.FloatingActionButton-->
 <!--            android:id="@+id/btnRecord"-->
 <!--            android:layout_width="wrap_content"-->
 <!--            android:layout_height="wrap_content"-->
@@ -79,6 +80,24 @@
 <!--            android:src="@drawable/ic_keyboard_record_24"-->
 <!--            android:layout_alignParentTop="@id/recordProgressBar"-->
 <!--            />-->
+
+        <ImageButton
+            android:id="@+id/btnRecord"
+            android:layout_width="72dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="21dp"
+            android:layout_marginLeft="64.5dp"
+            android:background="@drawable/record_progress_bar_background"
+            android:src="@drawable/ic_keyboard_record_24"></ImageButton>
+
+        <ImageButton
+            android:id="@+id/playSound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_baseline_volume_up_24"
+            android:layout_marginLeft="155dp"
+            />
+
         <Chronometer
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,20 +109,19 @@
             android:layout_marginBottom="64dp"
 
             />
+
         <ProgressBar
             android:id="@+id/recordProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="200dp"
             android:layout_height="200dp"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:indeterminate="false"
-            android:max="100"
-            android:progress="0"
-            android:layout_marginTop="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="74dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/record_progress_bar"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            />
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -34,10 +34,11 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+
+        <activity android:name=".RegisterUser"/>
         <activity android:name=".MinhTriet.activity_correct_option" />
         <activity android:name=".Revise_PhuongDong.Revise" />
-        <activity android:name=".Revise_PhuongDong.Activities.ReviseSpeaking"/>
-        <activity android:name=".Revise_PhuongDong.Services.RecordingService"/>
+        <activity android:name=".Revise_PhuongDong.Fragment.RecordFragment"/>
         <activity android:name=".Revise_PhuongDong.Reading"/>
         <activity android:name=".Revise_PhuongDong.Listening"/>
         <activity android:name=".Revise_PhuongDong.Result"/>

@@ -32,6 +32,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.nhi.english.R;
 import com.nhi.english.Revise_PhuongDong.Activities.ReviseSpeaking;
+import com.nhi.english.Revise_PhuongDong.Fragment.RecordFragment;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -92,10 +93,12 @@ public class Revise extends AppCompatActivity {
         setContentView(R.layout.activity_vocabulary);
 
         Log.d("Connect", "REALTIME DATABASE ___________________________");
+
         myRef = FirebaseDatabase
                 .getInstance()
-                .getReference();
+                .getReference("hjk");
         myRef.setValue("Hello");
+
         title_ = (TextView) findViewById(R.id.title_);
 
         image = findViewById(R.id.imageView);
@@ -225,7 +228,7 @@ public class Revise extends AppCompatActivity {
                 pos++;
                 if (pos == listQuestion.size()){
                     sound.stop();
-                    Intent intents = new Intent(Revise.this, ReviseSpeaking.class);
+                    Intent intents = new Intent(Revise.this, RecordFragment.class);
                     Bundle bundle = new Bundle();
                     bundle.putParcelableArrayList("Question", listQuestion);
                     bundle.putParcelableArrayList("Answer", listAnswer);
